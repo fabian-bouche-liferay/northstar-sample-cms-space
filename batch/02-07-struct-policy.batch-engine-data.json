@@ -48,7 +48,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-TITLE"
         },
         {
           "name": "policyId",
@@ -61,7 +62,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-POLICYID"
         },
         {
           "name": "policyDomain",
@@ -74,7 +76,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-POLICYDOMAIN"
         },
         {
           "name": "purpose",
@@ -88,7 +91,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-PURPOSE"
         },
         {
           "name": "scope",
@@ -102,7 +106,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-SCOPE"
         },
         {
           "name": "policyText",
@@ -116,7 +121,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-POLICYTEXT"
         },
         {
           "name": "responsibilities",
@@ -130,7 +136,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-RESPONSIBILITIES"
         },
         {
           "name": "exceptions",
@@ -144,7 +151,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-EXCEPTIONS"
         },
         {
           "name": "effectiveDate",
@@ -156,7 +164,8 @@
           "required": false,
           "indexed": true,
           "indexedAsKeyword": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-EFFECTIVEDATE"
         },
         {
           "name": "policyReviewDate",
@@ -168,7 +177,8 @@
           "required": false,
           "indexed": true,
           "indexedAsKeyword": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-POLICYREVIEWDATE"
         },
         {
           "name": "ownerDepartment",
@@ -181,7 +191,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-OWNERDEPARTMENT"
         },
         {
           "name": "supersedesPolicy",
@@ -194,7 +205,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-SUPERSEDESPOLICY"
         },
         {
           "name": "businessDomain",
@@ -207,7 +219,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-BUSINESSDOMAIN",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-BUSINESSDOMAIN"
         },
         {
           "name": "countryScope",
@@ -220,7 +233,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-COUNTRY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-COUNTRYSCOPE"
         },
         {
           "name": "audience",
@@ -233,7 +247,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-AUDIENCE",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-AUDIENCE"
         },
         {
           "name": "lifecycleStatus",
@@ -246,7 +261,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-LIFECYCLESTATUS",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-LIFECYCLESTATUS"
         },
         {
           "name": "confidentiality",
@@ -259,7 +275,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-CONFIDENTIALITY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-CONFIDENTIALITY"
         },
         {
           "name": "tags",
@@ -272,7 +289,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-POLICY-TAGS"
         }
       ],
       "objectRelationships": []

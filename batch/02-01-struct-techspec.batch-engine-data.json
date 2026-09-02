@@ -48,7 +48,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-TITLE"
         },
         {
           "name": "productCode",
@@ -61,7 +62,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-PRODUCTCODE"
         },
         {
           "name": "hardwareVersion",
@@ -74,7 +76,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-HARDWAREVERSION"
         },
         {
           "name": "maximumPower",
@@ -87,7 +90,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-MAXIMUMPOWER"
         },
         {
           "name": "inputVoltage",
@@ -100,7 +104,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-INPUTVOLTAGE"
         },
         {
           "name": "outputVoltage",
@@ -113,7 +118,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-OUTPUTVOLTAGE"
         },
         {
           "name": "connectivity",
@@ -126,7 +132,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-CONNECTIVITY"
         },
         {
           "name": "protocols",
@@ -139,7 +146,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-PROTOCOLS"
         },
         {
           "name": "operatingTemperature",
@@ -152,7 +160,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-OPERATINGTEMPERATURE"
         },
         {
           "name": "ipRating",
@@ -165,7 +174,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-IPRATING"
         },
         {
           "name": "dimensions",
@@ -178,7 +188,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-DIMENSIONS"
         },
         {
           "name": "weight",
@@ -191,7 +202,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-WEIGHT"
         },
         {
           "name": "installationRequirements",
@@ -205,7 +217,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-INSTALLATIONREQUIREMENTS"
         },
         {
           "name": "safetyInformation",
@@ -219,7 +232,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-SAFETYINFORMATION"
         },
         {
           "name": "certificationInformation",
@@ -233,7 +247,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-CERTIFICATIONINFORMATION"
         },
         {
           "name": "techNotes",
@@ -247,7 +262,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-TECHNOTES"
         },
         {
           "name": "effectiveDate",
@@ -259,7 +275,8 @@
           "required": false,
           "indexed": true,
           "indexedAsKeyword": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-EFFECTIVEDATE"
         },
         {
           "name": "businessDomain",
@@ -272,7 +289,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-BUSINESSDOMAIN",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-BUSINESSDOMAIN"
         },
         {
           "name": "countryScope",
@@ -285,7 +303,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-COUNTRY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-COUNTRYSCOPE"
         },
         {
           "name": "lifecycleStatus",
@@ -298,7 +317,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-LIFECYCLESTATUS",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-LIFECYCLESTATUS"
         },
         {
           "name": "confidentiality",
@@ -311,7 +331,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-CONFIDENTIALITY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-CONFIDENTIALITY"
         },
         {
           "name": "tags",
@@ -324,7 +345,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-TECHSPEC-TAGS"
         }
       ],
       "objectRelationships": []

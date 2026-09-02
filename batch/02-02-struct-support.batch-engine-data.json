@@ -48,7 +48,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-TITLE"
         },
         {
           "name": "articleId",
@@ -61,7 +62,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-ARTICLEID"
         },
         {
           "name": "productCode",
@@ -74,7 +76,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-PRODUCTCODE"
         },
         {
           "name": "problemStatement",
@@ -88,7 +91,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-PROBLEMSTATEMENT"
         },
         {
           "name": "symptoms",
@@ -102,7 +106,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-SYMPTOMS"
         },
         {
           "name": "environment",
@@ -116,7 +121,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-ENVIRONMENT"
         },
         {
           "name": "possibleCauses",
@@ -130,7 +136,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-POSSIBLECAUSES"
         },
         {
           "name": "resolution",
@@ -144,7 +151,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-RESOLUTION"
         },
         {
           "name": "verificationSteps",
@@ -158,7 +166,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-VERIFICATIONSTEPS"
         },
         {
           "name": "escalationCriteria",
@@ -172,7 +181,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-ESCALATIONCRITERIA"
         },
         {
           "name": "relatedErrorCodes",
@@ -185,7 +195,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-RELATEDERRORCODES"
         },
         {
           "name": "relatedArticles",
@@ -198,7 +209,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-RELATEDARTICLES"
         },
         {
           "name": "lastReviewedDate",
@@ -210,7 +222,8 @@
           "required": false,
           "indexed": true,
           "indexedAsKeyword": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-LASTREVIEWEDDATE"
         },
         {
           "name": "businessDomain",
@@ -223,7 +236,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-BUSINESSDOMAIN",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-BUSINESSDOMAIN"
         },
         {
           "name": "countryScope",
@@ -236,7 +250,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-COUNTRY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-COUNTRYSCOPE"
         },
         {
           "name": "audience",
@@ -249,7 +264,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-AUDIENCE",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-AUDIENCE"
         },
         {
           "name": "lifecycleStatus",
@@ -262,7 +278,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-LIFECYCLESTATUS",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-LIFECYCLESTATUS"
         },
         {
           "name": "confidentiality",
@@ -275,7 +292,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-CONFIDENTIALITY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-CONFIDENTIALITY"
         },
         {
           "name": "tags",
@@ -288,7 +306,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SUPPORT-TAGS"
         }
       ],
       "objectRelationships": []

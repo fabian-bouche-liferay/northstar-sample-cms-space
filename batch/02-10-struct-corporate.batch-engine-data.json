@@ -48,7 +48,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CORPORATE-TITLE"
         },
         {
           "name": "articleType",
@@ -61,7 +62,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-ARTICLETYPE",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CORPORATE-ARTICLETYPE"
         },
         {
           "name": "department",
@@ -74,7 +76,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CORPORATE-DEPARTMENT"
         },
         {
           "name": "summary",
@@ -88,7 +91,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CORPORATE-SUMMARY"
         },
         {
           "name": "body",
@@ -102,7 +106,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CORPORATE-BODY"
         },
         {
           "name": "publicationDate",
@@ -114,7 +119,8 @@
           "required": true,
           "indexed": true,
           "indexedAsKeyword": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CORPORATE-PUBLICATIONDATE"
         },
         {
           "name": "relatedContent",
@@ -127,7 +133,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CORPORATE-RELATEDCONTENT"
         },
         {
           "name": "countryScope",
@@ -140,7 +147,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-COUNTRY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CORPORATE-COUNTRYSCOPE"
         },
         {
           "name": "audience",
@@ -153,7 +161,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-AUDIENCE",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CORPORATE-AUDIENCE"
         },
         {
           "name": "lifecycleStatus",
@@ -166,7 +175,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-LIFECYCLESTATUS",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CORPORATE-LIFECYCLESTATUS"
         },
         {
           "name": "confidentiality",
@@ -179,7 +189,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-CONFIDENTIALITY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CORPORATE-CONFIDENTIALITY"
         },
         {
           "name": "tags",
@@ -192,7 +203,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CORPORATE-TAGS"
         }
       ],
       "objectRelationships": []

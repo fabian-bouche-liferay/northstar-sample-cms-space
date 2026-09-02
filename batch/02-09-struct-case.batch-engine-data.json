@@ -48,7 +48,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-TITLE"
         },
         {
           "name": "customerName",
@@ -61,7 +62,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-CUSTOMERNAME"
         },
         {
           "name": "industry",
@@ -74,7 +76,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-INDUSTRY"
         },
         {
           "name": "customerChallenge",
@@ -88,7 +91,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-CUSTOMERCHALLENGE"
         },
         {
           "name": "solution",
@@ -102,7 +106,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-SOLUTION"
         },
         {
           "name": "productsUsed",
@@ -115,7 +120,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-PRODUCTSUSED"
         },
         {
           "name": "deploymentSize",
@@ -128,7 +134,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-DEPLOYMENTSIZE"
         },
         {
           "name": "implementation",
@@ -142,7 +149,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-IMPLEMENTATION"
         },
         {
           "name": "results",
@@ -156,7 +164,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-RESULTS"
         },
         {
           "name": "customerQuote",
@@ -170,7 +179,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-CUSTOMERQUOTE"
         },
         {
           "name": "lessonsLearned",
@@ -184,7 +194,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-LESSONSLEARNED"
         },
         {
           "name": "relatedProducts",
@@ -197,7 +208,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-RELATEDPRODUCTS"
         },
         {
           "name": "countryScope",
@@ -210,7 +222,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-COUNTRY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-COUNTRYSCOPE"
         },
         {
           "name": "lifecycleStatus",
@@ -223,7 +236,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-LIFECYCLESTATUS",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-LIFECYCLESTATUS"
         },
         {
           "name": "confidentiality",
@@ -236,7 +250,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-CONFIDENTIALITY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-CONFIDENTIALITY"
         },
         {
           "name": "tags",
@@ -249,7 +264,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-CASE-TAGS"
         }
       ],
       "objectRelationships": []

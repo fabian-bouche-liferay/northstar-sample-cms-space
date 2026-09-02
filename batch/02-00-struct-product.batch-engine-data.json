@@ -48,7 +48,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-TITLE"
         },
         {
           "name": "productCode",
@@ -61,7 +62,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-PRODUCTCODE"
         },
         {
           "name": "productFamily",
@@ -74,7 +76,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-PRODUCTFAMILY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-PRODUCTFAMILY"
         },
         {
           "name": "shortDescription",
@@ -88,7 +91,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-SHORTDESCRIPTION"
         },
         {
           "name": "fullDescription",
@@ -102,7 +106,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-FULLDESCRIPTION"
         },
         {
           "name": "targetMarket",
@@ -116,7 +121,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-TARGETMARKET"
         },
         {
           "name": "keyFeatures",
@@ -130,7 +136,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-KEYFEATURES"
         },
         {
           "name": "technicalSummary",
@@ -144,7 +151,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-TECHNICALSUMMARY"
         },
         {
           "name": "launchDate",
@@ -156,7 +164,8 @@
           "required": false,
           "indexed": true,
           "indexedAsKeyword": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-LAUNCHDATE"
         },
         {
           "name": "endOfSaleDate",
@@ -168,7 +177,8 @@
           "required": false,
           "indexed": true,
           "indexedAsKeyword": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-ENDOFSALEDATE"
         },
         {
           "name": "relatedProducts",
@@ -181,7 +191,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-RELATEDPRODUCTS"
         },
         {
           "name": "countryAvailability",
@@ -194,7 +205,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-COUNTRYAVAILABILITY"
         },
         {
           "name": "businessDomain",
@@ -207,7 +219,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-BUSINESSDOMAIN",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-BUSINESSDOMAIN"
         },
         {
           "name": "audience",
@@ -220,7 +233,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-AUDIENCE",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-AUDIENCE"
         },
         {
           "name": "lifecycleStatus",
@@ -233,7 +247,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-LIFECYCLESTATUS",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-LIFECYCLESTATUS"
         },
         {
           "name": "confidentiality",
@@ -246,7 +261,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-CONFIDENTIALITY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-CONFIDENTIALITY"
         },
         {
           "name": "tags",
@@ -259,7 +275,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PRODUCT-TAGS"
         }
       ],
       "objectRelationships": []

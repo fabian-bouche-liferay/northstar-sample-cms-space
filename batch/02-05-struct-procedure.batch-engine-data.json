@@ -48,7 +48,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-TITLE"
         },
         {
           "name": "procedureId",
@@ -61,7 +62,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-PROCEDUREID"
         },
         {
           "name": "procedureDomain",
@@ -74,7 +76,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-PROCEDUREDOMAIN"
         },
         {
           "name": "productCode",
@@ -87,7 +90,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-PRODUCTCODE"
         },
         {
           "name": "purpose",
@@ -101,7 +105,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-PURPOSE"
         },
         {
           "name": "prerequisites",
@@ -115,7 +120,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-PREREQUISITES"
         },
         {
           "name": "requiredTools",
@@ -129,7 +135,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-REQUIREDTOOLS"
         },
         {
           "name": "safetyWarnings",
@@ -143,7 +150,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-SAFETYWARNINGS"
         },
         {
           "name": "procedureSteps",
@@ -157,7 +165,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-PROCEDURESTEPS"
         },
         {
           "name": "validation",
@@ -171,7 +180,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-VALIDATION"
         },
         {
           "name": "procTroubleshooting",
@@ -185,7 +195,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-PROCTROUBLESHOOTING"
         },
         {
           "name": "escalation",
@@ -199,7 +210,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-ESCALATION"
         },
         {
           "name": "effectiveDate",
@@ -211,7 +223,8 @@
           "required": false,
           "indexed": true,
           "indexedAsKeyword": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-EFFECTIVEDATE"
         },
         {
           "name": "supersedesProcedure",
@@ -224,7 +237,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-SUPERSEDESPROCEDURE"
         },
         {
           "name": "countryScope",
@@ -237,7 +251,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-COUNTRY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-COUNTRYSCOPE"
         },
         {
           "name": "audience",
@@ -250,7 +265,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-AUDIENCE",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-AUDIENCE"
         },
         {
           "name": "lifecycleStatus",
@@ -263,7 +279,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-LIFECYCLESTATUS",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-LIFECYCLESTATUS"
         },
         {
           "name": "confidentiality",
@@ -276,7 +293,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-CONFIDENTIALITY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-CONFIDENTIALITY"
         },
         {
           "name": "tags",
@@ -289,7 +307,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-PROCEDURE-TAGS"
         }
       ],
       "objectRelationships": []

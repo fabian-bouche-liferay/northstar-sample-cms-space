@@ -48,7 +48,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-TITLE"
         },
         {
           "name": "issueId",
@@ -61,7 +62,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-ISSUEID"
         },
         {
           "name": "productCode",
@@ -74,7 +76,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-PRODUCTCODE"
         },
         {
           "name": "affectedVersions",
@@ -87,7 +90,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-AFFECTEDVERSIONS"
         },
         {
           "name": "severity",
@@ -100,7 +104,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-SEVERITY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-SEVERITY"
         },
         {
           "name": "symptoms",
@@ -114,7 +119,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-SYMPTOMS"
         },
         {
           "name": "rootCause",
@@ -128,7 +134,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-ROOTCAUSE"
         },
         {
           "name": "workaround",
@@ -142,7 +149,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-WORKAROUND"
         },
         {
           "name": "permanentFix",
@@ -156,7 +164,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-PERMANENTFIX"
         },
         {
           "name": "dateIdentified",
@@ -168,7 +177,8 @@
           "required": false,
           "indexed": true,
           "indexedAsKeyword": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-DATEIDENTIFIED"
         },
         {
           "name": "issueStatus",
@@ -181,7 +191,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-ISSUESTATUS",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-ISSUESTATUS"
         },
         {
           "name": "fixedInVersion",
@@ -194,7 +205,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-FIXEDINVERSION"
         },
         {
           "name": "relatedSupportArticles",
@@ -207,7 +219,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-RELATEDSUPPORTARTICLES"
         },
         {
           "name": "businessDomain",
@@ -220,7 +233,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-BUSINESSDOMAIN",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-BUSINESSDOMAIN"
         },
         {
           "name": "countryScope",
@@ -233,7 +247,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-COUNTRY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-COUNTRYSCOPE"
         },
         {
           "name": "audience",
@@ -246,7 +261,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-AUDIENCE",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-AUDIENCE"
         },
         {
           "name": "lifecycleStatus",
@@ -259,7 +275,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-LIFECYCLESTATUS",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-LIFECYCLESTATUS"
         },
         {
           "name": "confidentiality",
@@ -272,7 +289,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-CONFIDENTIALITY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-CONFIDENTIALITY"
         },
         {
           "name": "tags",
@@ -285,7 +303,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-KNOWNISSUE-TAGS"
         }
       ],
       "objectRelationships": []

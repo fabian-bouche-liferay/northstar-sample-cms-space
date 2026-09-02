@@ -48,7 +48,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-TITLE"
         },
         {
           "name": "segment",
@@ -61,7 +62,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-SEGMENT"
         },
         {
           "name": "customerProfile",
@@ -75,7 +77,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-CUSTOMERPROFILE"
         },
         {
           "name": "customerNeeds",
@@ -89,7 +92,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-CUSTOMERNEEDS"
         },
         {
           "name": "recommendedProducts",
@@ -102,7 +106,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-RECOMMENDEDPRODUCTS"
         },
         {
           "name": "discoveryQuestions",
@@ -116,7 +121,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-DISCOVERYQUESTIONS"
         },
         {
           "name": "valueProposition",
@@ -130,7 +136,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-VALUEPROPOSITION"
         },
         {
           "name": "objections",
@@ -144,7 +151,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-OBJECTIONS"
         },
         {
           "name": "objectionResponses",
@@ -158,7 +166,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-OBJECTIONRESPONSES"
         },
         {
           "name": "competitivePositioning",
@@ -172,7 +181,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-COMPETITIVEPOSITIONING"
         },
         {
           "name": "qualificationCriteria",
@@ -186,7 +196,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-QUALIFICATIONCRITERIA"
         },
         {
           "name": "exampleConfiguration",
@@ -200,7 +211,8 @@
           "indexedAsKeyword": false,
           "indexedLanguageId": "en_US",
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-EXAMPLECONFIGURATION"
         },
         {
           "name": "relatedCaseStudies",
@@ -213,7 +225,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-RELATEDCASESTUDIES"
         },
         {
           "name": "businessDomain",
@@ -226,7 +239,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-BUSINESSDOMAIN",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-BUSINESSDOMAIN"
         },
         {
           "name": "countryScope",
@@ -239,7 +253,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-COUNTRY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-COUNTRYSCOPE"
         },
         {
           "name": "lifecycleStatus",
@@ -252,7 +267,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-LIFECYCLESTATUS",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-LIFECYCLESTATUS"
         },
         {
           "name": "confidentiality",
@@ -265,7 +281,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-CONFIDENTIALITY",
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-CONFIDENTIALITY"
         },
         {
           "name": "tags",
@@ -278,7 +295,8 @@
           "indexed": true,
           "indexedAsKeyword": true,
           "localized": false,
-          "objectFieldSettings": []
+          "objectFieldSettings": [],
+          "externalReferenceCode": "NMG-FIELD-SALES-TAGS"
         }
       ],
       "objectRelationships": []
