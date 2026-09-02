@@ -42,36 +42,3 @@ Confirmed live end to end on `dxp-2026.q3.1`, 2026-09-02, on a genuinely
 fresh instance: all 33 files processed in one continuous deploy, all 260
 entries verified live afterward (`GET /o/c/<pluralPath>/scopes/NMG-KNOWLEDGE`
 per structure, `totalCount` summing to 260).
-
-## `taskItemDelegateName` must be a top-level sibling of `configuration.parameters`, not nested inside it
-
-```json
-"configuration": {
-    "className": "com.liferay.object.rest.dto.v1_0.ObjectEntry",
-    "taskItemDelegateName": "C_<ObjectName>",
-    "parameters": {
-        "createStrategy": "UPSERT",
-        "scopeKey": "NMG-KNOWLEDGE"
-    }
-}
-```
-
-Nesting `taskItemDelegateName` inside `parameters` (the shape shown in this
-workspace's own `manage-objects` skill reference example, itself unconfirmed)
-is silently accepted with no validation error, but hangs the deploy
-indefinitely: confirmed via bytecode disassembly of
-`com.liferay.batch.engine.internal.unit.BatchEngineUnitProcessorImpl` and
-`BatchEngineUnitReaderImpl` (in `com.liferay.batch.engine.service.jar`) —
-`BatchEngineUnitConfiguration.getTaskItemDelegateName()` is read as a
-dedicated field, not looked up inside the generic `parameters` map. When
-nested inside `parameters` it silently deserializes to `null`, and the
-processor then blocks forever (`BatchEngineUnitProcessorImpl: Waiting for a
-service matching (...batch.engine.task.item.delegate.name=null...)`) waiting
-for a generic/nameless delegate service that doesn't exist — a real service
-tagged with the actual delegate name is registered and reachable the whole
-time (confirmed: the identical import, issued via a direct
-`POST /o/headless-batch-engine/v1.0/import-task/...` REST call instead of
-file-based delivery, completes instantly regardless of nesting, since that
-code path reads `taskItemDelegateName` from the query string, not this JSON
-structure). Isolated with a 3-file minimal reproduction (one Space, one
-structure, one entry) before being confirmed fixed at full scale.
