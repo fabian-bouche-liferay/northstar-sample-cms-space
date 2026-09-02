@@ -1,0 +1,336 @@
+{
+  "configuration": {
+    "className": "com.liferay.object.rest.dto.v1_0.ObjectEntry",
+    "parameters": {
+      "createStrategy": "UPSERT",
+      "scopeKey": "NMG-KNOWLEDGE"
+    },
+    "taskItemDelegateName": "C_NMGSalesPlaybook"
+  },
+  "items": [
+    {
+      "externalReferenceCode": "SALES-SHOPPINGCENTER-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Sales Playbook: Shopping Center & Retail Parking",
+        "segment": "Shopping center",
+        "customerProfile": "<p>Shopping center owners and operators seeking to differentiate their property for EV-driving shoppers, typically with high daily visitor traffic and a shopper dwell time ranging from under an hour to a full afternoon.</p>",
+        "customerNeeds": "<p>Charging capacity that scales to high daily visitor volume without exceeding the center's electrical capacity; a fast-charging option for time-pressed shoppers; a business case tied to shopper retention and dwell time, not just amenity provision.</p>",
+        "recommendedProducts": "NX-400 with dynamic load balancing across the bulk of the parking structure for steady all-day AC charging demand; DX-120 for a smaller bank of fast chargers near the main entrance for shoppers who want a rapid top-up during a shorter visit.",
+        "discoveryQuestions": "<p>What is your typical shopper dwell time — is it a quick errand stop or a longer shopping visit? How much daily parking traffic does the center see? Do you have a dedicated area near the entrance suitable for a fast-charging bank? What is your current electrical service capacity, and do you have headroom to add a dedicated DC fast-charging supply?</p>",
+        "valueProposition": "<p>A two-tier NX-400/DX-120 approach lets a shopping center serve both long-dwell and short-dwell shoppers, with dynamic load balancing on the NX-400 tier allowing continued charging expansion without repeated electrical service upgrades as demand grows.</p>",
+        "objections": "<p>“Do we need DC fast charging at all, or would AC alone be enough?” / “Isn't dynamic load balancing an unnecessary extra cost?”</p>",
+        "objectionResponses": "<p>AC-only charging works for longer-dwell shoppers but leaves out the meaningful share of visitors on a shorter errand-style visit — DX-120 captures that segment specifically. Dynamic load balancing on NX-400 is what allows the center to keep adding charging bays as demand grows without triggering a new electrical service upgrade each time, which is a real cost saver over the life of the deployment, not an unnecessary extra.</p>",
+        "competitivePositioning": "<p>Competing shopping-center charging proposals often deploy a single charger type across the entire lot, missing the shorter-dwell shopper segment entirely if AC-only, or overspending on DC fast charging if applied lot-wide. NMG's segmented approach matches charger type to actual shopper behavior.</p>",
+        "qualificationCriteria": "<p>Shopping center or retail complex with 500+ daily visitors; existing electrical service with headroom for a dedicated DC fast-charging supply; management team focused on shopper retention/dwell time metrics.</p>",
+        "exampleConfiguration": "<p>70x NX-400 across the main parking structure, 20x DX-120 near the main entrance.</p>",
+        "relatedCaseStudies": "CASE-SOLENA-001",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "shopping center, NX-400, DX-120, retail, sales playbook"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SALES"
+    },
+    {
+      "externalReferenceCode": "SALES-MUNICIPALPARKING-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Sales Playbook: Municipal & Public Parking (Superseded)",
+        "segment": "Municipal parking",
+        "customerProfile": "<p>City governments and municipal parking operators managing charging rollouts across many public parking facilities, typically under significant budget scrutiny and public accountability for cost-effective spend of public funds.</p>",
+        "customerNeeds": "<p>A charging rollout that scales across dozens of facilities on a defensible, tiered budget rather than a single uniform product choice; demonstrable value to residents; a plan that respects existing facility traffic patterns rather than treating every location identically.</p>",
+        "recommendedProducts": "This version of the playbook recommended standardizing on NX-400 across all municipal facilities regardless of traffic tier, reasoning that a single product would simplify long-term maintenance contracts and “future-proof” lower-traffic facilities against growing demand.",
+        "discoveryQuestions": "<p>How many parking facilities are in scope, and how does traffic vary between them? What is the total capital budget approved by council, and is it fixed or does it scale with resident demand data? Do you need centralized reporting across all facilities, or can each be managed independently?</p>",
+        "valueProposition": "<p>A single standardized product citywide was positioned in this version as simplifying maintenance contracts and vendor management for the city.</p>",
+        "objections": "<p>“This is significantly more expensive than our approved budget for the lower-traffic facilities.”</p>",
+        "objectionResponses": "<p>This version of the playbook did not have a strong answer to the budget objection at low-traffic facilities beyond arguing long-term future-proofing value, which repeatedly failed to satisfy city council budget reviews.</p>",
+        "competitivePositioning": "<p>SUPERSEDED — this playbook previously recommended a single standardized NX-400 deployment across every municipal facility regardless of traffic tier, to simplify maintenance contracts. In practice (see CASE-METROVIA-001), this approach consistently failed municipal budget reviews once council compared per-facility utilization data against per-facility cost. This playbook has been superseded by the current traffic-tiered NX-200/NX-400 approach, which segments product selection by facility traffic and has proven materially easier to defend in public budget reviews.</p>",
+        "qualificationCriteria": "<p>Municipal or public-sector parking operator; multi-facility rollout (10+ locations); fixed or council-approved capital budget; public accountability requirement for spend justification.</p>",
+        "exampleConfiguration": "<p>Historical example only — do not reuse: 220x NX-400 uniformly across all 34 facilities regardless of traffic. See CASE-METROVIA-001 for the current, traffic-tiered configuration actually deployed.</p>",
+        "relatedCaseStudies": "CASE-METROVIA-001",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "superseded",
+        "confidentiality": "internal",
+        "tags": "municipal parking, superseded, NX-400, sales playbook"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SALES"
+    },
+    {
+      "externalReferenceCode": "SALES-CARRENTAL-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Sales Playbook: Car Rental Fleet Charging (Deprecated)",
+        "segment": "Car rental company",
+        "customerProfile": "<p>Vehicle rental companies operating EV rental fleets from airport or urban rental locations, needing to balance fast return-lane turnaround against overnight bulk fleet charging.</p>",
+        "customerNeeds": "<p>Fast turnaround charging for vehicles moving directly from return to re-rental; overnight bulk charging capacity for the remainder of the fleet; minimal disruption to existing rental yard layout and workflow.</p>",
+        "recommendedProducts": "DX-60 for return-lane bays where quick turnaround to a rentable charge level matters most; NX-400 for the main overnight fleet parking area, using dynamic load balancing to charge the bulk of the fleet within available electrical capacity.",
+        "discoveryQuestions": "<p>What is your typical vehicle turnaround time from return to re-rental? How much of your fleet charges overnight versus needing same-day turnaround? What is your current electrical service capacity at the rental yard?</p>",
+        "valueProposition": "<p>Splitting return-lane fast charging (DX-60) from overnight bulk charging (NX-400) matches charger type to the two genuinely different charging use cases a rental fleet has, rather than a single uniform approach.</p>",
+        "objections": "<p>“Is DC fast charging necessary in the return lane, or would AC be fast enough?”</p>",
+        "objectionResponses": "<p>AC charging cannot reliably deliver a rentable charge level within a typical vehicle cleaning/inspection turnaround window — DX-60 is sized specifically for that use case.</p>",
+        "competitivePositioning": "<p>This playbook's original recommendation of DX-60 across essentially the entire rental yard predates NMG's current segmented AC/DC guidance and has not been refreshed to reflect current product positioning for NX-400's role in overnight fleet charging.</p>",
+        "qualificationCriteria": "<p>Rental fleet operator with return-lane and overnight charging use cases; airport or high-turnover urban rental location.</p>",
+        "exampleConfiguration": "<p>Note — this configuration example predates the current DX-60/NX-400 split guidance reflected in the CASE-CAVALLO-001 case study and should be refreshed before further use in active deals.</p>",
+        "relatedCaseStudies": "CASE-CAVALLO-001",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "deprecated",
+        "confidentiality": "internal",
+        "tags": "car rental, deprecated, sales playbook, pending refresh"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SALES"
+    },
+    {
+      "externalReferenceCode": "SALES-HIGHWAYCHARGING-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Sales Playbook: Highway & Travel Corridor Charging Sites (Superseded)",
+        "segment": "Highway charging site",
+        "customerProfile": "<p>Highway rest stop and travel plaza operators seeking to offer fast, reliable charging to highway travelers with short stop durations, typically 15-30 minutes, and high daily vehicle throughput.</p>",
+        "customerNeeds": "<p>Fast enough charging to deliver a meaningful range top-up within a short highway stop; enough throughput to serve high daily traffic volume without long queues; installation planning around the site's available or plannable electrical substation capacity.</p>",
+        "recommendedProducts": "This version of the playbook recommended defaulting to DX-360 across the entire site to maximize charging speed for every bay, regardless of budget or actual traffic-tier requirements.",
+        "discoveryQuestions": "<p>What is your typical traveler stop duration? What is your daily vehicle throughput? What electrical substation capacity do you have available or can you build out?</p>",
+        "valueProposition": "<p>Maximum charging speed on every bay was positioned as the primary differentiator for highway sites in this version of the playbook.</p>",
+        "objections": "<p>“DX-360 installation cost seems high for a single highway site.”</p>",
+        "objectionResponses": "<p>This version of the playbook did not adequately address the installation cost objection, defaulting to a premium-only recommendation regardless of site budget constraints.</p>",
+        "competitivePositioning": "<p>SUPERSEDED — this playbook previously recommended DX-360 across the entire highway site regardless of budget or traffic-tier requirements, on the reasoning that maximum charging speed was the only meaningful differentiator for a highway location. Field experience (see CASE-VOYAGE-001) showed that a mixed DX-240/DX-360 deployment meets the same traveler stop-time targets at meaningfully lower installation cost for the majority of bays, with DX-360 genuinely justified only for a smaller premium tier. This playbook has been superseded by needs-based, traffic-tiered highway site guidance, and should not be used for active highway-site opportunities.</p>",
+        "qualificationCriteria": "<p>Highway rest stop or travel plaza with high daily vehicle throughput and plannable substation capacity above 400A.</p>",
+        "exampleConfiguration": "<p>Historical example only — do not reuse: 32x DX-360 across the entire site. See CASE-VOYAGE-001 for the current, cost-optimized mixed DX-240/DX-360 configuration actually deployed.</p>",
+        "relatedCaseStudies": "CASE-VOYAGE-001, CASE-GREENWAY-001",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "superseded",
+        "confidentiality": "internal",
+        "tags": "highway charging, superseded, DX-360, sales playbook"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SALES"
+    },
+    {
+      "externalReferenceCode": "SALES-SMALLOFFICE-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Sales Playbook: Small Office & Employee Parking",
+        "segment": "Small office",
+        "customerProfile": "<p>Small businesses and professional offices (typically under 50 employees) with a handful of dedicated parking spaces, little to no existing three-phase electrical infrastructure, and no dedicated facilities or IT team to manage a complex charging platform.</p>",
+        "customerNeeds": "<p>Reliable, low-maintenance charging for a small number of employee or visitor vehicles; minimal upfront capital cost; no requirement for centralized fleet-style reporting or multi-site management; installation that doesn't require a major electrical service upgrade.</p>",
+        "recommendedProducts": "NX-100 (default, 1-6 spaces, standard building power). NX-200 only if RFID access control is needed or growth beyond a single small office is planned. Avoid NX-400/NX-450 or any DX-series product — unjustified cost and complexity at this scale.",
+        "discoveryQuestions": "<p>How many dedicated parking spaces do you have available for charging? Do you currently have any three-phase electrical supply, or only standard building power? Do you need to track or bill individual employees for their charging usage, or is this a shared amenity? Do you expect to add more spaces within the next 1-2 years?</p>",
+        "valueProposition": "<p>NX-100 delivers a genuinely simple, low-cost path to offering EV charging without the electrical infrastructure investment, ongoing software subscription, or management overhead that a larger deployment requires — it is right-sized specifically for the small office segment rather than a scaled-down version of a larger product.</p>",
+        "objections": "<p>“This seems too basic — will we need to upgrade later?” / “Why not just get the more capable NX-200 in case we need it?”</p>",
+        "objectionResponses": "<p>NX-100 is not a stripped-down NX-200 — it is purpose-built for exactly this scale, and a later upgrade to NX-200 or beyond is a straightforward addition rather than a forced replacement. Recommending NX-200 by default for a 12-space single-tenant office adds RFID and connectivity costs the customer will likely never use.</p>",
+        "competitivePositioning": "<p>Competing offerings at this scale often push a single “one-size-fits-all” charger tier regardless of site size, forcing small customers to either overpay for capacity they don't need or accept a residential-grade unit not designed for shared office use. NMG's NX-100 is purpose-built for exactly this segment.</p>",
+        "qualificationCriteria": "<p>Fewer than 15 dedicated parking spaces; no existing dedicated three-phase supply; no requirement for per-user billing or centralized multi-site reporting; single physical site.</p>",
+        "exampleConfiguration": "<p>12x NX-100 units on standard building power, self-service mobile registration, no Polaris Charge Cloud subscription required.</p>",
+        "relatedCaseStudies": "CASE-BLUEPEAK-001",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "small office, NX-100, sales playbook"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SALES"
+    },
+    {
+      "externalReferenceCode": "SALES-CORPHQ-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Sales Playbook: Corporate Headquarters Campus",
+        "segment": "Corporate headquarters",
+        "customerProfile": "<p>Mid-to-large enterprises with a single headquarters campus hosting hundreds of employees, regular visitor and supplier traffic, and often a small internal fleet of company vehicles, typically with an existing facilities management function and appetite for centralized reporting.</p>",
+        "customerNeeds": "<p>Charging capacity that scales to hundreds of employees without exceeding existing campus electrical capacity; department-level cost reporting; access control to distinguish employee, visitor, and fleet vehicle charging; a path to add capacity over time without re-architecting the deployment.</p>",
+        "recommendedProducts": "NX-200 for standard employee bays; NX-400 for high-traffic/fleet bays needing RFID and dynamic load balancing; Polaris Charge Cloud for centralized reporting. NX-450 selectively for flagship bays where Plug & Charge is a genuine differentiator.",
+        "discoveryQuestions": "<p>How many total parking spaces does the campus have, and what share do you want charging-enabled in year one versus over time? Do you need to report charging costs back to individual departments? Do you have a company vehicle fleet that should be prioritized over employee/visitor charging? What is your current electrical service headroom?</p>",
+        "valueProposition": "<p>A tiered NX-200/NX-400 deployment under Polaris Charge Cloud gives a headquarters campus centralized visibility and access control from day one, while dynamic load balancing on the NX-400 tier lets the campus add charging capacity over time without a disruptive electrical service upgrade.</p>",
+        "objections": "<p>“Do we really need Polaris Charge Cloud, or can facilities just monitor chargers manually?” / “Isn't NX-400 overkill for most of our parking?”</p>",
+        "objectionResponses": "<p>Manual monitoring does not scale past a handful of chargers — Polaris Charge Cloud's reporting becomes essential the moment department-level cost allocation or multi-building visibility is required, which is nearly universal at headquarters scale. NX-400 is intentionally reserved for higher-traffic, access-controlled bays in this playbook, not proposed campus-wide — most bays should use the more cost-effective NX-200.</p>",
+        "competitivePositioning": "<p>Rival vendors frequently propose a single uniform product across an entire headquarters campus, either overspending on low-traffic bays or under-provisioning high-traffic ones. NMG's segmented NX-200/NX-400 approach, unified under Polaris Charge Cloud, matches spend to actual utilization.</p>",
+        "qualificationCriteria": "<p>Single-site headquarters campus; 200+ total parking spaces; existing facilities management function; requirement for centralized reporting or department cost allocation.</p>",
+        "exampleConfiguration": "<p>40x NX-200 (general employee parking), 20x NX-400 (fleet bays and high-traffic entrance), Polaris Charge Cloud with RFID-based department cost allocation.</p>",
+        "relatedCaseStudies": "CASE-VERIDIAN-001, CASE-BLUEPEAK-001",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "corporate headquarters, NX-400, Polaris Charge Cloud, sales playbook"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SALES"
+    },
+    {
+      "externalReferenceCode": "SALES-HOTEL-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Sales Playbook: Hotel & Hospitality",
+        "segment": "Hotel",
+        "customerProfile": "<p>Independent hotels and boutique hotel groups where EV charging availability is increasingly expected by guests as a booking-influencing amenity, with guest parking dwell times typically limited to a single overnight stay.</p>",
+        "customerNeeds": "<p>Charging fast enough to deliver a meaningful top-up within an overnight stay; a straightforward guest-facing experience with no complex registration; separate, lower-priority charging for staff and valet parking; installation that doesn't disrupt hotel operations.</p>",
+        "recommendedProducts": "DX-60 for guest-facing bays — a meaningful overnight charge without the cost of a higher-power DX-120/DX-240 most hotel guest volumes don't require. NX-200 for staff/valet parking where RFID access matters more than charging speed.",
+        "discoveryQuestions": "<p>What is your typical guest parking dwell time — overnight, or shorter for day guests? How many guest parking spaces do you want charging-enabled? Do you have separate staff or valet parking that also needs charging? Are you marketing EV charging as a guest amenity today, or is this a first deployment?</p>",
+        "valueProposition": "<p>DX-60 delivers the fast-charging experience overnight guests actually need without the installation cost and complexity of a full DC fast-charging hub — right-sized for hospitality dwell times rather than the higher power tiers built for logistics or highway use cases.</p>",
+        "objections": "<p>“Shouldn't we get the fastest charger available to be competitive?” / “Is DC charging really necessary, or would AC be enough?”</p>",
+        "objectionResponses": "<p>Guests staying overnight don't need the fastest possible charge — they need a reliable, meaningful charge within the hours they're parked, which DX-60 delivers at a lower installation cost than DX-120/DX-240. A pure AC deployment (NX-200) can work for longer-stay guests but underperforms for shorter visits or guests arriving with low range, which is why NMG recommends DX-60 for the primary guest-facing bays specifically.</p>",
+        "competitivePositioning": "<p>Some competing hospitality charging proposals push the highest-power DC charger available regardless of guest dwell time, inflating installation cost unnecessarily. NMG's DX-60 recommendation is calibrated specifically to overnight-stay charging economics.</p>",
+        "qualificationCriteria": "<p>Guest parking with primarily overnight dwell time; hotel actively marketing or considering charging as a guest amenity; at least one property with dedicated guest parking spaces available for charger installation.</p>",
+        "exampleConfiguration": "<p>6x DX-60 guest-facing bays per property, 4x NX-200 staff/valet bays with RFID access.</p>",
+        "relatedCaseStudies": "CASE-ARDENT-001",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "hotel, DX-60, hospitality, sales playbook"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SALES"
+    },
+    {
+      "externalReferenceCode": "SALES-LOGISTICS-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Sales Playbook: Logistics Fleet Depot Charging",
+        "segment": "Logistics fleet",
+        "customerProfile": "<p>Logistics and freight companies operating a growing electric truck or van fleet out of one or more distribution depots, typically under pressure to hit fleet electrification targets while managing depot electrical capacity constraints.</p>",
+        "customerNeeds": "<p>Reliable overnight and shift-change fast charging capable of turning around a large fleet within tight operational windows; software-driven scheduling to avoid charging conflicts during shift changes; a clear path to scale charging capacity as fleet electrification percentage grows.</p>",
+        "recommendedProducts": "DX-240 for most depot bays (dedicated ~350A supply); DX-360 reserved for bays needing the fastest turnaround. Atlas Fleet is essential, not optional, beyond a handful of vehicles — route-aware scheduling and depot capacity forecasting make large-scale electrification workable.",
+        "discoveryQuestions": "<p>What is your current fleet electrification percentage, and what is your target over the next 2-3 years? What is your depot's existing electrical service capacity, and do you have room for a dedicated transformer? How do you currently schedule which vehicles charge first during shift changes? Do you operate a single depot or multiple, and would centralized fleet visibility matter?</p>",
+        "valueProposition": "<p>DX-240/DX-360 depot charging paired with Atlas Fleet's route-aware scheduling solves both halves of the fleet electrification problem — enough raw charging capacity to turn the fleet around, and the scheduling intelligence to actually use that capacity efficiently during tight shift-change windows.</p>",
+        "objections": "<p>“Can't we just install more chargers instead of buying scheduling software?” / “Why DX-240 instead of DX-360 across the whole depot?”</p>",
+        "objectionResponses": "<p>Adding more chargers without scheduling intelligence still produces shift-change conflicts — the constraint is rarely just charger count, it's coordinating which vehicle charges when against its next route. DX-240 delivers a highway/logistics-appropriate fast charge at meaningfully lower installation cost than DX-360; reserving DX-360 for only the bays where the fastest possible turnaround is genuinely required, rather than defaulting to DX-360 depot-wide, controls capital cost without compromising fleet turnaround targets.</p>",
+        "competitivePositioning": "<p>Competing fleet-charging vendors frequently push hardware-only proposals that default to the highest-power unit across an entire depot regardless of actual turnaround requirements, and typically lack an equivalent to Atlas Fleet's route-aware scheduling and depot capacity forecasting — leaving the customer to solve the scheduling problem themselves with a generic fleet-management tool not built for charging coordination. This is NMG's clearest differentiator in competitive logistics deals and should not be undersold in a proposal.</p>",
+        "qualificationCriteria": "<p>Depot-based electric truck or van fleet of 20+ vehicles; existing or planned dedicated three-phase electrical supply; fleet electrification target set by company leadership; pain point around shift-change charging conflicts.</p>",
+        "exampleConfiguration": "<p>24x DX-240 (majority of bays), 6x DX-360 (premium fast-turnaround bays), Atlas Fleet with route-aware scheduling and depot capacity forecasting configured against actual delivery routes.</p>",
+        "relatedCaseStudies": "CASE-GREENWAY-001, CASE-NORDKREUZ-001",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "confidential",
+        "tags": "logistics fleet, DX-240, Atlas Fleet, sales playbook, competitive"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SALES"
+    },
+    {
+      "externalReferenceCode": "SALES-APARTMENT-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Sales Playbook: Apartment & Multi-Unit Residential",
+        "segment": "Apartment building",
+        "customerProfile": "<p>Property management companies and homeowners' associations responsible for shared parking infrastructure in apartment or multi-unit residential buildings, typically balancing resident demand for charging against fair cost allocation among residents who may or may not own an EV.</p>",
+        "customerNeeds": "<p>A charging model residents perceive as fair, typically requiring individual metering or RFID-based billing rather than a flat shared building cost; installation that works within existing underground or surface parking garage electrical infrastructure; a simple opt-in path for interested residents.</p>",
+        "recommendedProducts": "NX-100 for dedicated, individually-metered resident bays. NX-200 with RFID access for shared bays serving residents without a dedicated space, enabling fair per-session billing so non-EV owners don't subsidize charging costs.",
+        "discoveryQuestions": "<p>Do residents have individually assigned parking bays, or shared/rotating spaces? Is there an existing electrical service with headroom in the parking garage? How do you want to handle billing — individual metering, RFID-based per-session billing, or a flat building fee? Is this an opt-in program, or a building-wide amenity?</p>",
+        "valueProposition": "<p>Individual metering (NX-100) and RFID-based per-session billing (NX-200) directly address the fairness concern that is the single biggest source of resident and HOA board resistance to shared-building EV charging — nobody subsidizes anyone else's charging cost.</p>",
+        "objections": "<p>“Won't a flat building fee be simpler to administer?” / “What about residents who don't have a dedicated parking bay?”</p>",
+        "objectionResponses": "<p>A flat fee is simpler to administer but reliably generates resident and board pushback once non-EV owners realize they're subsidizing others — individual metering or RFID billing avoids that conflict entirely and is worth the modest added administrative step. NX-200 with RFID access solves exactly the shared-bay case, letting residents without a dedicated space still charge and be billed fairly per session.</p>",
+        "competitivePositioning": "<p>Some residential charging vendors propose a simpler flat-fee model to win the initial sale, which frequently becomes a source of resident conflict and support burden for the property manager within the first year. NMG's metered/RFID approach costs a little more upfront in setup complexity but avoids that downstream conflict.</p>",
+        "qualificationCriteria": "<p>Multi-unit residential building or HOA with shared or assigned parking; property manager or HOA board authorized to approve a shared-infrastructure capital decision; existing electrical service headroom in the parking garage.</p>",
+        "exampleConfiguration": "<p>16x NX-100 (dedicated resident bays), 8x NX-200 (shared bays with RFID per-session billing).</p>",
+        "relatedCaseStudies": "CASE-LINDQVIST-001",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "apartment building, NX-100, NX-200, residential, sales playbook"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SALES"
+    },
+    {
+      "externalReferenceCode": "SALES-DELIVERYFLEET-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Sales Playbook: Last-Mile Delivery Fleet Charging",
+        "segment": "Delivery fleet",
+        "customerProfile": "<p>Parcel and last-mile delivery companies operating electric van fleets from a central depot, typically under pressure to hit tight shift-change turnaround windows without charging conflicts disrupting delivery schedules.</p>",
+        "customerNeeds": "<p>Depot fast charging capable of turning around a delivery van fleet within shift-change windows; software-driven scheduling to prevent returning and departing vans from competing for the same charging bays; a path to scale as fleet electrification percentage increases.</p>",
+        "recommendedProducts": "DX-240 sized to the depot's dedicated supply, paired with Atlas Fleet for route-aware charge scheduling. DX-360 is rarely justified for last-mile delivery vans — reserve it only for depots with unusually large or long-range vehicles.",
+        "discoveryQuestions": "<p>What is your current shift-change charging conflict rate — how often do returning and departing vans compete for the same bay? What is your fleet electrification percentage today, and target over the next 1-2 years? What is your depot's existing electrical service capacity? Do you currently use any route-planning or fleet-management software that Atlas Fleet would need to complement or replace?</p>",
+        "valueProposition": "<p>DX-240 combined with Atlas Fleet's route-aware scheduling directly targets the shift-change conflict problem that is the most common operational pain point in last-mile delivery fleet electrification — not just adding charging capacity, but coordinating how it's used.</p>",
+        "objections": "<p>“We already have route-planning software — why do we need Atlas Fleet too?” / “Why DX-240 instead of the faster DX-360?”</p>",
+        "objectionResponses": "<p>Generic route-planning software plans delivery routes but does not coordinate charging scheduling against those routes — Atlas Fleet is purpose-built to connect the two, which is the actual source of shift-change conflicts. DX-240 delivers a charge speed well matched to typical delivery van battery capacity and route length; DX-360 adds cost without a corresponding turnaround-time benefit for most delivery fleets.</p>",
+        "competitivePositioning": "<p>Generic fleet-charging proposals frequently treat charging scheduling as an afterthought to hardware installation, leaving the customer to solve shift-change coordination manually. Atlas Fleet's route-aware scheduling is a genuine differentiator in delivery fleet deals.</p>",
+        "qualificationCriteria": "<p>Delivery fleet operator with a central depot and 15+ electric delivery vans; documented shift-change charging conflict pain point; existing or plannable dedicated three-phase electrical supply.</p>",
+        "exampleConfiguration": "<p>18x DX-240, Atlas Fleet with route-aware scheduling tuned against actual delivery route data.</p>",
+        "relatedCaseStudies": "CASE-NORDKREUZ-001, CASE-GREENWAY-001",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "delivery fleet, DX-240, Atlas Fleet, sales playbook"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SALES"
+    },
+    {
+      "externalReferenceCode": "SALES-INDUSTRIAL-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Sales Playbook: Industrial & Manufacturing Facility Charging",
+        "segment": "Industrial facility",
+        "customerProfile": "<p>Manufacturing and industrial facility operators needing to add fleet, forklift, or employee EV charging on a site where existing production equipment already consumes a large share of available electrical capacity.</p>",
+        "customerNeeds": "<p>Charging capacity that does not compete with or disrupt manufacturing equipment during peak production; a way to prioritize fleet/operational vehicle charging over lower-priority visitor or employee charging; avoidance of a costly electrical service upgrade where possible.</p>",
+        "recommendedProducts": "DX-120 or DX-240 depending on fleet/forklift speed needs and substation capacity. Orion Energy Manager is essential for any site near capacity limits — dynamic load balancing and charging priority rules make added capacity viable without a disruptive upgrade.",
+        "discoveryQuestions": "<p>How close is your current electrical service to its capacity limit during peak production? Do you have an electric forklift or yard-vehicle fleet that should be prioritized over employee/visitor charging? Have you had load-related incidents (breaker trips, curtailment) on your existing electrical service? What is your appetite for a further electrical service upgrade versus managing within existing capacity?</p>",
+        "valueProposition": "<p>Orion Energy Manager lets an industrial site add substantial fleet and employee charging capacity while treating manufacturing equipment as the non-negotiable priority load — this is frequently the deciding factor for a site that cannot simply request a larger electrical service connection on the timeline the business needs.</p>",
+        "objections": "<p>“We're worried adding charging will risk disrupting production.” / “Isn't Orion Energy Manager an unnecessary extra cost on top of the chargers themselves?”</p>",
+        "objectionResponses": "<p>Orion Energy Manager is specifically designed to prevent that risk — charging priority rules ensure manufacturing equipment is never curtailed to serve vehicle charging, with charging load dynamically shifted into available headroom instead. For any industrial site already near capacity, Orion Energy Manager is what avoids a multi-million-euro electrical service upgrade — it should be positioned as the enabling technology, not an add-on.</p>",
+        "competitivePositioning": "<p>This is one of NMG's strongest competitive positions: most competing DC fast-charging vendors have no equivalent to Orion Energy Manager's dynamic, priority-rule-based load management, and will either recommend a full electrical service upgrade (adding significant cost and timeline to the deal) or risk an installation that creates real load-conflict problems with existing production equipment once live. Lead with this capability gap explicitly in competitive industrial deals — it is difficult for most competitors to match.</p>",
+        "qualificationCriteria": "<p>Manufacturing or industrial site already at or near electrical service capacity; electric forklift/yard-vehicle fleet or planned fleet electrification; facilities/plant engineering function with authority over electrical capacity planning.</p>",
+        "exampleConfiguration": "<p>10x DX-120, 6x DX-240, Orion Energy Manager tuned against the plant's production load profile with charging priority rules favoring fleet vehicles over visitor/employee charging.</p>",
+        "relatedCaseStudies": "CASE-HELIOS-001, CASE-CONTINENTAL-001",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "confidential",
+        "tags": "industrial facility, Orion Energy Manager, DX-240, sales playbook, competitive"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SALES"
+    },
+    {
+      "externalReferenceCode": "SALES-MULTICOUNTRY-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Sales Playbook: Multi-Country Enterprise Rollout",
+        "segment": "Multi-country enterprise",
+        "customerProfile": "<p>Large enterprises with commercial real estate, retail, or facilities operations spanning multiple European countries, typically evaluating charging as a standardized program rather than a series of independent site decisions, with a facilities technology or real estate function holding cross-country budget authority.</p>",
+        "customerNeeds": "<p>A single centrally-manageable platform across all countries rather than a patchwork of country-specific vendor relationships; hardware selection that can still vary by site power availability and traffic without breaking the centralized management model; awareness of country-specific service-plan nuances (Germany's Bavaria/Baden-Württemberg same-day exception, Netherlands' metro-limited Gold coverage, Spain's extended non-metro response time) when setting customer expectations.</p>",
+        "recommendedProducts": "Mixed portfolio by site: NX-200/NX-400 standard, DX-120 high-traffic flagships, NX-450 selective premium sites. Unified under Polaris Charge Cloud company-wide, with Orion Energy Manager at high-load or solar-equipped sites.",
+        "discoveryQuestions": "<p>How many countries and properties are in scope for this program? Is there a single facilities technology or real estate function with cross-country budget authority, or does each country decide independently today? What existing charging vendor relationships, if any, would this program need to consolidate or replace? Are there specific properties with unusually high building loads or on-site solar generation that would benefit from Orion Energy Manager?</p>",
+        "valueProposition": "<p>Polaris Charge Cloud is the deal-defining differentiator for a multi-country program — it is what turns a patchwork of country-specific vendor relationships into a single reported, centrally-managed program, while still allowing hardware selection to vary sensibly by site.</p>",
+        "objections": "<p>“Wouldn't it be simpler to just pick one hardware tier and standardize everywhere?” / “How do we know service levels will actually be consistent across countries with different local realities?”</p>",
+        "objectionResponses": "<p>Forcing identical hardware everywhere means either overpaying at low-traffic sites or under-provisioning high-traffic ones — the country-spanning value is in the unified Polaris Charge Cloud management layer, not in identical hardware. On service levels, NMG's country-specific Gold/Professional plan exceptions (Netherlands metro-limited coverage, Spain's extended non-metro response, Germany's Bavaria/Baden-Württemberg same-day exception) should be disclosed transparently upfront during scoping, not discovered after signature — this builds trust and avoids a difficult conversation later.</p>",
+        "competitivePositioning": "<p>This is NMG's single strongest competitive position against multi-country competitors who typically operate through a loose federation of country-specific resellers with no unified reporting platform. Polaris Charge Cloud's API Management module, allowing integration into the customer's own facilities management platform, is frequently the feature that wins a multi-country enterprise deal outright — emphasize it early and do not let a competitor's lower per-unit hardware pricing in any single country distract from the platform-level value across the full program.</p>",
+        "qualificationCriteria": "<p>Enterprise with commercial property operations in 3+ European countries; centralized facilities technology or real estate budget authority; existing pain point around fragmented country-by-country vendor management.</p>",
+        "exampleConfiguration": "<p>Mixed NX-200/NX-400/NX-450/DX-120 hardware by site, Polaris Charge Cloud with API Management integration to the customer's facilities platform, Orion Energy Manager at high-load or solar-equipped sites.</p>",
+        "relatedCaseStudies": "CASE-CONTINENTAL-001, CASE-GREENWAY-001, CASE-HELIOS-001",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "confidential",
+        "tags": "multi-country enterprise, Polaris Charge Cloud, Orion Energy Manager, sales playbook, competitive"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SALES"
+    }
+  ]
+}

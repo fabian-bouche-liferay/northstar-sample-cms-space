@@ -1,0 +1,644 @@
+{
+  "configuration": {
+    "className": "com.liferay.object.rest.dto.v1_0.ObjectEntry",
+    "parameters": {
+      "createStrategy": "UPSERT",
+      "scopeKey": "NMG-KNOWLEDGE"
+    },
+    "taskItemDelegateName": "C_NMGFAQ"
+  },
+  "items": [
+    {
+      "externalReferenceCode": "FAQ-NX400-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Can an NX-400 operate without an Internet connection?",
+        "question": "Can an NX-400 operate without an Internet connection?",
+        "answer": "The NX-400 can continue delivering power to a connected vehicle even when it loses its connection to Polaris Charge Cloud, but some functionality is affected. The charger falls back to a local offline charging mode: it will still start and complete a session using its last-known authorization list (cached RFID or Plug & Charge credentials), but it cannot report live status, apply Orion Energy Manager priority rules, or synchronize billing to Polaris in real time. Session data queues locally and syncs automatically once connectivity (Ethernet or the integrated 4G module) is restored, so no charging data is lost, only delayed. Dynamic load balancing across paired units also pauses during an outage, since that feature depends on units negotiating shared circuit budget with each other and with Polaris. For sites where connectivity is unreliable, we recommend keeping the offline authorization cache populated and, where possible, a secondary Ethernet or 4G path for resilience. See PROD-NX400 and SPEC-NX400-01 for full connectivity specifications.",
+        "productCode": "NX-400",
+        "faqDomain": "product-capability",
+        "relatedArticles": "PROD-NX400, SPEC-NX400-01",
+        "effectiveDate": "2025-04-01",
+        "businessDomain": "product",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-400, connectivity, offline, OCPP"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-NX200-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Does the NX-200 support OCPP 2.0.1?",
+        "question": "Does the NX-200 support OCPP 2.0.1?",
+        "answer": "No. The NX-200 (Nova AC 200) communicates using OCPP 1.6J only. OCPP 2.0.1 support is reserved for the NX-400, NX-450, and the entire Nova DC (DX) series -- a common point of confusion because the NX-200 and NX-400 look similar, share the Nova AC naming, and target overlapping corporate and hospitality use cases. If your back-office or third-party charge management platform requires OCPP 2.0.1 -- for example to use ISO 15118 Plug & Charge or the newer 2.0.1 security profiles -- the NX-200 will not meet that requirement regardless of firmware version. There is no firmware path that upgrades an NX-200 from 1.6J to 2.0.1, since the protocol stack is tied to the unit's controller hardware, not just its software. If OCPP 2.0.1 is a hard requirement, specify the NX-400 (standard tier) or NX-450 (premium tier, also adds Plug & Charge) instead. Sales and pre-sales teams should confirm the OCPP version requirement explicitly before quoting an NX-200 for any RFP that mentions OCPP 2.0.1, ISO 15118, or Plug & Charge. See PROD-NX200 and PROD-NX400 for the full comparison.",
+        "productCode": "NX-200",
+        "faqDomain": "product-capability",
+        "relatedArticles": "PROD-NX200, PROD-NX400",
+        "effectiveDate": "2025-04-01",
+        "businessDomain": "product",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-200, OCPP, protocol, compatibility"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-SERVICE-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Can Gold customers request an engineer on Sunday?",
+        "question": "Can Gold customers request an engineer on Sunday?",
+        "answer": "Yes. The Gold service plan provides 24/7 coverage, including weekends and public holidays, so a Gold customer can log a request on Sunday and receive the same response commitments as any other day of the week: a 30-minute remote response for critical issues, and on-site attendance within 4 hours in supported metropolitan areas (8 hours elsewhere), with no reduction in service level for weekend requests. This is a key differentiator from the Essential plan (Monday to Friday, 08:00-18:00 local time only) and the Professional plan (Monday to Saturday, 07:00-22:00), neither of which covers Sunday at all. A small number of countries adjust the metro-coverage or on-site windows under Gold -- for example the Netherlands' 4-hour metro coverage is limited to Amsterdam, Rotterdam, Utrecht, and The Hague, and Spain extends the elsewhere on-site window to 10 hours outside Madrid and Barcelona -- but the 24/7 availability itself is unchanged everywhere Gold is offered. Customers should log the request through the standard Polaris support channel so the response-time clock starts correctly, even outside normal business hours.",
+        "faqDomain": "service-plans",
+        "effectiveDate": "2025-05-01",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "Gold plan, SLA, service hours, weekend support"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-POLARIS-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "What happens to charging sessions when Polaris Cloud is unavailable?",
+        "question": "What happens to charging sessions when Polaris Cloud is unavailable?",
+        "answer": "A charging session that is already running when Polaris Charge Cloud becomes unreachable is not interrupted -- the charger continues to deliver power using its locally cached authorization and configuration data. What changes during the outage is visibility and coordination: live status updates, remote monitoring, and Orion Energy Manager's dynamic priority rules are all unavailable until connectivity returns, since those features depend on an active link to the cloud platform. New sessions can usually still start if the driver's credential (RFID card or Plug & Charge certificate) is already present in the charger's local cache; a brand-new or recently-issued credential that hasn't yet synced to the charger may be rejected until the connection is restored. Session and meter data queue locally on the charger and upload automatically once Polaris is reachable again, so billing information is not lost, only delayed -- this can occasionally show up as a short gap between when a session ended and when it appears in reporting. For sites where uptime is critical, we recommend a secondary network path (4G as a backup to Ethernet, or vice versa) to reduce the chance of a simultaneous outage on both links.",
+        "faqDomain": "platform-availability",
+        "effectiveDate": "2025-05-01",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "Polaris, offline mode, outage, session data"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-ORION-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Can Orion Energy Manager prioritize company vehicles over visitor vehicles?",
+        "question": "Can Orion Energy Manager prioritize company vehicles over visitor vehicles?",
+        "answer": "Yes. Orion Energy Manager's charging priority rules can be configured so that vehicles identified as company or fleet vehicles receive priority access to available power over visitor or guest vehicles at the same site. This is typically implemented by grouping chargers or RFID/Plug & Charge credentials into fleet and visitor categories, then setting a priority rule that allocates the site's available charging capacity to the fleet group first during periods of constrained supply -- for example when building load balancing has reduced the power budget available for EV charging, or when solar generation and battery storage (available from Orion 3.1 and 3.2 respectively) aren't covering full site demand. Visitor vehicles still charge, but may see a lower maximum rate or be queued behind fleet sessions until capacity frees up. This is commonly used by corporate campuses that want to guarantee their own fleet is ready for the workday while still offering charging as an amenity to visitors. Configuring priority rules requires Orion Energy Manager 3.0 or later and is done through the Orion administration console; contact your account team if you need help designing a priority scheme for a mixed fleet/visitor site.",
+        "faqDomain": "energy-management",
+        "effectiveDate": "2025-06-01",
+        "businessDomain": "product",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "Orion Energy Manager, load balancing, charging priority, fleet"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-NX400-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Does the NX-400 support Plug & Charge?",
+        "question": "Does the NX-400 support Plug & Charge?",
+        "answer": "No, the NX-400 does not support Plug & Charge. It supports OCPP 2.0.1, RFID authentication, and dynamic load balancing, but ISO 15118 Plug & Charge -- the ability for a vehicle to authenticate and start a session automatically simply by plugging in, with no card or app required -- is reserved for its premium successor, the NX-450, which launched in March 2026. This is a common point of confusion because the NX-400 and NX-450 share the same power output (2x22 kW), socket count, connectivity, and OCPP version, and look nearly identical; the difference is specifically Plug & Charge support plus improved energy metering on the NX-450. If Plug & Charge is a requirement -- for example for a fleet that wants frictionless, unattended overnight charging -- specify the NX-450, not the NX-400. There is no firmware upgrade path that adds Plug & Charge to an existing NX-400 unit, since it requires the NX-450's updated secure element hardware for certificate storage. Customers who already deployed NX-400 units and now need Plug & Charge should discuss an NX-450 upgrade or mixed-fleet path with their account team rather than expecting a software update to unlock the feature.",
+        "productCode": "NX-400",
+        "faqDomain": "product-capability",
+        "relatedArticles": "PROD-NX400, PROD-NX450",
+        "effectiveDate": "2026-04-01",
+        "businessDomain": "product",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-400, NX-450, Plug and Charge, ISO 15118"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-NX450-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "What's the real difference between the NX-400 and the NX-450?",
+        "question": "What's the real difference between the NX-400 and the NX-450?",
+        "answer": "The NX-400 and NX-450 (both Nova AC dual-socket units) share the same headline specifications: 2x22 kW output across two sockets, Ethernet plus standard integrated 4G, OCPP 2.0.1, RFID authentication, and dynamic load-balancing-aware charging. The NX-450 is positioned as the premium successor, released March 2026, and adds two things the NX-400 does not have: ISO 15118 Plug & Charge (automatic, card-free authentication when a vehicle plugs in) and improved energy metering accuracy. If a deployment doesn't need Plug & Charge, the NX-400 remains a fully supported, current product covering the same large corporate and public parking use case at a lower price point. If frictionless, unattended charging authentication matters -- for example ride-hailing or corporate fleets that want drivers to plug in and walk away with no card tap -- the NX-450 is the right choice. Existing NX-400 deployments are not automatically compatible with Plug & Charge via a firmware update, since the feature depends on hardware (a secure element for certificate storage) unique to the NX-450. For new large corporate or public parking projects, ask whether the customer anticipates needing Plug & Charge in the next 1-2 years before defaulting to the NX-400.",
+        "productCode": "NX-450",
+        "faqDomain": "product-capability",
+        "relatedArticles": "PROD-NX400, PROD-NX450",
+        "effectiveDate": "2026-04-01",
+        "businessDomain": "product",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-400, NX-450, Plug and Charge, product comparison"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-NX200-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Does the NX-200 include 4G connectivity out of the box?",
+        "question": "Does the NX-200 include 4G connectivity out of the box?",
+        "answer": "No -- on the NX-200, 4G is an optional add-on module, not a standard feature. The NX-200 ships with Ethernet and Wi-Fi as its standard connectivity, and a 4G module can be added where a wired or Wi-Fi connection isn't practical, for example a car park with no nearby network drop. This is different from the NX-400 and NX-450, both of which include integrated 4G as standard alongside Ethernet, reflecting their positioning for larger, higher-criticality deployments where cellular backup connectivity is expected by default rather than optioned in. When quoting an NX-200 for a site with no reliable wired network, confirm the 4G add-on is included in the order -- it is not assumed, and a unit ordered without it will only have Ethernet/Wi-Fi connectivity. If a customer's requirements list standard 4G or built-in cellular backup as a hard requirement, the NX-400 (or NX-450) is a better fit out of the box than the NX-200 plus an add-on, particularly for sites where connectivity resilience is a priority. See PROD-NX200 and SPEC-NX200-01 for the full connectivity option list.",
+        "productCode": "NX-200",
+        "faqDomain": "product-capability",
+        "relatedArticles": "PROD-NX200, SPEC-NX200-01",
+        "effectiveDate": "2025-04-01",
+        "businessDomain": "product",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-200, 4G, connectivity, add-on"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-SERVICE-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "What's the difference in response times between the Professional and Gold service plans?",
+        "question": "What's the difference in response times between the Professional and Gold service plans?",
+        "answer": "The two plans differ in both coverage hours and response speed. Professional covers Monday to Saturday, 07:00-22:00 local time, with a 4-hour remote response target and next-business-day on-site attendance. Gold covers 24/7 -- including Sundays and holidays -- with a much faster critical remote response target of 30 minutes, and on-site attendance within 4 hours in supported metropolitan areas (8 hours elsewhere). In short, Gold is both broader (any time, any day) and faster (30 minutes vs. 4 hours remote, same-day-class on-site vs. next-business-day) than Professional. Essential, the entry-level plan, is narrower still: weekday business hours only, an 8-business-hour remote response, and 3-business-day on-site attendance. Which plan is appropriate usually comes down to how critical uptime is at a given site -- a single-charger employee car park may be well served by Essential or Professional, while a public fast-charging hub or a 24-hour logistics depot typically needs Gold. Note that a handful of countries adjust the Gold and Professional windows slightly -- see the country-specific FAQs for the Netherlands, Spain, and Germany -- so always confirm local exceptions before quoting a response-time commitment to a customer.",
+        "faqDomain": "service-plans",
+        "effectiveDate": "2025-05-01",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "service plans, SLA, Professional, Gold, response time"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-SERVICE-003",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "How fast will a Gold-plan engineer reach me in the Netherlands?",
+        "question": "How fast will a Gold-plan engineer reach me in the Netherlands?",
+        "answer": "It depends on location. Under the Gold plan, the standard 4-hour on-site response applies in the Netherlands only within Amsterdam, Rotterdam, Utrecht, and The Hague -- these are the metro areas where NMG maintains the field-technician density to guarantee that window. Outside those four cities, the on-site response extends to 8 hours, the same as the general elsewhere commitment used in most other countries. The 30-minute critical remote response and 24/7 availability are unchanged nationwide -- the country exception only affects how quickly a technician can physically reach the site, not how quickly a remote engineer picks up the case. If a site is near, but not inside, one of the four listed metro areas, plan for the 8-hour window rather than assuming the 4-hour commitment applies -- proximity alone doesn't extend metro coverage. Sales and support teams quoting Gold-plan SLAs for a Dutch site should confirm the exact installation address against this list before committing to the 4-hour figure, since misquoting this to a customer is one of the more common Dutch SLA support escalations. See the general service-plan comparison FAQ for the underlying Essential/Professional/Gold structure.",
+        "faqDomain": "service-plans",
+        "relatedArticles": "FAQ-SERVICE-002",
+        "effectiveDate": "2025-05-01",
+        "businessDomain": "support",
+        "countryScope": "netherlands",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "Gold plan, Netherlands, SLA, on-site response"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-SERVICE-004",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Is the Gold plan's 8-hour on-site response guaranteed everywhere in Spain?",
+        "question": "Is the Gold plan's 8-hour on-site response guaranteed everywhere in Spain?",
+        "answer": "No -- in Spain, the on-site window outside the Madrid and Barcelona metro areas is 10 hours, not the standard 8 hours used elsewhere. This is a deliberate country exception, not an error: field-technician density outside Spain's two largest metro areas is lower than in most other markets where NMG operates Gold-plan coverage, so the on-site commitment is extended slightly to reflect realistic travel times to more remote installation sites. Inside Madrid or Barcelona, the standard Gold-plan commitments apply in full: 30-minute critical remote response and 4-hour on-site attendance, 24/7. The 10-hour figure only applies to the elsewhere case, not to the two metro areas. When quoting Gold-plan coverage for a Spanish site outside Madrid or Barcelona -- for example a public charging hub along a coastal highway or a logistics depot in a smaller city -- always state the 10-hour window rather than the generic 8-hour figure used for most other countries, to avoid setting an expectation the local field team cannot meet. This exception does not affect Essential or Professional plan commitments in Spain, which follow the standard structure.",
+        "faqDomain": "service-plans",
+        "relatedArticles": "FAQ-SERVICE-002",
+        "effectiveDate": "2025-05-01",
+        "businessDomain": "support",
+        "countryScope": "spain",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "Gold plan, Spain, SLA, on-site response"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-SERVICE-005",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Is the Professional plan's on-site response always next business day in Germany?",
+        "question": "Is the Professional plan's on-site response always next business day in Germany?",
+        "answer": "Not everywhere. In most of Germany, the Professional plan's on-site response is next business day, matching the standard commitment used in other countries. However, in Bavaria and Baden-Wurttemberg specifically, Professional-plan on-site response is upgraded to same-day, provided the request is logged before 12:00 local time. A request logged after 12:00 in those two states falls back to the standard next-business-day window, since there usually isn't enough of the working day left to guarantee same-day dispatch and travel. Outside Bavaria and Baden-Wurttemberg, the exception does not apply, and next-business-day remains the correct commitment regardless of what time the request is logged. This exception exists because of the stronger field-technician coverage NMG maintains in those two southern states, which are also where a large share of German automotive and logistics customers are concentrated. It applies only to the Professional plan -- Essential's 3-business-day on-site commitment and Gold's 24/7, hours-based commitments are unaffected by this regional adjustment. When logging a support ticket for a German site in Bavaria or Baden-Wurttemberg before midday, confirm the ticket is flagged for same-day dispatch rather than defaulting to the standard next-business-day queue.",
+        "faqDomain": "service-plans",
+        "relatedArticles": "FAQ-SERVICE-002",
+        "effectiveDate": "2025-05-01",
+        "businessDomain": "support",
+        "countryScope": "germany",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "Professional plan, Germany, SLA, on-site response"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-BILLING-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Can Polaris apply a new tariff in the middle of an active charging session?",
+        "question": "Can Polaris apply a new tariff in the middle of an active charging session?",
+        "answer": "Yes -- mid-session tariff-change support was added to the Polaris Billing module in the 2025.4 release (November 2025). Before that release, a tariff change during an active session could only be applied to the next session, not the one already in progress; from 2025.4 onward, Polaris can recalculate billing for the portion of a session that occurs after a tariff change takes effect, splitting the session into the applicable price periods automatically. This is useful for sites with time-of-use pricing, where a session that spans a peak-to-off-peak boundary should be billed at two different rates rather than one flat rate for the whole session. One caveat worth knowing: there is currently an open investigation into occasional meter-synchronization mismatches on sessions that span a tariff change on 2025.4, which can in rare cases produce a billing amount that doesn't immediately reconcile with the meter reading. If a customer reports an unexpected charge on a session that crossed a tariff boundary, check whether it falls into this pattern before assuming it's a one-off data-entry error, and escalate to the Polaris billing support queue for review.",
+        "faqDomain": "billing",
+        "relatedArticles": "REL-POLARIS-2025.4, KI-POLARIS-003",
+        "effectiveDate": "2025-12-01",
+        "businessDomain": "sales",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "Polaris, billing, tariff change, mid-session"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-BILLING-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Why does my invoice show a different amount than what I expected for a session?",
+        "question": "Why does my invoice show a different amount than what I expected for a session?",
+        "answer": "A billed amount that doesn't match your expectation is most often caused by one of a few things. First, check whether the session crossed a tariff change (see the FAQ on mid-session tariff changes) -- a session split across two price periods can look wrong if you're only comparing it to a single flat rate. Second, an error code E404 (meter synchronization / billing session mismatch) indicates Polaris detected a discrepancy between the charger's own meter reading and the billing record it received -- this can happen after a brief connectivity interruption during the session, and usually self-corrects once the charger's queued data syncs, but occasionally needs a manual review by support. Third, confirm which service plan or corporate account discount applies to the site -- pricing can vary by account, and an invoice that looks high for a public rate may be correct for a different, non-discounted account. If none of these explain the discrepancy, submit a billing dispute through the Polaris customer portal with the session ID; support can pull the raw meter and session logs to confirm the correct amount and issue a correction if needed.",
+        "faqDomain": "billing",
+        "relatedArticles": "FAQ-BILLING-001",
+        "effectiveDate": "2025-12-01",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "billing, invoice, E404, meter sync"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-NX400-003",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Why does my NX-400 lose its OCPP connection after a few days?",
+        "question": "Why does my NX-400 lose its OCPP connection after a few days?",
+        "answer": "This is a known issue affecting NX-400 units running firmware 4.8 specifically (error code E217): a session-token cache leak in the OCPP client caused the backend connection to drop intermittently after roughly 72 hours of continuous uptime, most noticeable on dual-socket units handling a high volume of sessions. It does not affect any other firmware version, and it does not affect NX-200, NX-450, or DX-series units. The fix shipped in firmware 4.8.1 (March 2025), which patches the cache eviction logic that was causing the leak -- once a unit is upgraded to 4.8.1 or later, the issue does not recur. If you're still on 4.8 and can't upgrade immediately, the interim workaround is a scheduled nightly OCPP reconnect triggered from Polaris, which clears the leaked cache before it accumulates enough to cause a drop; full steps are in the related support article. We strongly recommend upgrading affected units to 4.8.1 rather than relying on the workaround long-term, since the workaround only masks the symptom rather than fixing the underlying cache leak. Check your unit's current firmware version in the Polaris device list before troubleshooting further -- if it's already on 4.8.1 or later, this issue is not the cause of a connection drop you're seeing.",
+        "productCode": "NX-400",
+        "faqDomain": "known-issue",
+        "relatedArticles": "KB-NX400-014, KI-NX400-004, REL-NX400-4.8.1",
+        "effectiveDate": "2025-03-15",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-400, OCPP, E217, known issue, firmware 4.8"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-INSTALL-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "What electrical supply does a DX-240 fast charger need?",
+        "question": "What electrical supply does a DX-240 fast charger need?",
+        "answer": "The DX-240 is a modular 240 kW DC fast charger (2x120 kW modules) and needs approximately 350A of three-phase 400V supply to run at full rated output. This is a step up from the DX-120, which needs roughly 175A three-phase 400V -- the DX-240 essentially doubles the DX-120's power electronics, so plan the incoming supply and any dedicated transformer capacity accordingly rather than assuming a simple linear scale-up from a smaller unit already on site. Installation prerequisites -- dedicated transformer room considerations, cable routing, and switchgear sizing -- closely resemble what's required for a DX-120 installation, just rated for the higher current draw, so a site survey that already accounts for DX-120-class infrastructure is a reasonable starting point but must be re-verified against the DX-240's actual current requirement, not copied assuming the numbers are interchangeable. Because the DX-240 is aimed at logistics hubs with multiple vehicles charging in sequence or parallel across its 2-4 guns, always confirm the site's grid connection capacity and any local utility approval process early in the project -- undersized supply is the most common cause of overcurrent protection trips (error E301) after commissioning. Consult SPEC-DX240 for the full technical specification before finalizing an electrical design.",
+        "productCode": "DX-240",
+        "faqDomain": "installation",
+        "relatedArticles": "SPEC-DX240",
+        "effectiveDate": "2025-06-01",
+        "businessDomain": "operations",
+        "countryScope": "global",
+        "audience": "installer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "DX-240, electrical supply, installation, three-phase"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-INSTALL-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Do I need a licensed electrician to install an NX-200?",
+        "question": "Do I need a licensed electrician to install an NX-200?",
+        "answer": "Yes -- NX-200 installation always requires a licensed electrician, since it involves connecting a 22 kW AC charging unit to the building's electrical supply and, in most jurisdictions, this work is legally restricted to qualified electrical professionals regardless of the equipment vendor. What has changed over time is the paperwork around it: an older installation procedure required a separate licensed-electrician sign-off form to be submitted to NMG as part of the commissioning checklist, but that standalone form is no longer used -- the current installation procedure folds electrician certification into the standard commissioning checklist instead of requiring a separate document. If you're following an older printed or saved copy of the NX-200 install procedure that references a dedicated sign-off form, check the current procedure library for the up-to-date version before commissioning, since the older document has been superseded. Beyond the electrical connection itself, the installer should also confirm local permitting requirements, verify the available circuit capacity supports the NX-200's 22 kW draw (or lower, if load-limited), and complete the standard commissioning checks in Polaris before handing the unit over to the customer. See PROC-INSTALL-NX200 for the current step-by-step procedure.",
+        "productCode": "NX-200",
+        "faqDomain": "installation",
+        "relatedArticles": "PROC-INSTALL-NX200",
+        "effectiveDate": "2025-07-01",
+        "businessDomain": "operations",
+        "countryScope": "global",
+        "audience": "installer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-200, installation, electrician, commissioning"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-HR-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Can employees charge their personal EVs at NMG offices?",
+        "question": "Can employees charge their personal EVs at NMG offices?",
+        "answer": "Yes, employees at NMG offices with on-site charging infrastructure are generally permitted to charge personal EVs, subject to local site rules and fair-use expectations set by facilities management at each location. Because NMG office car parks typically use the same charger hardware and Polaris platform sold to customers, employee charging is usually managed through the same RFID or app-based authentication used for any other charging session, with employee sessions tracked separately from visitor or fleet sessions for reporting purposes. Some sites may apply a reasonable daily or session-length cap during peak hours to make sure charging capacity is available to as many employees as possible, particularly at offices where charger count is limited relative to the number of EV-driving staff -- check with your local facilities or HR contact for site-specific rules before assuming unrestricted access. Cost treatment (free, subsidized, or billed) also varies by site and by country, since electricity pricing and any applicable benefit-in-kind tax treatment differ across NMG's markets. If your office doesn't currently offer employee charging and you believe there's demand for it, raise it with facilities management -- new employee charging installations are evaluated on a per-site basis.",
+        "faqDomain": "workplace-policy",
+        "effectiveDate": "2025-01-15",
+        "businessDomain": "humanResources",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "HR, employee benefits, EV charging, offices"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-HR-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "How many vacation days do France-based NMG employees get?",
+        "question": "How many vacation days do France-based NMG employees get?",
+        "answer": "Vacation entitlement for France-based NMG employees follows French statutory minimums as a baseline, with NMG's own policy layered on top where it provides additional entitlement beyond what local law requires. Exact day counts can vary by contract type, seniority, and any applicable collective bargaining agreement provisions specific to France, so this FAQ intentionally does not quote a single fixed number -- the authoritative figure for any individual employee is what's stated in their employment contract and the current France-specific HR policy document, not a generic company-wide figure, since entitlement structures differ meaningfully between NMG's countries of operation. If you need your exact current entitlement, check your contract or the employee self-service HR portal, which reflects your specific accrual based on start date and any carried-over days from the previous period. For general questions about how vacation accrual and carry-over work at NMG, HR can walk through the applicable France policy in more detail; this FAQ is meant as a pointer to the right source rather than a substitute for it, since vacation policy details are reviewed periodically.",
+        "faqDomain": "hr-policy",
+        "effectiveDate": "2025-01-15",
+        "businessDomain": "humanResources",
+        "countryScope": "france",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "HR, France, vacation, leave policy"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-HR-003",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "How many days a week can NMG employees work remotely?",
+        "question": "How many days a week can NMG employees work remotely?",
+        "answer": "NMG's current remote-work policy allows a limited, structured number of remote days per week rather than open-ended remote work -- the exact cap and any role- or team-specific exceptions are set out in the current HR remote-work policy, which employees should check directly since this is an area where policy has changed over time. An earlier version of the policy allowed effectively unlimited remote work; that approach was later revised in favor of a capped structure, reflecting feedback that some in-person collaboration time benefited team cohesion and cross-functional work. If you're referencing an older internal document or an informal understanding from before the policy update, treat it as outdated and check the current policy rather than relying on it, since the two describe materially different arrangements. Managers have some discretion to adjust the standard cap for specific roles -- for example field service engineers or fully distributed teams -- so if your situation doesn't fit the general policy, discuss it with your manager and HR rather than assuming the standard cap automatically applies or doesn't apply. As with vacation entitlement, country-specific labor law can also affect remote-work arrangements in some NMG markets, so the exact rule may not be perfectly identical everywhere.",
+        "faqDomain": "hr-policy",
+        "effectiveDate": "2025-02-01",
+        "businessDomain": "humanResources",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "HR, remote work, hybrid policy"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-DATA-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "How long does NMG retain diagnostic logs from charging stations?",
+        "question": "How long does NMG retain diagnostic logs from charging stations?",
+        "answer": "The current diagnostic log retention period is 60 days, set by policy POL-DATA-002 (effective 2025), which superseded an earlier policy (POL-DATA-001, 2023) that had set retention at 90 days. The shorter window reflects a tightened approach to how long device-level diagnostic data -- connectivity logs, error codes, firmware event traces -- is kept before automatic deletion, balancing troubleshooting usefulness against data-minimization principles. If you need diagnostic data for a support case or an ongoing known-issue investigation, retrieve and archive the relevant logs promptly once a case is opened rather than assuming they'll still be available 60+ days later, since routine automatic deletion does not pause for an open ticket unless the data has been explicitly flagged and exported. Do not quote the older 90-day figure to a customer or partner -- that number is from the superseded policy and no longer reflects NMG's actual retention practice. This distinction matters most for support agents handling escalations that reference historical data, and for any compliance or legal request for log data, where citing the wrong retention window could misrepresent what data is actually available. Direct any external requests for retained diagnostic data to the compliance team rather than responding directly, per standard data-handling procedure.",
+        "faqDomain": "data-retention",
+        "relatedArticles": "POL-DATA-002, POL-DATA-001",
+        "effectiveDate": "2025-01-10",
+        "businessDomain": "compliance",
+        "countryScope": "global",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "confidential",
+        "tags": "data retention, compliance, diagnostic logs, policy"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-FIRMWARE-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "What's the recommended way to update firmware on an NX-400?",
+        "question": "What's the recommended way to update firmware on an NX-400?",
+        "answer": "The recommended method is a remote firmware update pushed through Polaris Charge Cloud, which is now the preferred approach for NX-400 units. This replaces the older USB-based update procedure, which required a technician to physically visit each unit with a prepared USB drive -- a slower, more labor-intensive process that doesn't scale well across a large fleet of installed chargers. Remote updates via Polaris let an administrator schedule a firmware rollout across many units at once, monitor progress centrally, and retry or roll back automatically if an update fails (for example due to error E512, an interrupted transfer or checksum mismatch), without dispatching a technician. The USB method is still technically usable as a fallback -- for example at a site with no network connectivity at all -- but should not be treated as the standard path going forward; if you're following older documentation that presents USB as the primary method, that guidance is outdated and has been superseded by the remote-update procedure. Before initiating any firmware update, confirm the target version against the current release notes to understand what's changing and whether any known issues apply to the version you're updating to or from.",
+        "productCode": "NX-400",
+        "faqDomain": "firmware",
+        "relatedArticles": "PROC-MAINT-NX400-FWREMOTE, PROC-MAINT-NX400-FWUSB",
+        "effectiveDate": "2025-06-01",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "installer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-400, firmware, update, Polaris remote update"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-DX240-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Does the DX-240 need special overcurrent protection settings to comply with German grid regulations?",
+        "question": "Does the DX-240 need special overcurrent protection settings to comply with German grid regulations?",
+        "answer": "Yes -- DX-240 installations in Germany need overcurrent protection calibrated to local grid compliance settings, and this is worth flagging specifically because an earlier calibration default caused a known issue: overcurrent protection (error E301) could miscalibrate and trip under certain German grid compliance configurations on firmware versions prior to the overcurrent calibration update. That issue has since been fixed, and current DX-240 firmware ships with the corrected calibration logic, but it's a useful reminder that grid-compliance settings for high-power DC fast chargers can be genuinely different by country, not just a checkbox -- Germany's grid codes for units in the DX-240's power class impose specific overcurrent and reactive-power behavior that installers need to configure correctly during commissioning, not just leave at a generic default. When commissioning a DX-240 in Germany, confirm the unit is running current firmware and that the grid-compliance profile selected during setup matches German requirements rather than a generic or another country's default profile. If nuisance E301 trips occur after commissioning on a unit that should already have the fix, check the firmware version first before assuming a new hardware fault, since an outdated firmware version reintroduces the exact symptom this fix resolved.",
+        "productCode": "DX-240",
+        "faqDomain": "installation",
+        "relatedArticles": "KI-DX240-001",
+        "effectiveDate": "2025-08-01",
+        "businessDomain": "support",
+        "countryScope": "germany",
+        "audience": "installer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "DX-240, Germany, grid compliance, overcurrent"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-SALES-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "What's the difference between Atlas Fleet and Orion Energy Manager?",
+        "question": "What's the difference between Atlas Fleet and Orion Energy Manager?",
+        "answer": "The two products solve related but distinct problems. Atlas Fleet is a fleet management and EV charging optimization platform -- it's built around the vehicles and drivers, handling things like route-aware charge scheduling, depot capacity forecasting, and a driver-facing mobile app, so it's the right fit for a customer whose primary concern is managing a fleet of vehicles and making sure they're charged and ready when needed. Orion Energy Manager, by contrast, is a site-side dynamic energy management product -- it's built around the building's electrical supply, handling load balancing, solar generation awareness, battery storage integration, and charging priority rules such as prioritizing company vehicles over visitor vehicles, so it's the right fit for a customer whose primary concern is managing site-level power capacity and cost across multiple chargers and other electrical loads. Many customers use both together: Atlas Fleet to manage the fleet and its charging schedule, and Orion Energy Manager to make sure the site can actually deliver that power without exceeding its electrical capacity or on-peak energy costs. In a discovery conversation, ask whether the customer's primary pain point is managing our vehicles (Atlas Fleet) or managing our site's power (Orion) to identify which product, or both, fits the opportunity.",
+        "faqDomain": "product-comparison",
+        "effectiveDate": "2025-09-01",
+        "businessDomain": "sales",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "Atlas Fleet, Orion Energy Manager, product comparison"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-NX100-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Is the NX-100 a good fit for a large corporate parking deployment?",
+        "question": "Is the NX-100 a good fit for a large corporate parking deployment?",
+        "answer": "Not usually. The NX-100 (Nova AC 100) is positioned for small business and employee parking use cases -- a single 7.4 kW socket, no RFID, no 4G, no load balancing -- which makes it a good, cost-effective fit for a handful of chargers at a small office, but it doesn't have the capacity management, authentication, or connectivity redundancy features that a large corporate or public parking deployment typically needs. For a larger site, the NX-200 (single 22 kW socket, RFID, optional 4G) or the NX-400/NX-450 (dual 22 kW sockets, standard 4G, RFID, dynamic load balancing, and for the NX-450 Plug & Charge) are much better suited, since large deployments usually need to manage shared electrical capacity across many simultaneous sessions, authenticate a wide range of users reliably, and maintain connectivity resilience that the NX-100 wasn't designed for. If a prospect specifically asks about the NX-100 for a large site, it's worth probing why -- sometimes it's simply unfamiliarity with the product range, and steering the conversation toward the NX-200 or NX-400/450 based on actual site size, expected simultaneous usage, and connectivity needs will produce a better-fitting recommendation and a better outcome for the customer.",
+        "productCode": "NX-100",
+        "faqDomain": "product-fit",
+        "relatedArticles": "PROD-NX100, PROD-NX200, PROD-NX400",
+        "effectiveDate": "2025-09-01",
+        "businessDomain": "sales",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-100, product fit, corporate parking"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-SUPPORT-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "What does error code E301 mean on my charger?",
+        "question": "What does error code E301 mean on my charger?",
+        "answer": "E301 indicates a circuit breaker trip or overcurrent protection event -- the charger's internal protection has detected current draw beyond what it's rated or configured to handle safely, and has shut down the affected output as a safety measure. This can happen on any AC or DC unit, but it's most commonly seen on the higher-power DX-240 and DX-360 DC fast chargers when the site's incoming electrical supply is undersized relative to the unit's rated draw, or when multiple high-power sessions are running simultaneously without adequate load management in place. It can also occur on any unit if there's a genuine downstream electrical fault -- a damaged cable, a vehicle-side issue, or a wiring problem in the building's own circuit. If E301 appears occasionally and clears on retry, it may be a load-balancing or capacity issue worth reviewing with your installer; if it appears consistently or immediately on connection, treat it as a potential electrical fault and have it inspected by a qualified electrician before attempting further charging sessions, since repeatedly resetting past a genuine overcurrent fault is a safety risk. Log the exact circumstances -- time, other simultaneous sessions, any recent electrical work on site -- when reporting E301 to support, as it speeds up diagnosis considerably.",
+        "faqDomain": "error-codes",
+        "effectiveDate": "2025-03-01",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "E301, error codes, overcurrent, circuit breaker"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-SUPPORT-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "My NX-200 rejects RFID cards after sitting idle overnight -- is this a known issue?",
+        "question": "My NX-200 rejects RFID cards after sitting idle overnight -- is this a known issue?",
+        "answer": "This was a known issue on NX-200 units running firmware versions prior to an RFID reader driver update: the reader could reject valid RFID cards (error E117) specifically after an extended overnight idle period, most likely due to the reader entering a low-power state that didn't fully re-initialize on the next card presentation. The issue has since been fixed via the RFID reader driver update, and units running current firmware do not exhibit this behavior -- if you're seeing this symptom on a unit you believe is already updated, it's worth double-checking the actual installed firmware version in Polaris rather than assuming the fix is present, since an update can occasionally fail to complete on the affected unit. This FAQ is retained for historical reference but is superseded: if a customer reports this exact symptom today, treat it as a new report rather than an instance of the old, already-fixed issue, and verify the firmware version and RFID reader status directly before reusing this explanation, since a similar-looking symptom on current firmware would have a different root cause and would need its own investigation rather than being closed out against this older known issue.",
+        "productCode": "NX-200",
+        "faqDomain": "known-issue",
+        "relatedArticles": "KI-NX200-003",
+        "effectiveDate": "2024-02-01",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "superseded",
+        "confidentiality": "public",
+        "tags": "NX-200, RFID, E117, known issue, superseded"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-SUPPORT-003",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Can I self-diagnose an E607 error using the original NX-200 4G troubleshooting checklist?",
+        "question": "Can I self-diagnose an E607 error using the original NX-200 4G troubleshooting checklist?",
+        "answer": "The original standalone NX-200 4G troubleshooting checklist for E607 (4G/cellular modem connection failure) is deprecated and should not be used as the primary self-diagnosis path anymore. It was written before Polaris's remote diagnostics capability existed, and asked customers to manually check antenna connections, SIM seating, and signal indicators on the unit itself. Remote Diagnostics, added to Polaris in the 2024.3 release, can now check most of these conditions centrally -- signal strength, modem status, and recent connection history -- without a site visit, which is faster and more reliable than the old manual checklist and is the current recommended first step for any E607 report. E607 can affect the NX-200's optional 4G module as well as the standard 4G connectivity on NX-400, NX-450, and the DX series, so the current guidance applies across all of those products rather than being NX-200-specific the way the old checklist was. If you're still working from a printed or bookmarked copy of the original checklist, treat it as outdated: start with Polaris Remote Diagnostics instead, and only fall back to an on-site physical check if remote diagnostics can't resolve or explain the failure.",
+        "productCode": "NX-200",
+        "faqDomain": "troubleshooting",
+        "effectiveDate": "2024-05-01",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "deprecated",
+        "confidentiality": "public",
+        "tags": "NX-200, E607, 4G, troubleshooting, deprecated"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-HR-004",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Is unlimited remote work still allowed for NMG employees?",
+        "question": "Is unlimited remote work still allowed for NMG employees?",
+        "answer": "No -- this reflects an older HR policy position that has since been replaced. NMG previously allowed effectively unlimited remote work under an earlier version of its remote-work policy, but that approach was revised in favor of a capped number of remote days per week, based on feedback about in-person collaboration and team cohesion. This FAQ is archived because the unlimited remote work arrangement it describes is no longer NMG's policy anywhere in the company; it's retained only for historical reference in case older internal documents or communications are found that still describe the earlier arrangement, so that anyone encountering those older references understands why they no longer apply. Employees should not rely on this FAQ for current guidance -- see the current remote-work policy FAQ and the underlying HR policy document for the actual, current cap on remote days per week, including any role- or team-specific adjustments a manager may apply. If you're a manager or HR contact and encounter someone citing unlimited remote work as current policy, point them to the current policy directly rather than this archived explanation, since the difference between the two arrangements is significant enough that a partial correction could still leave the wrong impression.",
+        "faqDomain": "hr-policy",
+        "relatedArticles": "FAQ-HR-003",
+        "effectiveDate": "2024-01-01",
+        "businessDomain": "humanResources",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "archived",
+        "confidentiality": "internal",
+        "tags": "HR, remote work, archived policy"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "FAQ-CORP-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Where are NMG's main offices located?",
+        "question": "Where are NMG's main offices located?",
+        "answer": "This FAQ is in draft while the corporate communications team finalizes a complete, up-to-date list of NMG office locations following recent organizational changes -- please treat the content below as provisional and subject to revision before publication. Northstar Mobility Group maintains a presence across several European markets tied to its core customer base for AC and DC charging hardware and the Polaris, Atlas Fleet, and Orion Energy Manager software platforms, with functions spanning engineering, product, sales, support, and operations distributed across those locations rather than concentrated in a single headquarters. A finalized office directory -- including exact addresses, which teams sit where, and which offices offer on-site EV charging for employees -- will replace this draft once corporate communications completes its review, expected to align with the next internal announcement cycle. In the meantime, employees needing a specific office address for travel or logistics purposes should check the internal intranet directory or ask their manager rather than relying on this draft FAQ, since details here may change before final publication.",
+        "faqDomain": "corporate-info",
+        "effectiveDate": "2026-08-01",
+        "businessDomain": "corporate",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "draft",
+        "confidentiality": "public",
+        "tags": "corporate, offices, locations, draft"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    }
+  ]
+}

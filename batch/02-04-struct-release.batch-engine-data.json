@@ -1,0 +1,271 @@
+{
+  "configuration": {
+    "className": "com.liferay.object.admin.rest.dto.v1_0.ObjectDefinition",
+    "parameters": {
+      "createStrategy": "UPSERT",
+      "updateStrategy": "UPDATE"
+    }
+  },
+  "items": [
+    {
+      "enableComments": false,
+      "enableFriendlyURLCustomization": true,
+      "enableIndexSearch": true,
+      "enableLocalization": false,
+      "enableObjectEntryDraft": true,
+      "enableObjectEntryHistory": true,
+      "enableObjectEntrySchedule": false,
+      "enableObjectEntryVersioning": true,
+      "externalReferenceCode": "NMG-STRUCT-RELEASE",
+      "label": {
+        "en_US": "Release Note"
+      },
+      "name": "NMGReleaseNote",
+      "pluralLabel": {
+        "en_US": "NMG Release Notes"
+      },
+      "scope": "depot",
+      "status": {
+        "code": 0
+      },
+      "titleObjectFieldName": "title",
+      "objectFolderExternalReferenceCode": "L_CMS_CONTENT_STRUCTURES",
+      "objectDefinitionSettings": [
+        {
+          "name": "acceptedGroupExternalReferenceCodes",
+          "value": "NMG-KNOWLEDGE"
+        }
+      ],
+      "objectFields": [
+        {
+          "name": "title",
+          "label": {
+            "en_US": "Title"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "product",
+          "label": {
+            "en_US": "Product"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "version",
+          "label": {
+            "en_US": "Version"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "releaseDate",
+          "label": {
+            "en_US": "Release Date"
+          },
+          "businessType": "Date",
+          "DBType": "Date",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "summary",
+          "label": {
+            "en_US": "Summary"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "newFeatures",
+          "label": {
+            "en_US": "New Features"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "improvements",
+          "label": {
+            "en_US": "Improvements"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "bugFixes",
+          "label": {
+            "en_US": "Bug Fixes"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "knownIssuesText",
+          "label": {
+            "en_US": "Known Issues"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "breakingChanges",
+          "label": {
+            "en_US": "Breaking Changes"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "upgradeInstructions",
+          "label": {
+            "en_US": "Upgrade Instructions"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "previousVersion",
+          "label": {
+            "en_US": "Previous Version"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "businessDomain",
+          "label": {
+            "en_US": "Business Domain"
+          },
+          "businessType": "Picklist",
+          "DBType": "String",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-BUSINESSDOMAIN",
+          "objectFieldSettings": []
+        },
+        {
+          "name": "countryScope",
+          "label": {
+            "en_US": "Country"
+          },
+          "businessType": "Picklist",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-COUNTRY",
+          "objectFieldSettings": []
+        },
+        {
+          "name": "lifecycleStatus",
+          "label": {
+            "en_US": "Lifecycle Status"
+          },
+          "businessType": "Picklist",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-LIFECYCLESTATUS",
+          "objectFieldSettings": []
+        },
+        {
+          "name": "confidentiality",
+          "label": {
+            "en_US": "Confidentiality"
+          },
+          "businessType": "Picklist",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-CONFIDENTIALITY",
+          "objectFieldSettings": []
+        },
+        {
+          "name": "tags",
+          "label": {
+            "en_US": "Tags"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        }
+      ],
+      "objectRelationships": []
+    }
+  ]
+}

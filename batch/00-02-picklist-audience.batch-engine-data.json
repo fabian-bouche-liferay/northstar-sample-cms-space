@@ -1,0 +1,72 @@
+{
+  "configuration": {
+    "className": "com.liferay.headless.admin.list.type.dto.v1_0.ListTypeDefinition",
+    "parameters": {
+      "createStrategy": "UPSERT"
+    }
+  },
+  "items": [
+    {
+      "externalReferenceCode": "NMG-PICKLIST-AUDIENCE",
+      "name_i18n": {
+        "en_US": "NMG Audience"
+      },
+      "listTypeEntries": [
+        {
+          "key": "customer",
+          "name_i18n": {
+            "en_US": "Customer"
+          }
+        },
+        {
+          "key": "installer",
+          "name_i18n": {
+            "en_US": "Installer"
+          }
+        },
+        {
+          "key": "supportAgent",
+          "name_i18n": {
+            "en_US": "Support Agent"
+          }
+        },
+        {
+          "key": "sales",
+          "name_i18n": {
+            "en_US": "Sales"
+          }
+        },
+        {
+          "key": "operations",
+          "name_i18n": {
+            "en_US": "Operations"
+          }
+        },
+        {
+          "key": "engineer",
+          "name_i18n": {
+            "en_US": "Engineer"
+          }
+        },
+        {
+          "key": "manager",
+          "name_i18n": {
+            "en_US": "Manager"
+          }
+        },
+        {
+          "key": "employee",
+          "name_i18n": {
+            "en_US": "Employee"
+          }
+        },
+        {
+          "key": "partner",
+          "name_i18n": {
+            "en_US": "Partner"
+          }
+        }
+      ]
+    }
+  ]
+}

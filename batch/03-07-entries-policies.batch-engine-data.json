@@ -1,0 +1,795 @@
+{
+  "configuration": {
+    "className": "com.liferay.object.rest.dto.v1_0.ObjectEntry",
+    "parameters": {
+      "createStrategy": "UPSERT",
+      "scopeKey": "NMG-KNOWLEDGE"
+    },
+    "taskItemDelegateName": "C_NMGPolicy"
+  },
+  "items": [
+    {
+      "externalReferenceCode": "POL-GDPR-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "GDPR Customer Data Subject Request Handling Policy",
+        "policyId": "POL-GDPR-001",
+        "policyDomain": "Data Protection - Data Subject Rights",
+        "purpose": "This policy establishes the procedure by which Northstar Mobility Group (NMG) receives, verifies, and responds to data subject requests submitted under the EU General Data Protection Regulation (GDPR) and equivalent national implementing legislation. It ensures that customers, drivers, and site-access-card holders can exercise their rights of access, rectification, erasure, restriction, portability, and objection within statutory deadlines.",
+        "scope": "This policy applies to all NMG employees and contracted service desk staff who receive, log, or fulfil a data subject request concerning personal data processed by NMG charging hardware, the Polaris Charge Cloud platform, Atlas Fleet, or Orion Energy Manager, across every country in which NMG operates.",
+        "policyText": "1. Intake. A data subject request may be received via the customer portal privacy form, the privacy@northstarmobility.example mailbox, or verbally through Customer Support, and must be logged in the Data Subject Request Register within one business day of receipt, regardless of the channel it arrived through. 2. Verification. The requester's identity must be verified using a proportionate method (account credential confirmation, or a government-issued identification document for a request submitted outside the authenticated portal) before any personal data is disclosed, corrected, or erased. 3. Response window. NMG shall respond within one calendar month of receipt of a verified request. Where a request is complex or NMG has received a high volume of requests, this period may be extended by a further two months, provided the requester is informed of the extension and the reason for it within the first month. 4. Request types. This policy covers requests for access, rectification, erasure ('right to be forgotten'), restriction of processing, data portability, and objection to processing, including objection to profiling used for service recommendations. 5. Erasure requests touching diagnostic data. An erasure request that would require deletion of charger diagnostic logs prior to the end of the standard retention period set out in POL-DATA-002 must be routed to the Data Protection Office for review, since diagnostic logs may be needed to resolve an open safety or warranty matter. 6. Cross-border handling. A request is handled centrally by the Data Protection Office regardless of the customer's country of residence; local entities do not process data subject requests independently.",
+        "responsibilities": "Customer Support Agents: receive and log the request within one business day and perform initial identity verification. Data Protection Office: confirms verification, coordinates the substantive response, and approves final disclosure or erasure. IT/Engineering: extracts or deletes the relevant records from Polaris Charge Cloud, Atlas Fleet, and Orion Energy Manager on instruction from the Data Protection Office. Legal & Compliance: reviews any request that intersects with an active litigation hold, law-enforcement request, or regulatory inquiry before a response is issued.",
+        "exceptions": "A request may be refused, or the response period extended beyond the statutory maximum, where the requester's identity cannot be verified, the request is manifestly unfounded or excessive (in particular if repetitive), or an overriding legal obligation requires temporary retention despite an erasure request, such as an active litigation hold or an open safety investigation referencing the same charger unit. Every refusal or extension must be documented in the Data Subject Request Register and approved by the Data Protection Officer before communication to the requester.",
+        "effectiveDate": "2024-05-01",
+        "policyReviewDate": "2026-05-01",
+        "ownerDepartment": "Data Protection Office",
+        "businessDomain": "compliance",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "GDPR, data subject requests, privacy, data protection, portability, erasure"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-DATA-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Charger Diagnostic Log Retention Policy",
+        "policyId": "POL-DATA-001",
+        "policyDomain": "Data Protection - Retention Schedules",
+        "purpose": "This policy establishes the retention period for diagnostic telemetry, error-code logs, and session diagnostic data generated by NMG charging hardware and transmitted to the Polaris Charge Cloud backend.",
+        "scope": "Applies to all diagnostic telemetry collected from Nova AC, Nova DC, and integrated software modules, wherever the originating charger is installed.",
+        "policyText": "IMPORTANT — SUPERSEDED. This policy has been superseded by POL-DATA-002 (Diagnostic Log Retention Policy - Revised), effective 2025-05-01, which reduces the standard retention period described below from 90 days to 60 days. This document is retained for historical and audit reference only and must not be relied upon for current retention practice. Consult POL-DATA-002 for the policy currently in force. 1. Standard retention. Diagnostic telemetry, error-code logs (including E101, E117, E204, E217, E301, E315, E404, E512, and E607 events), and session diagnostic data are retained in the Polaris backend for 90 days from the date of capture, after which they are purged automatically by a scheduled job. 2. Storage location. Diagnostic data is stored exclusively within the Polaris Charge Cloud backend infrastructure; no diagnostic data is exported to a separate long-term archive under this policy. 3. Ticket-linked holds. Diagnostic data referenced by an open support ticket or an open Known Issue investigation is retained until the ticket or investigation is closed, plus a further 90 days, after which the standard purge job applies.",
+        "responsibilities": "IT Operations: maintains and monitors the automated purge job against the 90-day schedule. Support: places and releases ticket-linked retention holds on affected diagnostic records.",
+        "exceptions": "Diagnostic data subject to an open Known Issue investigation, an active security incident, or a legal hold is retained beyond the standard 90-day period until the matter is formally closed.",
+        "effectiveDate": "2023-04-01",
+        "policyReviewDate": "2024-04-01",
+        "ownerDepartment": "Data Protection Office",
+        "businessDomain": "compliance",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "superseded",
+        "confidentiality": "internal",
+        "tags": "diagnostic logs, retention, data protection, superseded, Polaris"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-DATA-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Diagnostic Log Retention Policy - Revised",
+        "policyId": "POL-DATA-002",
+        "policyDomain": "Data Protection - Retention Schedules",
+        "purpose": "This policy revises the retention period for charger diagnostic telemetry, error-code logs, and session diagnostic data held in the Polaris Charge Cloud backend, reducing the standard retention period from 90 days to 60 days.",
+        "scope": "Applies to all diagnostic telemetry collected from Nova AC, Nova DC, and integrated software modules, wherever the originating charger is installed. This policy supersedes POL-DATA-001 in full.",
+        "policyText": "1. Standard retention. Diagnostic telemetry, error-code logs, and session diagnostic data are retained in the Polaris backend for 60 days from the date of capture, after which they are purged automatically by a scheduled job. 2. Rationale for the change. Two factors drove the reduction from the previous 90-day standard set by POL-DATA-001. First, a cost-optimization review of Polaris backend storage found that diagnostic value for standard troubleshooting drops sharply after approximately 45-60 days, meaning the final 30 days of the former 90-day window contributed disproportionately to storage cost relative to its practical use in resolving support tickets and Known Issues. Second, the reduction aligns retention more closely with the GDPR Article 5(1)(e) storage-limitation principle, under which personal data (including diagnostic data that may be linked to an identifiable driver session) should be kept for no longer than is necessary for the purposes for which it is processed. A shorter default retention window reduces NMG's overall data-protection risk surface without compromising the practical ability to diagnose and fix hardware or firmware issues. 3. Storage location. Diagnostic data continues to be stored exclusively within the Polaris Charge Cloud backend infrastructure. 4. Ticket-linked holds. Diagnostic data referenced by an open support ticket or an open Known Issue investigation is retained until the ticket or investigation is closed, plus a further 60 days, after which the standard purge job applies. This mechanism is unchanged from the prior policy other than the shortened base window. 5. Transitional note. Diagnostic data already purged under the prior 90-day schedule before this policy's effective date is not retroactively affected; the shortened window applies prospectively to data still held as of 2025-05-01 and to all data captured thereafter.",
+        "responsibilities": "IT Operations: maintains and monitors the automated purge job against the revised 60-day schedule. Data Protection Office: reviews the retention schedule annually against evolving GDPR guidance and NMG's storage-cost position. Support: continues to place and release ticket-linked retention holds exactly as under the prior policy.",
+        "exceptions": "Diagnostic data subject to an open Known Issue investigation, an active security incident, or a legal hold is retained beyond the standard 60-day period until the matter is formally closed. Data already purged under the previous 90-day schedule prior to 2025-05-01 is not affected by this revision.",
+        "effectiveDate": "2025-05-01",
+        "policyReviewDate": "2026-05-01",
+        "ownerDepartment": "Data Protection Office",
+        "supersedesPolicy": "POL-DATA-001",
+        "businessDomain": "compliance",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "diagnostic logs, retention, data protection, GDPR, storage optimization, Polaris"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-DATA-003",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Employee Access to Customer Data Policy",
+        "policyId": "POL-DATA-003",
+        "policyDomain": "Data Protection - Internal Access Control",
+        "purpose": "This policy governs which NMG employees may access customer personal data held in Polaris Charge Cloud, Atlas Fleet, and Orion Energy Manager, and the controls that apply to that access.",
+        "scope": "Applies to every NMG employee and contractor with an administrative or reporting account on Polaris Charge Cloud, Atlas Fleet, or Orion Energy Manager.",
+        "policyText": "1. Least privilege. Access to customer personal data is granted strictly on a role-based, least-privilege basis through the platform's native role-based access control; no employee is granted broader access than their role requires. 2. Provisioning. Access is requested through the IT Service Desk, requires line manager approval, and is provisioned only after the employee has completed the mandatory data-protection training referenced in POL-HR-006. 3. Recertification. All standing access grants are recertified quarterly by the employee's line manager in conjunction with IT Security; access not recertified within the review window is automatically revoked. 4. Logging. Every view, export, or modification of customer personal data is logged in the platform audit trail, including the employee identifier, timestamp, and record accessed. 5. Export controls. Exporting customer personal data to a personal device, personal email account, or unapproved cloud storage service is prohibited; only the approved corporate export mechanisms described in POL-DATA-004 may be used, and only for a legitimate business purpose.",
+        "responsibilities": "IT Security: administers role-based access provisioning and conducts quarterly access reviews. Line Managers: approve initial access requests and confirm ongoing business need during quarterly recertification. Employees: use access solely for legitimate business purposes and comply with export controls.",
+        "exceptions": "During a Gold-tier Critical incident, IT Security may grant emergency 'break-glass' access outside the standard approval workflow to enable rapid resolution. Any break-glass access must be logged automatically, reported to the employee's manager, and reviewed by IT Security within 24 hours of being granted.",
+        "effectiveDate": "2024-01-15",
+        "policyReviewDate": "2026-01-15",
+        "ownerDepartment": "IT Security & Risk",
+        "businessDomain": "compliance",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "confidential",
+        "tags": "access control, customer data, least privilege, data protection, RBAC"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-SEC-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Security Incident Reporting Policy",
+        "policyId": "POL-SEC-001",
+        "policyDomain": "Information Security - Incident Management",
+        "purpose": "This policy establishes the obligation for NMG employees and contractors to report a suspected security incident, including a data breach, unauthorized access, malware infection, or lost device.",
+        "scope": "Applies to all NMG employees and contractors with access to NMG systems.",
+        "policyText": "IMPORTANT — SUPERSEDED. This policy has been superseded by POL-SEC-002 (Security Incident Reporting Policy - Revised), effective 2025, which introduces severity-tiered reporting windows and a dedicated 24/7 Security Hotline. This document is retained for historical and audit reference only. Consult POL-SEC-002 for the policy currently in force. 1. Reporting obligation. Any employee who suspects a security incident must report it to IT Security within 24 hours of discovery, regardless of the apparent severity of the incident. 2. Reporting channel. Reports are submitted to the security@ mailbox, monitored during business hours by the IT Security team. 3. Triage. IT Security triages each report in the order received and determines the appropriate response.",
+        "responsibilities": "Employees: report a suspected incident within 24 hours via the security@ mailbox. IT Security: triages incoming reports and coordinates the response.",
+        "exceptions": "None beyond the standard 24-hour reporting window described above.",
+        "effectiveDate": "2023-02-01",
+        "policyReviewDate": "2024-02-01",
+        "ownerDepartment": "IT Security & Risk",
+        "businessDomain": "compliance",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "superseded",
+        "confidentiality": "confidential",
+        "tags": "security incident, reporting, superseded, IT security"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-SEC-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Security Incident Reporting Policy - Revised",
+        "policyId": "POL-SEC-002",
+        "policyDomain": "Information Security - Incident Management",
+        "purpose": "This policy revises NMG's internal security incident reporting requirements, replacing the prior flat 24-hour reporting window with severity-tiered reporting timelines and a dedicated 24/7 Security Hotline.",
+        "scope": "Applies to all NMG employees and contractors, and explicitly extends to incidents caused or discovered by a third-party vendor operating on NMG's behalf. This policy supersedes POL-SEC-001 in full.",
+        "policyText": "1. Severity-tiered reporting windows. Critical incidents — active data exfiltration, compromise of a safety-critical system, or ransomware — must be reported within 1 hour of discovery via the 24/7 Security Hotline. High-severity incidents — suspected unauthorized account access, or a lost or stolen device known to hold customer data — must be reported within 4 hours. Medium and low-severity incidents — a phishing attempt with no evidence of compromise, or a minor policy violation — are reported by the next business day via the standard security@ mailbox. 2. Rationale for the change. An internal review following a near-miss incident found that the prior undifferentiated 24-hour window under POL-SEC-001 was materially too slow for the most severe incidents, delaying containment and creating exposure against the 72-hour GDPR Article 33 breach-notification deadline once the time needed for assessment and decision-making after discovery was accounted for. Severity-tiered windows ensure the most urgent incidents reach IT Security fast enough to leave adequate time for containment, assessment, and any required regulatory notification. 3. Classification. IT Security classifies a reported incident's severity within 30 minutes of a Critical-tier report reaching the Security Hotline. 4. Escalation. Any incident classified Critical or High is escalated immediately to the Data Protection Officer for a breach-notification assessment and to Legal & Compliance, which determines whether regulator or customer notification is required and, where relevant, coordinates with Communications on any customer-facing notice. 5. Third-party incidents. An incident caused or first discovered by a vendor or contractor is subject to the same severity-tiered windows, measured from the time NMG is informed or reasonably should have been informed by the vendor under its contractual notification obligation.",
+        "responsibilities": "All employees: report a suspected incident immediately via the appropriate channel for its apparent severity. IT Security: classifies severity within 30 minutes of a Critical report and coordinates containment. Data Protection Officer: assesses GDPR breach-notification obligations for any Critical or High incident. Legal & Compliance: decides on regulator or customer notification. Communications: prepares any required customer-facing notice.",
+        "exceptions": "An incident already fully contained by an automated control with no evidence of data exposure may, at IT Security's discretion, be logged via the standard next-business-day channel rather than the Security Hotline, provided the automated containment action is itself documented in the report.",
+        "effectiveDate": "2025-02-01",
+        "policyReviewDate": "2026-02-01",
+        "ownerDepartment": "IT Security & Risk",
+        "supersedesPolicy": "POL-SEC-001",
+        "businessDomain": "compliance",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "confidential",
+        "tags": "security incident, reporting, severity, hotline, breach notification, GDPR"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-SEC-003",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "API Credential Handling Policy",
+        "policyId": "POL-SEC-003",
+        "policyDomain": "Information Security - Credential Management",
+        "purpose": "This policy governs the issuance, storage, and rotation of API keys and OAuth 2.0 client credentials used to integrate with Polaris Charge Cloud, Atlas Fleet, and third-party systems.",
+        "scope": "Applies to all engineers, integration partners, and automated systems that hold API credentials for an NMG platform, including credentials issued under Polaris Charge Cloud's OAuth 2.0 client-credentials support introduced in the 2025.1 release.",
+        "policyText": "1. Storage. API keys and OAuth 2.0 client secrets must never be committed to source control, embedded in client-side code, or hardcoded in configuration files checked into a repository; all credentials are stored exclusively in the approved secrets manager. 2. Rotation. Standard-scope credentials are rotated every 90 days. Credentials carrying write or administrative scope against Polaris Charge Cloud's API Management module are rotated every 30 days. 3. Offboarding. Any credential associated with an individual employee or contractor is revoked immediately upon that person's offboarding or contract termination, and in no case later than the end of their final working day. 4. Least-privilege scoping. An OAuth 2.0 client-credentials grant is scoped to only the specific API modules the integration requires (for example, Remote Diagnostics read access without Billing write access) rather than a broad or default scope. 5. Audit logging. Every credential issuance, rotation, and revocation event is logged with the requesting engineer, approving lead, and business justification. 6. No sharing. A credential is never shared between individuals or between systems; each integration or automated process receives its own credential.",
+        "responsibilities": "Engineering Leads: approve credential issuance requests and confirm scope is appropriately minimal. IT Security: administers the secrets manager and enforces the rotation schedule. Individual Engineers: never hardcode credentials and report any suspected exposure immediately.",
+        "exceptions": "A legacy on-premise integration that predates the secrets manager may continue to use a manually-rotated credential only under a documented, time-boxed IT Security waiver not exceeding 12 months, after which the integration must migrate to the secrets manager or be decommissioned.",
+        "effectiveDate": "2025-04-01",
+        "policyReviewDate": "2026-10-01",
+        "ownerDepartment": "IT Security & Risk",
+        "businessDomain": "compliance",
+        "countryScope": "global",
+        "audience": "engineer",
+        "lifecycleStatus": "current",
+        "confidentiality": "confidential",
+        "tags": "API credentials, OAuth2, secrets management, rotation, Polaris API Management"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-DATA-004",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Customer Data Export Policy",
+        "policyId": "POL-DATA-004",
+        "policyDomain": "Data Protection - Data Portability",
+        "purpose": "This policy describes how a customer may request a portable export of the personal data NMG holds about them in Polaris Charge Cloud, in support of the GDPR Article 20 right to data portability.",
+        "scope": "Applies to all customer accounts across every country in which NMG operates.",
+        "policyText": "1. Request channel. A customer may request an export using the self-service export function in the customer portal, or by written request to privacy@northstarmobility.example. 2. Format. Exports are provided in a machine-readable format (CSV or JSON) suitable for transmission to another service provider. 3. Contents. A standard export includes charging session history, billing and invoice records, saved payment-method metadata (excluding full card numbers), vehicle and driver profile data, and support-ticket correspondence associated with the account. 4. Turnaround. A verified export request is fulfilled within 30 calendar days of receipt. 5. Identity verification. Identity is verified before any export is released, using the same standard applied under POL-GDPR-001. 6. Fleet accounts. A large fleet account may request a scheduled, recurring export delivered via the Polaris API rather than a manual one-off export; any such integration is subject to the credential controls set out in POL-SEC-003.",
+        "responsibilities": "Customer Support: triages self-service export requests raised through the portal. Data Protection Office: verifies and processes written export requests received outside the portal. Engineering: maintains the export tooling and the scheduled-export API integration.",
+        "exceptions": "An export may be delayed where the request coincides with an open fraud or billing-dispute investigation on the same account, until the investigation concludes. Personal data of a third party incidentally captured in the account record, such as a shared corporate charging card's other named administrator, is redacted from the export.",
+        "effectiveDate": "2024-06-01",
+        "policyReviewDate": "2026-06-01",
+        "ownerDepartment": "Data Protection Office",
+        "businessDomain": "compliance",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "data export, portability, GDPR, customer data, Polaris"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-OPS-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Remote Maintenance Authorization Policy",
+        "policyId": "POL-OPS-001",
+        "policyDomain": "Operations - Remote Access Control",
+        "purpose": "This policy governs remote access by NMG or authorized partner technicians into deployed charger firmware, the OCPP backend connection, and the Polaris Remote Diagnostics module.",
+        "scope": "Applies to every remote diagnostic session or remote firmware operation performed against a production charger deployed at a customer or NMG-owned site.",
+        "policyText": "1. Authorization ticket. Every remote maintenance session requires a logged authorization ticket referencing the specific site and device serial number before the session begins. 2. Customer consent. Prior consent from the customer or site owner is required before any remote firmware change is applied to a production charger, except as set out in the exceptions below. 3. Audit logging. Every remote session is recorded in the Polaris audit trail, including the technician identity, session duration, and any configuration or firmware change made. 4. Two-person authorization for fleet pushes. A remote firmware push targeting 10 or more devices simultaneously requires authorization from two separate individuals: the requesting engineer and a Change Management approver. 5. Time-boxed access. Remote access windows default to 4 hours and are automatically revoked at expiry unless explicitly extended by the authorizing engineer.",
+        "responsibilities": "Remote Diagnostics Engineers: request authorization, obtain consent, and stay within the authorized access window. Site or Account Owner: grants or withholds consent for remote firmware changes. Change Management: approves fleet-wide firmware pushes affecting 10 or more devices.",
+        "exceptions": "An emergency security patch classified Critical under POL-SEC-002 may be applied remotely without prior customer consent where delay would leave a known vulnerability exploitable; the affected customer must be notified retrospectively within 24 hours of the patch being applied.",
+        "effectiveDate": "2024-09-01",
+        "policyReviewDate": "2026-09-01",
+        "ownerDepartment": "IT Security & Risk",
+        "businessDomain": "operations",
+        "countryScope": "global",
+        "audience": "engineer",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "remote maintenance, remote diagnostics, firmware, authorization, Polaris"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-SEC-004",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Video Surveillance at Charging Sites Policy - Germany",
+        "policyId": "POL-SEC-004",
+        "policyDomain": "Physical Security - Video Surveillance",
+        "purpose": "This policy governs the deployment and use of CCTV video surveillance at NMG-owned depot, warehouse, and demonstration charging sites located in Germany, reflecting the additional co-determination requirements that apply to workplace surveillance under German law.",
+        "scope": "Applies to NMG-owned and NMG-operated sites in Germany; does not apply to customer-owned installation sites, which follow the site owner's own surveillance policy. Sites outside Germany follow NMG's general facility security standard.",
+        "policyText": "1. Purpose limitation. Video surveillance at German sites is deployed solely for safety, theft and vandalism deterrence, and incident investigation; it is not used for routine employee performance monitoring. 2. Works council co-determination. Under German co-determination law (Betriebliche Mitbestimmung, Section 87 BetrVG), installation or material reconfiguration of a video surveillance system capable of monitoring employee conduct requires prior agreement (Betriebsvereinbarung) with the local works council before deployment; this requirement applies in addition to, and independently of, any GDPR data protection impact assessment. 3. Signage. Clear signage indicating active video surveillance is displayed at every monitored entrance and monitored area. 4. Retention. Footage is retained for 30 days under standard conditions, extended only for the duration of an active, documented incident investigation. 5. Access. Footage access is restricted to Facilities & Physical Security; access for a specific investigation additionally requires sign-off from Legal & Compliance or HR, as appropriate to the nature of the investigation. 6. No audio. Audio recording is not enabled on any NMG surveillance system. 7. Law enforcement requests. Sharing footage with law enforcement or another third party requires prior Legal & Compliance approval.",
+        "responsibilities": "Facilities & Physical Security: administers the surveillance system and maintains signage. HR Germany: coordinates works council consultation before any new deployment or material system change. Legal & Compliance: approves law-enforcement or other third-party footage requests. Site Managers: perform local access-log review.",
+        "exceptions": "None beyond the documented extension of the standard 30-day retention period for an active investigation. A works council agreement, once obtained, may itself specify additional local conditions that take precedence over the general terms above for the specific site it covers.",
+        "effectiveDate": "2024-03-01",
+        "policyReviewDate": "2026-03-01",
+        "ownerDepartment": "Facilities & Physical Security",
+        "businessDomain": "legal",
+        "countryScope": "germany",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "video surveillance, CCTV, physical security, works council, Germany"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-SEC-005",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Vendor and Third-Party Access Policy",
+        "policyId": "POL-SEC-005",
+        "policyDomain": "Information Security - Third-Party Access",
+        "purpose": "This policy originally governed how third-party vendors and contractors, including field-service subcontractors and cloud hosting providers, were granted access to NMG systems and sites.",
+        "scope": "Applies to third-party vendors and contractors requiring access to NMG systems or sites.",
+        "policyText": "STATUS: DEPRECATED. This policy is under active revision as part of NMG's 2026 vendor-risk-management program consolidation and no longer reflects current onboarding practice. Pending formal republication, a vendor access request should follow the interim controls set out in POL-DATA-003 (Employee Access to Customer Data Policy), applied by analogy to vendor personnel, together with Procurement & Vendor Management's current due-diligence checklist. Do not rely on the annual review cadence described below as current practice. Legacy content, retained for reference only: 1. Standing access list. Vendor access was provisioned against a standing access list reviewed once per year by Procurement & Vendor Management. 2. NDA requirement. A vendor was required to have a signed non-disclosure agreement on file before any system access was provisioned. 3. Scoped access. Vendor accounts were scoped to the specific system or module relevant to the engagement, following the same role-based principle later formalized for employees in POL-DATA-003.",
+        "responsibilities": "Procurement & Vendor Management: historically administered the standing access list; now leads the 2026 consolidation program. IT Security: historically provisioned and reviewed vendor system access.",
+        "exceptions": "None — this policy is flagged deprecated pending republication.",
+        "effectiveDate": "2022-06-01",
+        "policyReviewDate": "2025-06-01",
+        "ownerDepartment": "Procurement & Vendor Management",
+        "businessDomain": "compliance",
+        "countryScope": "global",
+        "audience": "manager",
+        "lifecycleStatus": "deprecated",
+        "confidentiality": "confidential",
+        "tags": "vendor access, third-party, deprecated, procurement, vendor risk"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-OPS-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Device Lifecycle Records Policy",
+        "policyId": "POL-OPS-002",
+        "policyDomain": "Operations - Asset Lifecycle Records",
+        "purpose": "This policy governs the creation and retention of lifecycle records for each deployed charger asset, tracked by serial number in Polaris Device Management, from installation through decommissioning.",
+        "scope": "Applies to every Nova AC and Nova DC unit deployed at a customer or NMG-owned site.",
+        "policyText": "1. Installation record. A mandatory installation record is created for every unit, capturing the site, installation date, installing technician, and, for a DX-series unit, written verification that the site's electrical supply meets the applicable three-phase current requirement (approximately 175A for DX-120, 350A for DX-240, or a dedicated MV/LV substation above approximately 400A for DX-360). 2. Maintenance and firmware history. Maintenance visits and firmware update events are logged against the unit's record, with firmware events auto-populated from Polaris firmware update telemetry and cross-referenced to the corresponding release note. 3. Decommissioning record. When a unit is removed from service, a decommissioning record captures the removal date, reason, and disposal or recycling method, in accordance with applicable local electronic-waste regulation. 4. Retention period. A device lifecycle record is retained for the full asset lifetime plus seven years following decommissioning, to support warranty and liability inquiries.",
+        "responsibilities": "Installation Technicians: complete the installation record at time of deployment. Field Service Engineers: log maintenance visits and confirm firmware history. Device Management module owner: maintains the record schema and firmware auto-population integration.",
+        "exceptions": "A pre-2023 legacy installation lacking a digital installation record is exempt from the mandatory-fields requirement for that original installation event, but a lifecycle record must be created retrospectively, using best available information, at the unit's next service visit.",
+        "effectiveDate": "2023-11-01",
+        "policyReviewDate": "2026-11-01",
+        "ownerDepartment": "Operations",
+        "businessDomain": "operations",
+        "countryScope": "global",
+        "audience": "engineer",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "device lifecycle, asset records, installation, decommissioning, Polaris"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-DATA-005",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Sub-Processor and International Data Transfer Policy",
+        "policyId": "POL-DATA-005",
+        "policyDomain": "Data Protection - International Transfers",
+        "purpose": "This policy originally set out the approval process and Standard Contractual Clause requirements for engaging a new sub-processor or transferring personal data outside the European Economic Area.",
+        "scope": "Applies to any engagement of a new data sub-processor or any transfer of personal data outside the EEA.",
+        "policyText": "STATUS: ARCHIVED. This policy is retained for historical and audit reference only. The living sub-processor register and the current international-transfer approval workflow are now maintained by the Data Protection Office in the central Vendor & Sub-Processor Register maintained outside this document corpus, and are updated continuously rather than through periodic policy republication. Do not use the register contents summarized below for current due diligence; contact the Data Protection Office for the current sub-processor list and transfer mechanism. Legacy content, retained for reference only: 1. Fixed register. This document formerly maintained a named list of approved sub-processors directly within the policy text, updated only when the policy itself was republished. 2. Standard Contractual Clauses. A new sub-processor located outside the EEA was required to execute the applicable Standard Contractual Clauses template referenced by this policy before any personal data was transferred. 3. Annual audit. Sub-processors were audited annually against their contractual data-protection commitments.",
+        "responsibilities": "Data Protection Office: historically maintained the register; now maintains the living register outside this corpus. Legal & Compliance: historically reviewed and executed Standard Contractual Clauses.",
+        "exceptions": "Not applicable — this policy is archived and superseded in practice by the living register.",
+        "effectiveDate": "2021-09-01",
+        "policyReviewDate": "2023-09-01",
+        "ownerDepartment": "Legal & Compliance",
+        "businessDomain": "compliance",
+        "countryScope": "global",
+        "audience": "manager",
+        "lifecycleStatus": "archived",
+        "confidentiality": "internal",
+        "tags": "sub-processor, international transfer, SCC, archived, GDPR"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-PRIV-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Cookie and Consent Policy for the Customer Portal",
+        "policyId": "POL-PRIV-001",
+        "policyDomain": "Data Protection - Cookies and Tracking",
+        "purpose": "This policy governs the use of cookies and similar tracking technologies, and the management of user consent, on the NMG customer portal and the Polaris Charge Cloud driver-facing web and mobile application.",
+        "scope": "Applies to every cookie or similar tracking technology set by an NMG-operated web or mobile property.",
+        "policyText": "1. Cookie categories. Cookies are classified into four categories: strictly necessary, functional, analytics, and marketing. 2. Consent banner. A consent banner is presented on first visit, allowing the user to accept all, reject all non-essential categories, or configure preferences individually. 3. Opt-in requirement. For a user located in the EEA, analytics and marketing cookies are set only after affirmative opt-in consent; no analytics or marketing cookie is set by default. 4. Preference center. A user may review and change their consent choices at any time through the portal's preference center, and withdrawal of consent takes effect immediately for future data collection. 5. Retention. Consent records, and the cookies themselves, are retained no longer than the lifetime disclosed in the cookie notice for each category, and consent is re-requested at the intervals set out in that notice. 6. Strictly necessary cookies. Session, authentication, load-balancing, and security cookies are classified strictly necessary and are exempt from the consent requirement.",
+        "responsibilities": "Digital/Web Engineering: implements and maintains the consent-management platform. Data Protection Office: classifies cookies by category and conducts an annual cookie audit. Marketing: manages any third-party marketing-cookie vendor relationship and its consent-dependent activation.",
+        "exceptions": "Strictly necessary cookies, including authentication, load-balancing, and security cookies, are exempt from the consent requirement under the ePrivacy Directive Article 5(3) exemption for cookies necessary to provide a service explicitly requested by the user.",
+        "effectiveDate": "2024-02-01",
+        "policyReviewDate": "2026-02-01",
+        "ownerDepartment": "Data Protection Office",
+        "businessDomain": "compliance",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "cookies, consent, ePrivacy, customer portal, tracking"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-SEC-006",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Physical Site Access Policy - Netherlands",
+        "policyId": "POL-SEC-006",
+        "policyDomain": "Physical Security - Site Access",
+        "purpose": "This policy originally governed badge and key access to NMG-owned depots, warehouses, and offices in the Netherlands.",
+        "scope": "Applies to NMG-owned and NMG-operated sites in the Netherlands.",
+        "policyText": "STATUS: DEPRECATED. NMG's physical access control system in the Netherlands was migrated to a biometric and mobile-credential platform in 2025; the badge-tier structure described below no longer reflects the deployed system. Facilities & Physical Security maintains current site-access procedures directly within the access-control platform's own configuration rather than in a standalone policy document; this document is retained for historical reference pending a full rewrite. Legacy content, retained for reference only: 1. Badge tiers. Site access was organized into three badge tiers (general staff, restricted-area, and after-hours), each granting a progressively wider set of entry points. 2. Visitor sign-in. A visitor to a Dutch site was required to sign a physical visitor log and be escorted by a badge-holding employee at all times. 3. After-hours approval. After-hours access required prior written approval from the site manager.",
+        "responsibilities": "Facilities & Physical Security: historically administered badge issuance; now administers the biometric and mobile-credential platform. Site Managers: historically approved after-hours access requests.",
+        "exceptions": "None — this policy is flagged deprecated pending a full rewrite reflecting the current platform.",
+        "effectiveDate": "2022-01-01",
+        "policyReviewDate": "2024-01-01",
+        "ownerDepartment": "Facilities & Physical Security",
+        "businessDomain": "legal",
+        "countryScope": "netherlands",
+        "audience": "employee",
+        "lifecycleStatus": "deprecated",
+        "confidentiality": "internal",
+        "tags": "physical security, site access, badge, deprecated, Netherlands"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-LEGAL"
+    },
+    {
+      "externalReferenceCode": "POL-HR-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Remote Work Policy",
+        "policyId": "POL-HR-001",
+        "policyDomain": "Human Resources - Remote Work",
+        "purpose": "This policy sets out eligibility and expectations for NMG employees working remotely.",
+        "scope": "Applies to all NMG employees in a role eligible for remote work, as designated by their department head.",
+        "policyText": "IMPORTANT — SUPERSEDED. This policy has been superseded by POL-HR-002 (Remote Work Policy - Revised), effective 2025, which introduces a maximum of 3 remote days per week for eligible roles. This document is retained for historical and audit reference only; the unrestricted remote-day allowance described below no longer applies. Consult POL-HR-002 for the policy currently in force. 1. Eligibility. An employee in an eligible role may work remotely with no fixed limit on the number of remote days per week, subject to manager approval. 2. Core hours. A remote employee is expected to be available during the team's designated core hours regardless of the number of remote days taken in a given week. 3. Manager approval. A remote work arrangement, and any change to it, is approved by the employee's direct manager.",
+        "responsibilities": "Managers: approve remote work arrangements on an ongoing basis. Employees: maintain core-hours availability regardless of remote-day frequency.",
+        "exceptions": "A role hired as fully remote from the outset, such as certain multi-timezone customer support coverage, was exempted from any implied expectation of in-office presence at manager discretion.",
+        "effectiveDate": "2022-04-01",
+        "policyReviewDate": "2024-04-01",
+        "ownerDepartment": "Human Resources",
+        "businessDomain": "humanResources",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "superseded",
+        "confidentiality": "internal",
+        "tags": "remote work, superseded, flexible working, HR"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    },
+    {
+      "externalReferenceCode": "POL-HR-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Remote Work Policy - Revised",
+        "policyId": "POL-HR-002",
+        "policyDomain": "Human Resources - Remote Work",
+        "purpose": "This policy revises NMG's remote work arrangements, introducing a maximum of 3 remote days per week for eligible roles, following findings from the 2024 employee engagement survey.",
+        "scope": "Applies to all NMG employees in an eligible role globally, excluding field and on-site roles such as installation technicians, field service engineers, and depot staff, whose working pattern is governed separately by their role requirements. This policy supersedes POL-HR-001 in full.",
+        "policyText": "1. Remote-day cap. An eligible employee may work remotely up to a maximum of 3 days per week, unless a formalized fully-remote arrangement has been separately approved in writing by both HR and the employee's department head. 2. Core in-office days. A team may designate specific core in-office days on which remote work is not available, to support scheduled collaboration. 3. Rationale for the change. The 2024 engagement survey, together with onboarding quality metrics for new hires, found that unrestricted remote work under the prior policy measurably reduced cross-team collaboration and slowed the ramp-up of new employees who had limited in-person exposure to their team during onboarding. The 3-day cap balances flexibility with the collaboration and mentoring benefits of regular in-office presence. 4. Equipment. Home-office equipment for an approved remote arrangement is covered under POL-HR-005. 5. Annual review. Remote-work eligibility is reviewed annually between the employee and their manager. 6. International remote work. Working from a country other than the employee's contracted country of employment, even temporarily, requires prior approval from both HR and Legal & Compliance, given potential tax and employment-law implications.",
+        "responsibilities": "Employees: comply with designated in-office days and the 3-day remote cap. Managers: set team core in-office days and approve day-to-day scheduling. HR: conducts the annual eligibility review and reviews any international remote-work request. Legal & Compliance: reviews cross-border tax and employment-law implications for international remote-work requests.",
+        "exceptions": "An employee with a documented disability accommodation, or in a formally approved fully-remote role, is exempt from the 3-day cap. HR may grant a temporary exception of up to 90 days for circumstances such as relocation or a family emergency.",
+        "effectiveDate": "2025-03-01",
+        "policyReviewDate": "2026-09-01",
+        "ownerDepartment": "Human Resources",
+        "supersedesPolicy": "POL-HR-001",
+        "businessDomain": "humanResources",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "remote work, flexible working, HR, engagement survey, in-office collaboration"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    },
+    {
+      "externalReferenceCode": "POL-HR-003",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Travel and Expense Reimbursement Policy",
+        "policyId": "POL-HR-003",
+        "policyDomain": "Human Resources - Travel and Expenses",
+        "purpose": "This policy governs business travel booking, allowable expenses, and the reimbursement process for NMG employees traveling on company business.",
+        "scope": "Applies to every NMG employee traveling for a site visit, customer meeting, conference, or other approved business purpose.",
+        "policyText": "1. Pre-approval. Travel expected to exceed the department's defined cost threshold requires manager pre-approval before booking. 2. Booking channel. Travel is booked through the corporate travel portal wherever available, to ensure duty-of-care tracking and negotiated rates. 3. Meals and lodging. A daily meal per-diem allowance applies, set by country and city cost tier, and hotel costs are capped by city. 4. Air travel class. Economy class is standard for flights under 6 hours; business class is permitted for flights of 6 hours or more, subject to manager approval. 5. Personal-vehicle mileage. Use of a personal vehicle for business travel is reimbursed at the standard published mileage rate for the employee's country. 6. Submission. Expenses are submitted through the expense platform within 30 days of the trip, with itemized receipts required above a minimal per-item threshold. 7. Corporate card. Use of the corporate card is preferred over personal-card reimbursement wherever a corporate card is available to the employee.",
+        "responsibilities": "Employees: obtain pre-approval where required and submit accurate, timely expense claims. Managers: approve travel and expense claims within their authority. Finance: audits submitted claims and processes reimbursement.",
+        "exceptions": "Field service engineers and installation technicians responding to an emergency on-site callout are exempt from the standard pre-approval lead time and may book travel same-day, subject to post-trip confirmation by their manager.",
+        "effectiveDate": "2024-01-01",
+        "policyReviewDate": "2026-01-01",
+        "ownerDepartment": "Total Rewards",
+        "businessDomain": "humanResources",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "confidential",
+        "tags": "travel, expenses, reimbursement, per diem, corporate card"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    },
+    {
+      "externalReferenceCode": "POL-HR-004",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Company EV Charging and Employee Charging Card Policy",
+        "policyId": "POL-HR-004",
+        "policyDomain": "Human Resources - Employee Benefits",
+        "purpose": "This policy governs employee use of NMG workplace charging stations at NMG offices and depots, and the issuance of employee charging cards for use at NMG or partner public charging locations.",
+        "scope": "Applies to every NMG employee with an electric or plug-in hybrid company or personal vehicle.",
+        "policyText": "1. Workplace charging eligibility. An employee with an electric or plug-in hybrid vehicle may use NMG workplace charging stations (Nova AC units) installed at NMG offices and depots, subject to session limits during peak demand periods. 2. Priority during peak hours. Where charging demand exceeds available capacity, Orion Energy Manager's charging-priority rules may prioritize company or fleet vehicles over personal employee vehicles, consistent with the platform's documented capability to prioritize fleet vehicles over visitor or personal vehicles. 3. Charging card issuance. An employee charging card is issued on manager approval and is linked to the employee's individual Polaris driver profile; it is non-transferable and usage is logged. 4. Reasonable use. Charging card usage is subject to a monthly reasonable-use threshold set by Facilities and Finance; usage materially above the threshold triggers a review. 5. Personal use. Personal use of a workplace charging station outside business hours is permitted at the standard workplace charging rate published annually. 6. Lost or stolen cards. A lost or stolen charging card must be reported to IT Security within 24 hours for deactivation.",
+        "responsibilities": "Facilities: manages workplace charging station availability and configures priority rules with Engineering. IT/Engineering: administers charging card issuance through Polaris and deactivates lost or stolen cards. Employees: use assigned cards responsibly and report loss or theft promptly. Finance: reconciles charging card billing monthly.",
+        "exceptions": "A visiting employee from another NMG site, or an approved business guest, may be issued a temporary charging card valid only for the duration of their visit.",
+        "effectiveDate": "2024-07-01",
+        "policyReviewDate": "2026-07-01",
+        "ownerDepartment": "Facilities & Physical Security",
+        "businessDomain": "humanResources",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "confidential",
+        "tags": "EV charging, charging card, employee benefit, Orion Energy Manager, workplace charging"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    },
+    {
+      "externalReferenceCode": "POL-HR-005",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Equipment and Home Office Equipment Policy",
+        "policyId": "POL-HR-005",
+        "policyDomain": "Human Resources - Equipment",
+        "purpose": "This policy governs the issuance, care, and return of NMG-owned equipment, and the home-office equipment allowance available to employees approved for remote work under POL-HR-002.",
+        "scope": "Applies to all NMG employees issued company equipment or a home-office allowance.",
+        "policyText": "1. Standard issuance. Standard equipment, including a laptop, mobile device where applicable, and standard peripherals, is issued at onboarding according to the employee's role profile. 2. Home-office allowance. An employee approved for remote work may request a one-time home-office stipend or company-purchased items (desk, chair, monitor), capped at a defined annual amount and requestable once every 3 years. 3. Company property. All issued equipment, including home-office items purchased under the stipend, remains NMG property and must be returned within 10 business days of a role change that removes remote-work eligibility or of termination of employment. 4. Loss or damage. Loss, theft, or damage to issued equipment is reported to IT within 24 hours. 5. Incidental personal use. Incidental personal use of NMG equipment is permitted, provided it is not for commercial purposes and does not interfere with business use.",
+        "responsibilities": "IT: issues and tracks standard equipment assets. Facilities: administers the home-office stipend and equipment purchase process. Managers: approve role-profile equipment requests. Employees: care for issued equipment and return it within the required window.",
+        "exceptions": "Field service engineers and installation technicians receive role-specific field equipment, such as a rugged laptop and diagnostic tools, issued and tracked separately from the standard office equipment catalog described above.",
+        "effectiveDate": "2024-08-01",
+        "policyReviewDate": "2026-08-01",
+        "ownerDepartment": "Human Resources",
+        "businessDomain": "humanResources",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "equipment, home office, stipend, remote work, asset return"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    },
+    {
+      "externalReferenceCode": "POL-HR-006",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Information Security Policy (Employee Handbook)",
+        "policyId": "POL-HR-006",
+        "policyDomain": "Human Resources - Information Security Awareness",
+        "purpose": "This policy sets out baseline information-security expectations for every NMG employee, complementing the more technical POL-SEC-003 (API Credential Handling) and POL-DATA-003 (Employee Access to Customer Data).",
+        "scope": "Applies to all NMG employees, and in an abbreviated form to contractors and temporary staff.",
+        "policyText": "1. Annual training. Every employee completes mandatory annual security-awareness training, and access enabling customer-data handling under POL-DATA-003 requires this training to be current. 2. Authentication. Multi-factor authentication is required on all NMG systems that support it, and password requirements follow the current IT Security standard. 3. Acceptable use. Company devices and approved cloud storage services only may be used for company business; installing unauthorized software on a company device is prohibited. 4. Phishing. A suspected phishing email is forwarded to security@ and not clicked or replied to; this is the same reporting channel used for non-Critical incidents under POL-SEC-002. 5. Clean desk and screen lock. Employees lock their screen when away from their workstation and secure sensitive physical documents at NMG sites. 6. BYOD. A personal device accesses NMG email or calendar only after enrollment in the managed mobile device management (MDM) platform. 7. Incident reporting. Any suspected security incident is reported per the severity-tiered windows in POL-SEC-002.",
+        "responsibilities": "Employees: complete annual training and comply with daily security expectations. IT Security: delivers training content and administers the MDM platform. Managers: track their team's training completion.",
+        "exceptions": "A contractor or temporary staff member completes an abbreviated onboarding security briefing in lieu of the full annual training module, renewed at each contract renewal.",
+        "effectiveDate": "2024-01-01",
+        "policyReviewDate": "2026-01-01",
+        "ownerDepartment": "IT Security & Risk",
+        "businessDomain": "humanResources",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "confidential",
+        "tags": "information security, training, MFA, BYOD, phishing, employee handbook"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    },
+    {
+      "externalReferenceCode": "POL-HR-007",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "On-Call Support Policy",
+        "policyId": "POL-HR-007",
+        "policyDomain": "Human Resources - On-Call Operations",
+        "purpose": "This policy governs on-call rotation, compensation, and response expectations for staff supporting NMG's Gold-tier 24/7 service commitments.",
+        "scope": "Applies to support and engineering staff assigned to the Gold-tier on-call rotation.",
+        "policyText": "1. Rotation scheduling. On-call rotations are scheduled weekly and published at least one month in advance. 2. Compensation. On-call staff receive a published on-call stipend for each scheduled rotation, plus overtime pay for time actively spent responding to an incident outside standard working hours. 3. Acknowledgement time. To meet the Gold-tier 30-minute critical remote-response commitment described in the applicable service plan, an on-call staff member must acknowledge a Critical page within 15 minutes, leaving adequate time to begin remote diagnosis within the committed window. 4. Escalation. If the primary on-call staff member does not acknowledge a page within 15 minutes, the page automatically escalates to the secondary on-call contact, and then to the on-call team lead. 5. Equipment. On-call staff are provided a company mobile device and VPN access sufficient to respond remotely. 6. Rest-period protection. An on-call staff member who handles an overnight Critical incident is not scheduled for non-urgent work on the following business day.",
+        "responsibilities": "On-call Engineers/Support Agents: acknowledge pages within the required window and escalate appropriately. Team Leads: publish the rotation schedule and approve on-call stipends. HR: enforces rest-period protection following an overnight Critical incident.",
+        "exceptions": "An employee within their first 90 days of employment (probationary period) is not placed on the on-call rotation.",
+        "effectiveDate": "2024-05-01",
+        "policyReviewDate": "2026-05-01",
+        "ownerDepartment": "Human Resources",
+        "businessDomain": "humanResources",
+        "countryScope": "global",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "on-call, rotation, Gold service plan, escalation, rest period"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    },
+    {
+      "externalReferenceCode": "POL-HR-008",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Training and Professional Development Policy",
+        "policyId": "POL-HR-008",
+        "policyDomain": "Human Resources - Learning and Development",
+        "purpose": "This policy governs mandatory compliance training and optional professional-development support for NMG employees.",
+        "scope": "Applies to all NMG employees.",
+        "policyText": "1. Mandatory modules. Every employee completes annual mandatory training covering security awareness (POL-HR-006), the Code of Conduct (POL-HR-010), and, for customer-facing roles, GDPR fundamentals. 2. Role-specific certification. Certain roles require a technical certification to be held and kept current, such as an electrical safety certification for installation technicians performing high-current work on DX-series units. 3. Development budget. Each employee has an annual professional-development budget, requestable through manager approval, for external courses, certifications, or conferences relevant to their role. 4. Product certification tracks. Internal certification tracks covering Polaris Charge Cloud, Atlas Fleet, and Orion Energy Manager are available to support and sales staff to deepen product knowledge.",
+        "responsibilities": "Learning & Development: maintains the training platform and tracks completion of mandatory modules. Managers: approve development-budget requests. Employees: complete mandatory training by its deadline.",
+        "exceptions": "An employee on extended leave has their mandatory-training deadlines paused for the duration of the leave and reset to 30 days from their return date.",
+        "effectiveDate": "2024-01-01",
+        "policyReviewDate": "2026-01-01",
+        "ownerDepartment": "Learning & Development",
+        "businessDomain": "humanResources",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "training, professional development, certification, learning and development"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    },
+    {
+      "externalReferenceCode": "POL-HR-009",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Internal Mobility Policy",
+        "policyId": "POL-HR-009",
+        "policyDomain": "Human Resources - Internal Mobility",
+        "purpose": "This policy governs how an employee may apply for an internal transfer or promotion to an open role across NMG departments or countries.",
+        "scope": "Applies to all NMG employees applying to an internally posted open role.",
+        "policyText": "1. Internal posting period. An open role is posted on the internal careers portal for a minimum period before it is posted externally. 2. Eligibility. An employee is generally eligible to apply after a minimum of 12 months in their current role, waivable by the employee's current manager. 3. Application. An employee may apply without prior approval from their current manager; the current manager is notified once the employee is shortlisted, not at the point of application. 4. Cross-country moves. A move to a role in a different country involves review by HR and Legal & Compliance for work-authorization and employment-law implications before an offer is made. 5. Feedback. An internal candidate receives interview feedback regardless of the outcome of their application.",
+        "responsibilities": "HR: administers the internal posting process and leads cross-border review. Hiring Managers: give fair consideration to internal candidates. Current Managers: negotiate a release timeline, typically 4 to 6 weeks, once an internal move is confirmed.",
+        "exceptions": "A business-critical role may be assigned a shorter minimum-tenure waiting period with HR approval.",
+        "effectiveDate": "2024-03-01",
+        "policyReviewDate": "2026-03-01",
+        "ownerDepartment": "Human Resources",
+        "businessDomain": "humanResources",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "internal mobility, transfer, promotion, career development"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    },
+    {
+      "externalReferenceCode": "POL-HR-010",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Code of Conduct Policy",
+        "policyId": "POL-HR-010",
+        "policyDomain": "Human Resources - Ethics and Conduct",
+        "purpose": "This policy sets out the standards of ethical conduct, professionalism, and integrity expected of every NMG employee, director, and contractor in their dealings with colleagues, customers, and business partners.",
+        "scope": "Applies to all NMG personnel without exception, including directors, employees, and contractors acting on NMG's behalf.",
+        "policyText": "1. Core principles. NMG personnel act with honesty, respect, and fair dealing, and comply with the law in every jurisdiction in which NMG operates. 2. Anti-bribery and corruption. No gift or hospitality above a nominal value may be offered or accepted without disclosure and approval under the accompanying Anti-Bribery Procedure; facilitation payments are prohibited in all circumstances. 3. Conflicts of interest. A personal, financial, or familial interest that could reasonably influence a business decision must be disclosed to a manager or to Legal & Compliance. 4. Anti-harassment and non-discrimination. NMG is committed to a workplace free from harassment and discrimination on any protected characteristic. 5. Confidential information. Confidential business and customer information is handled in accordance with POL-DATA-003 and is not disclosed outside NMG without authorization. 6. Reporting. Concerns may be raised through the ethics hotline, including anonymously, with a non-retaliation guarantee for a report made in good faith. 7. Consequences. A violation of this Code may result in disciplinary action up to and including termination of employment or contract.",
+        "responsibilities": "All personnel: adhere to this Code and report concerns in good faith. HR and Legal & Compliance: investigate reports raised through the ethics hotline. Leadership: model the standards of conduct expected of every employee.",
+        "exceptions": "None — this Code applies as a baseline standard without exception. Specific gift and hospitality value thresholds are set out separately in the accompanying Anti-Bribery Procedure.",
+        "effectiveDate": "2023-01-01",
+        "policyReviewDate": "2026-01-01",
+        "ownerDepartment": "Legal & Compliance",
+        "businessDomain": "humanResources",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "code of conduct, ethics, anti-bribery, non-discrimination, integrity"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    },
+    {
+      "externalReferenceCode": "POL-HR-011",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Company Vehicles Policy",
+        "policyId": "POL-HR-011",
+        "policyDomain": "Human Resources - Company Vehicles",
+        "purpose": "This policy governs eligibility for and use of NMG company vehicles, including field-service vans, pool cars, designated sales vehicles, and NMG's growing share of electric company vehicles charged via Atlas Fleet-managed depot infrastructure.",
+        "scope": "Applies to every employee assigned an individual company vehicle and to any employee using a shared pool car.",
+        "policyText": "1. Eligibility. Individual company vehicles are assigned to field service engineers, installation technicians, and designated sales roles requiring regular customer travel. 2. Licensing. A valid driver's license appropriate to the vehicle class is verified at assignment and re-checked annually. 3. Personal use. Limited personal use, including ordinary commuting, is permitted within a defined mileage cap; the vehicle may not be driven by any unauthorized driver. 4. Fuel and charging. Company vehicles receive a dedicated fuel or charging card, distinct from the employee charging card issued under POL-HR-004. An electric company vehicle charges preferentially at depot infrastructure managed by Orion Energy Manager, scheduled through Atlas Fleet's route-aware charge scheduling. 5. Maintenance. Scheduled maintenance is the assigned driver's responsibility to book, tracked by Fleet Management. 6. Incident reporting. Any accident or incident involving a company vehicle is reported within 24 hours.",
+        "responsibilities": "Fleet Management: allocates vehicles and tracks maintenance scheduling. Drivers: use the vehicle safely and within policy, and report incidents promptly. HR: verifies driver's license validity at assignment and annually thereafter.",
+        "exceptions": "A pool car used for occasional business travel, rather than individually assigned, is exempt from the personal-use mileage cap but must be booked and logged for each trip.",
+        "effectiveDate": "2024-04-01",
+        "policyReviewDate": "2026-04-01",
+        "ownerDepartment": "Human Resources",
+        "businessDomain": "humanResources",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "company vehicles, fleet, EV, Atlas Fleet, Orion Energy Manager"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    },
+    {
+      "externalReferenceCode": "POL-HR-012",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Parental Leave Policy - Germany",
+        "policyId": "POL-HR-012",
+        "policyDomain": "Human Resources - Parental Leave",
+        "purpose": "This policy sets out parental leave entitlements for NMG employees based in Germany, supplementing the Global Parental Leave Policy baseline with the country-specific statutory entitlements required under German law (Bundeselterngeld- und Elternzeitgesetz).",
+        "scope": "Applies to all NMG employees contracted and employed in Germany.",
+        "policyText": "1. Statutory Elternzeit. An employee is entitled to statutory, job-protected parental leave (Elternzeit) of up to 3 years per child, of which up to 24 months may be taken flexibly at any point until the child's 8th birthday with employer agreement. 2. Elterngeld. The wage-replacement benefit (Elterngeld) during Elternzeit is administered by the German state, calculated as a percentage of the employee's prior net income, and is not paid by NMG directly; NMG provides the documentation required to support the employee's Elterngeld application. 3. NMG salary top-up. In addition to the state benefit, NMG continues 100% salary for the first 14 weeks of leave following the birth, aligned with the statutory Mutterschutz maternity-protection period for a birthing parent. 4. Partial return during Elternzeit. An employee may work part-time during Elternzeit (Teilzeit während Elternzeit) at a minimum of 15 hours per week, per statute, with employer agreement on the specific schedule. 5. Job protection. Dismissal is prohibited during Elternzeit, and notice-period restrictions under German law apply both during the leave and for a defined period before it begins.",
+        "responsibilities": "HR Germany: administers statutory compliance and supports the employee's Elterngeld documentation. Payroll Germany: calculates the NMG salary top-up. Managers: plan the employee's return to work, including any agreed part-time schedule.",
+        "exceptions": "An employee on a fixed-term contract has their entitlement pro-rated to the contract's end date, per statute. This policy supplements, and where more generous supersedes, the Global Parental Leave Policy baseline for employees contracted in Germany; where the Global baseline is more generous on a specific point, the more generous term applies.",
+        "effectiveDate": "2024-01-01",
+        "policyReviewDate": "2026-01-01",
+        "ownerDepartment": "HR Business Partners",
+        "businessDomain": "humanResources",
+        "countryScope": "germany",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "parental leave, Elternzeit, Elterngeld, Germany, country-specific"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    },
+    {
+      "externalReferenceCode": "POL-HR-013",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Parental Leave Policy - France",
+        "policyId": "POL-HR-013",
+        "policyDomain": "Human Resources - Parental Leave",
+        "purpose": "This policy sets out parental leave entitlements for NMG employees based in France, supplementing the Global Parental Leave Policy baseline with the country-specific statutory entitlements under the French Labour Code.",
+        "scope": "Applies to all NMG employees contracted and employed in France.",
+        "policyText": "1. Maternity leave (congé maternité). A birthing parent is entitled to 16 weeks of statutory maternity leave for a first or second child (6 weeks before and 10 weeks after the expected date of birth), extended for multiple births or for a third or subsequent child. 2. Paternity and co-parent leave (congé paternité et d'accueil de l'enfant). The other parent is entitled to 25 calendar days of leave (32 for a multiple birth), of which 4 days immediately following the birth are mandatory and may not be waived. 3. Parental education leave (congé parental d'éducation). Either parent may take job-protected leave, full-time or part-time, until the child's 3rd birthday; this leave is generally unpaid by NMG, with the state PreParE allowance administered separately by French family benefits authorities. 4. NMG salary top-up. NMG continues 100% salary during the statutory maternity and paternity leave periods, coordinated with the French Social Security system's (CPAM) daily allowance (indemnités journalières) through payroll subrogation. 5. Return-to-work interview. A return-to-work interview is offered within 8 weeks of the employee's return from any parental leave.",
+        "responsibilities": "HR France: administers statutory compliance and coordinates with CPAM. Payroll France: calculates the salary top-up and subrogation with CPAM. Managers: conduct the return-to-work interview.",
+        "exceptions": "The mandatory 4-day period of paternity leave immediately following birth may not be waived even with the employee's consent, per statute. This policy supplements, and where more generous supersedes, the Global Parental Leave Policy baseline for employees contracted in France.",
+        "effectiveDate": "2024-01-01",
+        "policyReviewDate": "2026-01-01",
+        "ownerDepartment": "HR Business Partners",
+        "businessDomain": "humanResources",
+        "countryScope": "france",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "parental leave, congé maternité, congé paternité, France, country-specific"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    },
+    {
+      "externalReferenceCode": "POL-HR-014",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Vacation and Annual Leave Policy - Germany",
+        "policyId": "POL-HR-014",
+        "policyDomain": "Human Resources - Annual Leave",
+        "purpose": "This policy sets out annual leave entitlements for NMG employees based in Germany, supplementing the Global Vacation Policy baseline with the statutory minimum under the German Federal Leave Act (Bundesurlaubsgesetz).",
+        "scope": "Applies to all NMG employees contracted and employed in Germany.",
+        "policyText": "1. Statutory minimum. The statutory minimum annual leave entitlement is 20 working days per year on a 5-day work week (24 days on a 6-day basis). 2. NMG contractual entitlement. NMG grants a contractual entitlement of 28 working days per year, exceeding the statutory minimum. 3. Leave year and carryover. The leave year is the calendar year; unused leave may be carried over until 31 March of the following year, after which statutory minimum days lapse unless the employee was prevented from taking them by illness. 4. Request process. Leave is requested through the HR self-service system, with a minimum of 2 weeks' notice required for a request exceeding 5 consecutive days. 5. Public holidays. Public holidays observed follow the calendar of the applicable German federal state (Bundesland) in which the employee is based, which is materially relevant given the Bavaria and Baden-Württemberg service-plan response time exception already documented for field technicians under NMG's Professional service plan.",
+        "responsibilities": "Employees: submit leave requests with the required notice period. Managers: approve requests and plan for team coverage. HR Germany: monitors compliance with the statutory minimum entitlement.",
+        "exceptions": "An employee who falls ill during approved vacation may reclaim those days as sick leave upon providing a medical certificate, per statute. This policy supplements, and where more generous supersedes, the Global Vacation Policy baseline for employees contracted in Germany.",
+        "effectiveDate": "2024-01-01",
+        "policyReviewDate": "2026-01-01",
+        "ownerDepartment": "HR Business Partners",
+        "businessDomain": "humanResources",
+        "countryScope": "germany",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "vacation, annual leave, Bundesurlaubsgesetz, Germany, country-specific"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    },
+    {
+      "externalReferenceCode": "POL-HR-015",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Vacation and Annual Leave Policy - France",
+        "policyId": "POL-HR-015",
+        "policyDomain": "Human Resources - Annual Leave",
+        "purpose": "This policy sets out annual leave entitlements for NMG employees based in France, supplementing the Global Vacation Policy baseline with the statutory entitlement under the French Labour Code.",
+        "scope": "Applies to all NMG employees contracted and employed in France.",
+        "policyText": "1. Statutory entitlement. Statutory paid leave (congés payés) accrues at 2.5 working days per month worked, equivalent to 30 working days, or 5 weeks, for a full reference period, generally running from 1 June to 31 May unless the employee's site applies a different agreed reference period. 2. NMG contractual entitlement. NMG's contractual entitlement aligns with the statutory 5 weeks; no additional discretionary annual-leave days are granted beyond statute for employees in France. 3. Mandatory main leave period. At least 12 continuous working days, including at least 2 continuous weeks, must be taken between 1 May and 31 October, in line with standard French practice. 4. RTT days. Where the employee's site operates under a collective working-time agreement providing for reduction-in-working-time (RTT) days, those days are administered separately from statutory congés payés. 5. Carryover. Unused statutory leave generally does not carry over past the end of the reference period, except by specific agreement or where illness or parental leave prevented the employee from taking it.",
+        "responsibilities": "Employees: plan leave to satisfy the mandatory main-leave-period requirement. Managers: approve leave and plan coverage during the mandatory summer period. HR France: tracks the reference period and administers RTT days where applicable.",
+        "exceptions": "An employee returning from parental or long-term sick leave during the reference period has their statutory leave entitlement protected and, where the main-leave window was missed for that reason, may take the mandatory continuous period at an agreed alternate time. This policy supplements, and where more generous on a specific point supersedes, the Global Vacation Policy baseline for employees contracted in France.",
+        "effectiveDate": "2024-01-01",
+        "policyReviewDate": "2026-01-01",
+        "ownerDepartment": "HR Business Partners",
+        "businessDomain": "humanResources",
+        "countryScope": "france",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "vacation, congés payés, RTT, France, country-specific"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-HR"
+    }
+  ]
+}

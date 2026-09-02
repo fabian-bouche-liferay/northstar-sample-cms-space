@@ -1,0 +1,19 @@
+{
+  "configuration": {
+    "className": "com.liferay.headless.asset.library.dto.v1_0.AssetLibrary",
+    "parameters": {
+      "createStrategy": "UPSERT"
+    }
+  },
+  "items": [
+    {
+      "externalReferenceCode": "NMG-KNOWLEDGE",
+      "name": "Northstar Enterprise Knowledge",
+      "description": "Central enterprise knowledge repository for Northstar Mobility Group. Contains product, technical, operational, commercial, support, HR, legal and corporate documentation used for RAG evaluation.",
+      "type": "Space",
+      "settings": {
+        "logoColor": "outline-0"
+      }
+    }
+  ]
+}

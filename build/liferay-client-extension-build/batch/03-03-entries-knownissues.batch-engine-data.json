@@ -1,0 +1,408 @@
+{
+  "configuration": {
+    "className": "com.liferay.object.rest.dto.v1_0.ObjectEntry",
+    "parameters": {
+      "createStrategy": "UPSERT",
+      "scopeKey": "NMG-KNOWLEDGE"
+    },
+    "taskItemDelegateName": "C_NMGKnownIssue"
+  },
+  "items": [
+    {
+      "externalReferenceCode": "KI-NX400-004",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "OCPP Connection Failure (E217) on NX-400 Firmware 4.8",
+        "issueId": "KI-NX400-004",
+        "productCode": "NX-400",
+        "affectedVersions": "4.8",
+        "severity": "high",
+        "symptoms": "NX-400 dual-socket units running firmware 4.8 lose their OCPP 2.0.1 connection to the Polaris Charge Cloud backend after approximately 72 hours of continuous uptime, most consistently on units processing a high volume of charging sessions (multiple session start/stop cycles per day). The unit itself remains functional locally -- charging continues and the local display operates normally -- but Polaris loses visibility into the charger's status, and remote commands (start/stop/reset) stop being delivered. The disconnect is logged on the unit as error code E217 and is not accompanied by any Ethernet link-down event, ruling out a physical connectivity cause. Reconnection does not happen automatically; the OCPP client requires a manual restart or a full power cycle of the unit to reestablish the WebSocket session.",
+        "rootCause": "Root-cause analysis traced the issue to a session-token cache leak inside the OCPP 2.0.1 client introduced by the session-resume improvements shipped in firmware 4.8. Each authentication/reconnect cycle allocates a new session-token cache entry, but the eviction logic that should reclaim expired entries was not correctly wired to the WebSocket keep-alive heartbeat, so entries accumulate in memory. On a dual-socket unit processing a high volume of sessions, the cache reaches a size that exhausts the OCPP client's available memory pool at roughly the 72-hour mark, at which point the client's WebSocket handler fails silently rather than raising a recoverable error, producing the E217 disconnect.",
+        "workaround": "Until affected units are upgraded to 4.8.1, configure a scheduled nightly OCPP reconnect job in Polaris Charge Cloud (Device Management module) that forces a WebSocket reconnect for each affected NX-400 unit during a low-traffic window (e.g. 03:00 local time). This resets the session-token cache before it approaches the ~72-hour threshold and has fully prevented E217 occurrences in field trials. This is documented step by step in support article KB-NX400-014.",
+        "permanentFix": "Fixed in firmware 4.8.1 (released 2025-03, see release note REL-NX400-4.8.1), which patches the cache eviction logic so expired session-token entries are correctly reclaimed on each WebSocket heartbeat. Units upgraded to 4.8.1 have shown no recurrence of E217 in extended field testing beyond 30 days of continuous uptime. Customers on 4.8 should prioritize this upgrade; the nightly-reconnect workaround can be safely removed once 4.8.1 is confirmed installed.",
+        "dateIdentified": "2025-02-14",
+        "issueStatus": "fixed",
+        "fixedInVersion": "4.8.1",
+        "relatedSupportArticles": "KB-NX400-014",
+        "businessDomain": "engineering",
+        "countryScope": "global",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "OCPP, E217, NX-400, firmware, session-token, connectivity"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    },
+    {
+      "externalReferenceCode": "KI-NX100-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Charger Offline / Heartbeat Lost to Polaris (E101) on NX-100",
+        "issueId": "KI-NX100-001",
+        "productCode": "NX-100",
+        "affectedVersions": "All firmware versions",
+        "severity": "medium",
+        "symptoms": "NX-100 units configured over Wi-Fi (rather than Ethernet) intermittently report E101 -- charger offline / heartbeat lost to the Polaris Charge Cloud backend -- typically after a Wi-Fi access point roaming event or a brief drop in signal strength below approximately -75 dBm. The unit itself does not lose power or reset; the local display continues to operate and any in-progress charging session is not interrupted, but Polaris marks the charger as Offline and stops receiving heartbeat and status updates until the Wi-Fi link recovers.",
+        "rootCause": "The NX-100's Wi-Fi stack does not currently re-establish the persistent OCPP heartbeat channel automatically after a roaming or brief signal-loss event; the underlying TCP session is torn down by the access point but the OCPP client does not detect this until its own heartbeat timeout (5 minutes) expires, and even then does not always reconnect without an application-layer nudge.",
+        "workaround": "Where practical, connect NX-100 units to Ethernet instead of Wi-Fi -- this removes the roaming trigger entirely and is the primary recommendation for any installation with an available network drop nearby. For Wi-Fi-only installations, reduce the heartbeat interval from the default 300 seconds to 60 seconds in the unit's Polaris device configuration; this does not prevent the disconnect but shortens the time before Polaris detects and forces a reconnect, keeping visibility gaps under 2 minutes in field testing.",
+        "permanentFix": "No permanent fix has shipped yet. Engineering is evaluating an update to the Wi-Fi stack's reconnect logic that would detect a TCP session teardown independently of the heartbeat timer; this is not yet scheduled to a specific NX-100 firmware release.",
+        "dateIdentified": "2024-05-20",
+        "issueStatus": "workaroundAvailable",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "E101, heartbeat, Wi-Fi, NX-100, connectivity"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    },
+    {
+      "externalReferenceCode": "KI-NX200-003",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "RFID Card Rejected (E117) on NX-200 After Overnight Idle",
+        "issueId": "KI-NX200-003",
+        "productCode": "NX-200",
+        "affectedVersions": "Firmware versions prior to the RFID reader driver update",
+        "severity": "medium",
+        "symptoms": "NX-200 units occasionally reject valid, previously-working RFID cards with error E117 (\"RFID card rejected\"), most often on the first badge attempt of the day after the unit has been idle overnight. The card itself is confirmed valid and correctly provisioned in Polaris; a second tap moments later typically succeeds. Support logs across a sample of roughly 60 affected sites showed the rejection was almost always the very first authentication event of the day (before 09:00 local time) and essentially never recurred later in the same day once the reader had processed one successful read, which was the initial clue pointing at an idle/wake condition rather than a provisioning or reader-hardware defect.",
+        "rootCause": "The RFID reader firmware driver failed to fully re-initialize the reader's antenna gain calibration after the unit's overnight low-power idle state, causing marginal card reads to fail authentication even though the card is valid. Bench testing reproduced the condition reliably by forcing a unit into idle for at least 4 hours and then presenting a card at reduced signal strength (card held slightly off-center); a unit that had not entered idle did not exhibit the same failure rate under identical conditions, confirming the idle transition itself as the trigger rather than reader hardware tolerance alone.",
+        "workaround": "Instruct drivers to tap the card a second time, which reliably succeeds since the reader recalibrates on the first failed read. Alternatively, disable overnight low-power idle mode in the unit's local configuration menu, at the cost of slightly higher standby power draw; sites with a strict energy-efficiency requirement should prefer the tap-twice guidance instead.",
+        "permanentFix": "Fixed via an RFID reader driver update that re-runs antenna calibration on wake from idle rather than relying solely on the calibration performed at boot; confirmed resolved in units that received this driver update, with zero first-tap-of-the-day rejections recorded across the same 60-site sample in the 90 days following the update.",
+        "dateIdentified": "2024-08-05",
+        "issueStatus": "fixed",
+        "fixedInVersion": "RFID reader driver update (see product firmware update notes)",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "E117, RFID, NX-200, idle mode, driver"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    },
+    {
+      "externalReferenceCode": "KI-NX200-006",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Intermittent RFID Misreads on Early-Production NX-200 Units (Hardware Revision A)",
+        "issueId": "KI-NX200-006",
+        "productCode": "NX-200",
+        "affectedVersions": "Hardware revision A only (units manufactured before hardware revision B, introduced 2024-06); not present on hardware revision B or later",
+        "severity": "low",
+        "symptoms": "NX-200 units from the earliest production batch (hardware revision A) occasionally fail to read an RFID card on the first tap even when the card is held directly against the reader target, more frequently at cold outdoor installations below approximately 0C; the unit does not log an E117 rejection in these cases -- simply no read event at all.",
+        "rootCause": "Hardware revision A's RFID antenna PCB uses a trace layout that is more sensitive to temperature-related impedance drift than the revised layout introduced in hardware revision B; below freezing the antenna's effective read range is reduced enough that a card needs to be held closer and longer to register a read.",
+        "workaround": "Instruct users at cold-climate sites to hold the card against the reader target for a full second rather than a quick tap, and to center the card precisely over the reader icon; this reliably produces a successful read even at low temperatures on revision A units.",
+        "permanentFix": "No firmware fix is possible for this hardware-level limitation. Hardware revision B (introduced 2024-06) corrects the antenna PCB trace layout and does not exhibit this symptom. Customers with revision A units in cold-climate installations experiencing frequent complaints may request a field antenna-board replacement kit through support.",
+        "dateIdentified": "2024-11-18",
+        "issueStatus": "workaroundAvailable",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-200, RFID, hardware revision A, cold weather, antenna"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    },
+    {
+      "externalReferenceCode": "KI-NX400-007",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Dynamic Load-Balancing Conflict (E315) Between Adjacent NX-400 Units",
+        "issueId": "KI-NX400-007",
+        "productCode": "NX-400",
+        "affectedVersions": "4.6, 4.7, 4.8",
+        "severity": "medium",
+        "symptoms": "Pairs of NX-400 units sharing the same circuit budget under Polaris dynamic load balancing occasionally both throttle to minimum output simultaneously and log E315, rather than negotiating a split of the available current. Observed intermittently, roughly 1 in 40 sessions where both units start charging within the same 2-minute window, across firmware 4.6 through 4.8.",
+        "rootCause": "Under internal investigation. The current working hypothesis is a race condition in the load-balancing negotiation handshake when two units request a circuit-budget allocation within the same polling interval (default 5 seconds) -- the arbitration logic in Polaris appears to occasionally grant both units the \"yield\" response instead of exactly one, causing both to throttle defensively. Not yet confirmed against unit-side logs from a reproducible lab case; field reports are the only evidence so far.",
+        "workaround": "No reliable workaround has been identified yet beyond manually staggering session starts on shared-circuit unit pairs by at least 3 minutes where operationally possible, which reduces but does not eliminate the reported frequency.",
+        "permanentFix": "None yet -- this is an open, active investigation involving both the NX-400 firmware team and the Polaris Device Management backend team, since the fault could originate on either side of the negotiation handshake. Not expected to be resolved by release REL-NX400-4.8.1, which is scoped only to the unrelated E217 cache-eviction fix.",
+        "dateIdentified": "2025-04-10",
+        "issueStatus": "investigating",
+        "businessDomain": "engineering",
+        "countryScope": "global",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "E315, load balancing, NX-400, race condition, Polaris"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    },
+    {
+      "externalReferenceCode": "KI-NX450-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Load-Balancing Conflict (E315) on NX-450 During Plug & Charge Sessions",
+        "issueId": "KI-NX450-002",
+        "productCode": "NX-450",
+        "affectedVersions": "1.0, 1.1",
+        "severity": "medium",
+        "symptoms": "On NX-450 pairs under dynamic load balancing, a session initiated via Plug & Charge (no RFID tap, automatic vehicle authentication) occasionally fails to register with the load-balancing arbiter in Polaris, causing the paired unit to log E315 even though only one of the two units is actually drawing current at the time.",
+        "rootCause": "The Plug & Charge authentication path bypasses the same session-registration call that an RFID-initiated session uses to announce itself to the load-balancing arbiter; Plug & Charge instead registers slightly later in the connection sequence, and if the paired unit polls the arbiter in that narrow window it sees only itself as active and incorrectly infers a conflict.",
+        "workaround": "For sites running mixed Plug & Charge and RFID sessions on load-balanced NX-450 pairs, increase the arbiter polling interval from the default 5 seconds to 10 seconds in the site's Polaris load-balancing configuration; this gives the Plug & Charge registration call enough time to complete before the next poll and has eliminated the false E315 in field testing at three pilot sites.",
+        "permanentFix": "Not yet shipped. A fix aligning the Plug & Charge registration call with the RFID-session registration call is planned for a future NX-450 firmware release; it is not included in release 1.2 (2026-07), which is scoped to energy-metering accuracy only.",
+        "dateIdentified": "2026-04-22",
+        "issueStatus": "workaroundAvailable",
+        "businessDomain": "engineering",
+        "countryScope": "global",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "E315, NX-450, Plug and Charge, load balancing"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    },
+    {
+      "externalReferenceCode": "KI-DX60-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Ethernet Connectivity Failure (E204) on DX-60 After Network Switch Reboot",
+        "issueId": "KI-DX60-001",
+        "productCode": "DX-60",
+        "affectedVersions": "All firmware versions",
+        "severity": "medium",
+        "symptoms": "DX-60 units lose their Ethernet link and log E204 after the upstream network switch is rebooted or a DHCP lease renewal fails, and do not automatically recover the link once the switch and DHCP service are back online -- the unit requires a manual power cycle to restore connectivity.",
+        "rootCause": "The DX-60's network stack does not retry DHCP discovery on a fixed backoff after an initial lease-renewal failure; instead it enters a fault state and stops attempting to reacquire an address until the interface is reset, which normally only happens on power cycle.",
+        "workaround": "Where the site's network allows it, configure a static IP address for the DX-60 instead of DHCP -- this removes the lease-renewal dependency entirely and is the recommended configuration for any retail or hotel site where the DX-60 sits behind a small, infrequently-managed switch. For DHCP sites, set the switch port serving the DX-60 to a longer DHCP lease time (24 hours or more) to reduce how often a renewal is attempted, and advise site staff to power-cycle the unit after any planned switch maintenance or firmware update on the network hardware itself.",
+        "permanentFix": "None shipped yet for DX-60 specifically; the DHCP retry-backoff behavior is being reviewed for inclusion in a future maintenance firmware release across the DC fast-charging line, since the same network stack is shared with DX-120/240/360, though those larger units are typically installed behind more actively managed enterprise switching infrastructure and have not generated a comparable volume of E204 reports.",
+        "dateIdentified": "2024-09-12",
+        "issueStatus": "workaroundAvailable",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "E204, DX-60, Ethernet, DHCP, network"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    },
+    {
+      "externalReferenceCode": "KI-DX120-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Nuisance Overcurrent Trips (E301) on DX-120 Units in France",
+        "issueId": "KI-DX120-002",
+        "productCode": "DX-120",
+        "affectedVersions": "All firmware versions",
+        "severity": "high",
+        "symptoms": "A disproportionate share of DX-120 E301 (circuit breaker trip / overcurrent protection) reports are coming from French installations, occurring most often during the first few minutes of a high-power CCS2 session, even on sites where the incoming ~175A three-phase 400V supply has been verified to meet the published installation requirement with margin.",
+        "rootCause": "Under investigation. The leading hypothesis is that the DX-120's overcurrent protection threshold is calibrated against a nominal 50Hz supply with limited tolerance for the brief voltage/frequency transients that are more common on parts of the French low-voltage distribution grid during ramp-up of a high-power DC session, causing the protection logic to trip defensively on a transient that is not a genuine overcurrent condition. Not yet confirmed with grid-side monitoring equipment at an affected site.",
+        "workaround": "On affected French sites, field technicians have had success reducing the DX-120's ramp-up rate limit from the default (0 to full power in under 5 seconds) to a slower profile (full power over 15 seconds) in the unit's local power-management configuration; this has eliminated nuisance trips at two pilot sites without a measurable impact on typical session charge times.",
+        "permanentFix": "None yet. Engineering is coordinating with the France installer network to gather grid-side transient data before finalizing a change to the overcurrent protection calibration; a country-specific calibration profile is one option under consideration.",
+        "dateIdentified": "2025-06-03",
+        "issueStatus": "investigating",
+        "businessDomain": "engineering",
+        "countryScope": "france",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "E301, DX-120, France, overcurrent, grid transient"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    },
+    {
+      "externalReferenceCode": "KI-DX240-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Overcurrent Protection Miscalibration (E301) on DX-240 Under German Grid Compliance Settings",
+        "issueId": "KI-DX240-001",
+        "productCode": "DX-240",
+        "affectedVersions": "Firmware versions prior to the overcurrent calibration update",
+        "severity": "high",
+        "symptoms": "German DX-240 installations configured to the VDE-AR-N 4105 grid-compliance profile logged E301 significantly more often than the same unit configuration in other countries, particularly on the 2x120kW modular configuration under simultaneous dual-gun sessions, occasionally mid-session on an established, previously stable charge.",
+        "rootCause": "The VDE-AR-N 4105 compliance profile applies a stricter reactive-power and ramp-rate constraint than the default profile, and the DX-240's overcurrent protection threshold calculation did not correctly account for the additional headroom this constraint consumes when both modular 120kW stages are active simultaneously, causing the protection logic to trip on load levels that were still within the unit's genuine safe operating range.",
+        "workaround": "Prior to the fix, German sites were advised to stagger dual-gun session starts by at least 60 seconds and avoid both guns ramping to full power within the same 10-second window. Field technicians additionally recommended keeping a maintenance log of any E301 event timestamp alongside the site's own grid-monitoring data where available, which proved useful once the update was rolled out, since it let affected sites confirm the fix against their own historical trip frequency rather than relying on anecdotal reports.",
+        "permanentFix": "Fixed via an overcurrent calibration update that correctly incorporates the VDE-AR-N 4105 headroom into the threshold calculation for dual-stage operation; confirmed resolved across all German pilot sites that received the update, with dual-gun sessions no longer triggering E301 under normal operation. The same calibration logic was reviewed against the other DXP country compliance profiles used elsewhere in the DX-240 install base and found not to require an equivalent change, since VDE-AR-N 4105's reactive-power constraint is materially stricter than the profiles used in other served markets.",
+        "dateIdentified": "2025-01-15",
+        "issueStatus": "fixed",
+        "fixedInVersion": "Overcurrent calibration update (see product firmware update notes)",
+        "businessDomain": "engineering",
+        "countryScope": "germany",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "E301, DX-240, Germany, VDE-AR-N 4105, overcurrent"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    },
+    {
+      "externalReferenceCode": "KI-DX360-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "4G Modem Connection Failure (E607) on Early-Production DX-360 Units (Hardware Revision B)",
+        "issueId": "KI-DX360-002",
+        "productCode": "DX-360",
+        "affectedVersions": "Hardware revision B only (units manufactured before hardware revision C); not present on hardware revision C or later",
+        "severity": "medium",
+        "symptoms": "DX-360 units from the hardware revision B production batch intermittently lose their 4G cellular connection and log E607, most often at sites where the unit relies on 4G as its primary connectivity rather than as an Ethernet backup, and roughly correlated with periods of high ambient temperature inside the unit's electronics enclosure.",
+        "rootCause": "Hardware revision B uses an earlier modem module part number that is more sensitive to thermal throttling than the module used from hardware revision C onward; above approximately 55C internal enclosure temperature, the revision B modem occasionally drops its cellular registration and does not always re-register automatically, requiring the unit's own reconnect logic to intervene, which can take several minutes.",
+        "workaround": "For hardware revision B units at sites relying primarily on 4G, ensure the unit's enclosure ventilation is not obstructed and, where feasible, run a temporary Ethernet connection as backup connectivity -- the unit automatically fails over to Ethernet if the 4G link drops, eliminating the visible impact of the underlying modem issue even though the root cause remains unaddressed.",
+        "permanentFix": "No firmware fix is possible for this hardware-level thermal sensitivity. Hardware revision C (which changed the modem module part number) does not exhibit this symptom in field data collected so far. Customers with hardware revision B units experiencing frequent E607 at hot-climate or poorly-ventilated sites may request a field modem-module replacement kit through support.",
+        "dateIdentified": "2024-12-09",
+        "issueStatus": "workaroundAvailable",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "E607, DX-360, hardware revision B, 4G modem, thermal"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    },
+    {
+      "externalReferenceCode": "KI-POLARIS-003",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Meter Synchronization / Billing Mismatch (E404) After Mid-Session Tariff Change",
+        "issueId": "KI-POLARIS-003",
+        "productCode": "POLARIS",
+        "affectedVersions": "2025.4",
+        "severity": "high",
+        "symptoms": "Since the mid-session tariff-change support introduced in Polaris 2025.4, a small percentage of sessions that cross a tariff boundary (e.g. peak to off-peak) are logging E404 on the Billing module, with the session's final invoiced amount not matching the sum of the two tariff-segment meter readings; affected sessions are flagged for manual billing review rather than auto-invoiced.",
+        "rootCause": "Under internal investigation by the Billing module team. The current working theory is that the meter-reading snapshot taken at the moment of the tariff boundary is occasionally captured a few seconds before or after the actual tariff-change timestamp due to a clock-skew tolerance in the session-segmentation logic, producing a small discrepancy between the two segments' energy totals and the session's overall meter delta; not yet confirmed against raw meter telemetry for a reproduced case.",
+        "workaround": "Sites relying on mid-session tariff changes should review Polaris's flagged-for-review billing queue daily rather than assuming all sessions auto-invoice correctly; affected sessions can be manually reconciled against the raw meter-reading log, which is unaffected by the discrepancy -- only the automated invoice calculation is impacted.",
+        "permanentFix": "None yet. This is an active internal investigation involving the Billing module and Device Management teams; not customer-facing guidance beyond the manual-review workaround above until root cause is confirmed.",
+        "dateIdentified": "2025-12-01",
+        "issueStatus": "investigating",
+        "businessDomain": "engineering",
+        "countryScope": "global",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "E404, Polaris, Billing, tariff change, meter sync"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    },
+    {
+      "externalReferenceCode": "KI-POLARIS-007",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Meter Sync / Billing Session Mismatch (E404) During API Management OAuth2 Token Refresh",
+        "issueId": "KI-POLARIS-007",
+        "productCode": "POLARIS",
+        "affectedVersions": "2024.1, 2024.3, 2025.1",
+        "severity": "medium",
+        "symptoms": "Third-party billing integrations connected through the Polaris API Management module (added in 2025.1) occasionally received a stale or duplicate meter reading for a session, logged internally as E404, specifically during the OAuth2 client-credentials token refresh window; the discrepancy was visible to integrators as a session appearing twice in a polling window with two slightly different meter totals.",
+        "rootCause": "The meter-reading cache used to serve the API Management module's session-status endpoint was not being invalidated correctly when an OAuth2 client-credentials token refreshed mid-poll, causing a brief window where a cached (stale) reading could be served alongside, or instead of, the current one; the underlying session and billing records themselves were never actually duplicated or wrong -- only the API-served snapshot was affected.",
+        "workaround": "Prior to the fix, integrators were advised to de-duplicate session-status polls by session ID and always prefer the reading with the later timestamp when two were received in the same polling window.",
+        "permanentFix": "Fixed in release REL-POLARIS-2025.4 as part of the Billing module's mid-session tariff-change support work, which included a rewrite of the meter-reading cache invalidation logic; the fix eliminates the stale-reading window entirely rather than relying on the client-side de-duplication workaround.",
+        "dateIdentified": "2025-02-20",
+        "issueStatus": "fixed",
+        "fixedInVersion": "2025.4",
+        "businessDomain": "engineering",
+        "countryScope": "global",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "E404, Polaris, API Management, OAuth2, billing, meter cache"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    },
+    {
+      "externalReferenceCode": "KI-ATLAS-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Depot Capacity Forecast Occasionally Shows Stale Data in Atlas Fleet",
+        "issueId": "KI-ATLAS-002",
+        "productCode": "ATLAS",
+        "affectedVersions": "2.2, 2.3",
+        "severity": "low",
+        "symptoms": "The depot capacity forecasting view (added in Atlas Fleet 2.2) can display a forecast that is up to 15 minutes out of date relative to actual charger occupancy, most noticeable immediately after a large batch of vehicles arrives at a depot within a short window; the forecast eventually catches up without any user action.",
+        "rootCause": "The forecasting view is intentionally computed from a rolling aggregate refreshed on a fixed 15-minute cycle rather than in real time, as a deliberate performance trade-off to keep the depot-wide forecast computation lightweight across large fleets; this is expected behavior under the current architecture rather than a defect, but is reported often enough by depot operators expecting real-time data that it is tracked here for visibility.",
+        "workaround": "Depot operators needing up-to-the-minute occupancy during a known high-arrival window (e.g. shift change) should cross-check the real-time charger status view (which is not affected by the 15-minute refresh cycle) rather than relying on the forecast view during that window; the forecast view is best used for planning ahead rather than moment-to-moment occupancy.",
+        "permanentFix": "Not planned. Moving the forecast to a real-time computation would require a materially different backend architecture for large fleets and is not currently justified by the reported impact; the driver mobile app v2 (2.3) added a manual refresh button on the forecast view as a partial mitigation, but the underlying 15-minute cycle is unchanged. This is being tracked as a documented product limitation rather than a bug to be fixed.",
+        "dateIdentified": "2024-11-04",
+        "issueStatus": "wontFix",
+        "businessDomain": "engineering",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "Atlas Fleet, forecasting, refresh cycle, depot capacity"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    },
+    {
+      "externalReferenceCode": "KI-ORION-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Fleet Charging Priority Rule Occasionally Not Applied Under Low State-of-Charge Conditions in Orion Energy Manager",
+        "issueId": "KI-ORION-001",
+        "productCode": "ORION",
+        "affectedVersions": "3.1, 3.2",
+        "severity": "medium",
+        "symptoms": "Orion Energy Manager's charging priority rules (which can prioritize company/fleet vehicles over visitor vehicles) occasionally fail to apply when a visitor vehicle plugs in with a very low state of charge (below approximately 10%) at the same time a fleet vehicle with priority is already charging; in these cases the visitor vehicle is observed to receive a larger share of available power than the priority rule should allow, for the first several minutes of the session.",
+        "rootCause": "Under internal investigation. The current hypothesis is that the priority-rule engine's initial power allocation for a newly-plugged-in vehicle briefly weights estimated urgency (derived from reported state of charge) alongside the configured priority tier, before settling into the pure priority-tier allocation on the next allocation cycle (typically 30-60 seconds later); this \"urgency blending\" during the first cycle was not an intentional design decision and its origin in the codebase has not yet been located.",
+        "workaround": "Sites with a strict requirement that fleet vehicles never receive less than their configured priority share, even transiently, can reduce the allocation-cycle interval from the default 60 seconds to 15 seconds in the site's Orion configuration, which shortens the window during which the incorrect blending is visible, though it does not eliminate it.",
+        "permanentFix": "None yet -- engineering has not yet located the specific logic responsible for the transient urgency-blending behavior; this is being tracked as a priority investigation given the customer-visible impact on fleet-priority guarantees, a capability explicitly marketed as a core Orion feature.",
+        "dateIdentified": "2025-09-17",
+        "issueStatus": "investigating",
+        "businessDomain": "engineering",
+        "countryScope": "global",
+        "audience": "supportAgent",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "Orion Energy Manager, priority rules, state of charge, allocation"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    },
+    {
+      "externalReferenceCode": "KI-NX400-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Early NX-400 Firmware Display Freeze on Session Handoff (Historical, Unrelated to E217)",
+        "issueId": "KI-NX400-002",
+        "productCode": "NX-400",
+        "affectedVersions": "4.4, 4.5",
+        "severity": "low",
+        "symptoms": "On early NX-400 firmware (4.4 and 4.5), the local touchscreen display would occasionally freeze on the \"session ending\" screen after a charging session completed, requiring the driver to wait up to 60 seconds or physically unplug and replug the connector before the display returned to the idle/ready screen; the charging session itself always completed and billed correctly -- only the local display was affected.",
+        "rootCause": "The display's session-handoff state machine did not correctly clear its \"session ending\" render state when the backend confirmed session closure faster than the display's own animation sequence expected, leaving the display waiting on an animation callback that had already effectively completed.",
+        "workaround": "Unplugging and replugging the connector, or waiting for the display's own 60-second timeout, both cleared the frozen state without requiring a full power cycle.",
+        "permanentFix": "Fixed in a subsequent NX-400 firmware update that corrected the display state machine's handling of a fast backend session-closure confirmation. This issue predates and is unrelated to the later E217 OCPP disconnect issue (KI-NX400-004) fixed in release REL-NX400-4.8.1; it is retained here only for historical reference, as current NX-400 deployments are on firmware 4.7 or later and do not exhibit this symptom.",
+        "dateIdentified": "2023-09-08",
+        "issueStatus": "fixed",
+        "fixedInVersion": "4.6",
+        "businessDomain": "support",
+        "countryScope": "global",
+        "audience": "supportAgent",
+        "lifecycleStatus": "archived",
+        "confidentiality": "public",
+        "tags": "NX-400, display, firmware 4.4, firmware 4.5, superseded"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-SUPPORT"
+    }
+  ]
+}

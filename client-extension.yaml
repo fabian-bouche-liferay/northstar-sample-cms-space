@@ -1,0 +1,19 @@
+assemble:
+    -   from: batch
+        into: batch
+
+nmg-corpus-batch:
+    name: NMG Northstar Corpus Batch Initializer
+    oAuthApplicationHeadlessServer: nmg-corpus-batch-oauth
+    type: batch
+
+nmg-corpus-batch-oauth:
+    .serviceAddress: localhost:8080
+    .serviceScheme: http
+    name: NMG Corpus Batch OAuth
+    scopes:
+        - Liferay.Headless.Batch.Engine.everything
+        - Liferay.Object.Admin.REST.everything
+        - Liferay.Headless.Object.everything
+        - Liferay.Headless.Admin.List.Type.everything
+    type: oAuthApplicationHeadlessServer

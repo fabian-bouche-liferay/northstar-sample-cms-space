@@ -1,0 +1,56 @@
+{
+  "configuration": {
+    "className": "com.liferay.headless.object.dto.v1_0.ObjectEntryFolder",
+    "parameters": {
+      "createStrategy": "UPSERT",
+      "scopeKey": "NMG-KNOWLEDGE"
+    }
+  },
+  "items": [
+    {
+      "externalReferenceCode": "NMG-FOLDER-PRODUCTS",
+      "title": "Products",
+      "parentObjectEntryFolderExternalReferenceCode": "L_CONTENTS"
+    },
+    {
+      "externalReferenceCode": "NMG-FOLDER-SUPPORT",
+      "title": "Support",
+      "parentObjectEntryFolderExternalReferenceCode": "L_CONTENTS"
+    },
+    {
+      "externalReferenceCode": "NMG-FOLDER-OPERATIONS",
+      "title": "Operations",
+      "parentObjectEntryFolderExternalReferenceCode": "L_CONTENTS"
+    },
+    {
+      "externalReferenceCode": "NMG-FOLDER-SALES",
+      "title": "Sales",
+      "parentObjectEntryFolderExternalReferenceCode": "L_CONTENTS"
+    },
+    {
+      "externalReferenceCode": "NMG-FOLDER-CUSTOMERSTORIES",
+      "title": "Customer Stories",
+      "parentObjectEntryFolderExternalReferenceCode": "L_CONTENTS"
+    },
+    {
+      "externalReferenceCode": "NMG-FOLDER-LEGAL",
+      "title": "Legal & Compliance",
+      "parentObjectEntryFolderExternalReferenceCode": "L_CONTENTS"
+    },
+    {
+      "externalReferenceCode": "NMG-FOLDER-HR",
+      "title": "Human Resources",
+      "parentObjectEntryFolderExternalReferenceCode": "L_CONTENTS"
+    },
+    {
+      "externalReferenceCode": "NMG-FOLDER-CORPORATE",
+      "title": "Corporate",
+      "parentObjectEntryFolderExternalReferenceCode": "L_CONTENTS"
+    },
+    {
+      "externalReferenceCode": "NMG-FOLDER-ARCHIVE",
+      "title": "Archive",
+      "parentObjectEntryFolderExternalReferenceCode": "L_CONTENTS"
+    }
+  ]
+}

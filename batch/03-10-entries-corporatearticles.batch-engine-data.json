@@ -1,0 +1,516 @@
+{
+  "configuration": {
+    "className": "com.liferay.object.rest.dto.v1_0.ObjectEntry",
+    "parameters": {
+      "createStrategy": "UPSERT",
+      "scopeKey": "NMG-KNOWLEDGE"
+    },
+    "taskItemDelegateName": "C_NMGCorporateArticle"
+  },
+  "items": [
+    {
+      "externalReferenceCode": "CORP-001",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Northstar Mobility Group Launches Nova AC 450 — Premium AC Charging with Plug & Charge",
+        "articleType": "announcement",
+        "department": "Product Marketing",
+        "summary": "<p>Northstar Mobility Group today announced the general availability of the Nova AC 450, its new premium dual-socket AC charging station and the successor to the popular Nova AC 400.</p>",
+        "body": "<p>The Nova AC 450 builds on the proven 2×22 kW dual-socket architecture of the NX-400 and adds two headline capabilities: Plug & Charge (ISO 15118) support, which lets an enrolled vehicle authenticate and start a session automatically without an RFID card or app interaction, and improved energy-metering accuracy for tighter billing reconciliation with Polaris Charge Cloud.</p><p>\"The NX-450 is the charger our large corporate and public-parking customers have been asking for,\" said the company's VP of Product. \"Plug & Charge removes the last bit of friction from the charging experience, and it does so on hardware our installers and support teams already know inside and out.\"</p><p>Like its predecessor, the NX-450 ships with OCPP 2.0.1, integrated 4G connectivity, RFID support, and dynamic load balancing across its two sockets. It targets the same large corporate and public parking segments as the NX-400, but as a premium tier rather than a replacement — the NX-400 remains in the portfolio for customers who do not need Plug & Charge.</p><p>The NX-450 is available to order immediately across all Northstar Mobility Group markets, with firmware 1.0 shipping pre-installed. Existing NX-400 fleets are not upgradeable to NX-450 capabilities; the two products run independent firmware version sequences.</p>",
+        "publicationDate": "2026-03-02",
+        "relatedContent": "PROD-NX450",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "product-launch, NX-450, plug-and-charge, announcement"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-006",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NMG Germany — Munich Office Profile",
+        "articleType": "officeInformation",
+        "department": "Corporate Facilities",
+        "summary": "<p>Northstar Mobility Group's Munich office is the company's largest site outside its home market and its primary hub for engineering and DACH-region sales and support.</p>",
+        "body": "<p>The Munich office houses the majority of Hardware Engineering and Firmware & Embedded Systems staff, alongside a growing Cloud Platform Engineering presence, a regional Sales team covering Germany, Austria, and Switzerland, and a Tier 1/Tier 2 Support hub serving the DACH region during local business hours.</p><p>Customers on a Professional service plan in Germany should note the local on-site exception: next-business-day on-site response applies nationally except in Bavaria and Baden-Württemberg, where a same-day on-site visit is available for requests logged before 12:00 local time — a direct benefit of the technician density around the Munich hub.</p><p>The office also hosts Northstar Mobility Group's primary product certification lab, where new Nova AC and Nova DC hardware revisions undergo safety and compliance testing before manufacturing release.</p>",
+        "publicationDate": "2024-05-14",
+        "countryScope": "germany",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "office, germany, munich"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-002",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Northstar Mobility Group Strategy 2023: Accelerating AC Charging Infrastructure Across Europe",
+        "articleType": "strategy",
+        "department": "Corporate Strategy",
+        "summary": "<p>Northstar Mobility Group is setting out a three-year strategy centered on accelerating AC charging deployment for workplaces, corporate parking, and hospitality across Europe.</p>",
+        "body": "<p>As Northstar Mobility Group enters 2023, the company is doubling down on the segment where it has built its strongest early traction: AC charging for corporate and hospitality sites. The Nova AC 100, Nova AC 200, and Nova AC 400 form the backbone of this push, covering everything from single-space employee parking to large dual-socket public parking installations.</p><p>The company's near-term priority is expanding its installer network and sales presence in France, Germany, and the Benelux region, where demand for workplace and destination charging is growing fastest. Investment in DC fast-charging will continue at a measured pace during this period, with the current DX-60 and DX-120 stations serving a smaller set of retail and hotel customers while the AC portfolio scales.</p><p>\"Our customers are telling us clearly that reliable, affordable AC charging at scale is what unlocks the next wave of workplace electrification,\" said the company's Chief Strategy Officer. \"That's where we're putting our engineering, manufacturing, and go-to-market focus this year.\"</p><p>This strategy also anchors the company's software roadmap: Polaris Charge Cloud and Orion Energy Manager are both being extended specifically to support multi-unit AC deployments, including dynamic load balancing across large corporate parking sites.</p>",
+        "publicationDate": "2023-02-15",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "strategy, AC-charging, 2023, expansion"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-003",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Northstar Mobility Group 2026 Strategic Priorities: DC Fast-Charging and Energy Management Bundles",
+        "articleType": "strategy",
+        "department": "Corporate Strategy",
+        "summary": "<p>Northstar Mobility Group's strategic emphasis for the current period shifts toward DC fast-charging and bundled energy-management offerings, building on the AC network established over the past three years.</p>",
+        "body": "<p>Having established a strong AC charging footprint across its core European markets since 2023, Northstar Mobility Group is now shifting strategic emphasis toward DC fast-charging and bundled energy management. The DX-60, DX-120, DX-240, and DX-360 stations now anchor the company's growth plans for logistics hubs, highway locations, and high-throughput retail sites — segments where charging speed, not just charging availability, is the deciding factor for customers.</p><p>This is not a retreat from AC: the Nova AC 100/200/400/450 family remains central to workplace and corporate parking deployments, and the NX-450's March 2026 launch (with Plug & Charge) shows continued AC investment. But new capital and engineering headcount are increasingly weighted toward the DC lineup and toward Orion Energy Manager, which the company now positions as a bundled offering alongside DC installations rather than an optional add-on.</p><p>\"Three years ago the market needed us to prove that AC charging could be deployed reliably at scale. We did that,\" said the Chief Strategy Officer. \"Today our largest customers are asking for fast charging plus intelligent energy management — solar-aware, battery-aware, demand-charge-aware. That combination is where we're investing now.\"</p><p>Orion Energy Manager's recent battery-storage integration (version 3.2) and Polaris Charge Cloud's expanding API Management and Billing capabilities are explicitly cited as the software backbone for this shift. Expect continued DC portfolio investment and deeper energy-management bundling through the remainder of the year.</p>",
+        "publicationDate": "2026-06-10",
+        "relatedContent": "CORP-002",
+        "countryScope": "global",
+        "audience": "partner",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "strategy, DC-fast-charging, energy-management, 2026"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-004",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Engineering Organization Overview",
+        "articleType": "organization",
+        "department": "Engineering",
+        "summary": "<p>An overview of how the Engineering organization is structured, for new hires and cross-functional colleagues who need to know who owns what.</p>",
+        "body": "<p>Engineering at Northstar Mobility Group is organized into four functional groups. Hardware Engineering owns the design and certification of the Nova AC and Nova DC product lines, including the DX-series modular power electronics. Firmware & Embedded Systems owns the on-charger software stack — OCPP protocol handling, RFID and Plug & Charge authentication, load-balancing logic, and the firmware release trains for NX-400 and NX-450.</p><p>Cloud Platform Engineering owns Polaris Charge Cloud, Atlas Fleet, and Orion Energy Manager, organized into module-aligned squads (Device Management, Billing, Monitoring, Remote Diagnostics, API Management, and the fleet/energy platforms respectively). Quality & Certification owns compliance testing, safety certification, and the regression suites that gate every firmware and platform release.</p><p>Engineering headcount is concentrated in our Munich office, with the Firmware & Embedded Systems and Hardware Engineering groups based there, alongside a growing Cloud Platform Engineering presence. Smaller engineering pods also operate out of the France and Netherlands offices, focused primarily on Polaris and Atlas Fleet feature work respectively.</p><p>Escalation paths from Support into Engineering run through the on-call rotation documented in the internal engineering wiki; Known Issues and firmware defects should always be logged through the standard support-article and known-issue workflow before being routed to an engineering squad directly.</p>",
+        "publicationDate": "2025-01-20",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "organization, engineering, internal"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-005",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Support Organization Overview: Structure and Escalation Paths",
+        "articleType": "organization",
+        "department": "Customer Support",
+        "summary": "<p>How Customer Support is structured across tiers and regions, and how an issue moves from a first customer contact through to Engineering when needed.</p>",
+        "body": "<p>Customer Support operates a three-tier model. Tier 1 (regional support hubs) handles initial customer and installer contact, working from published Support Articles and known-issue records to resolve common problems — connectivity failures, RFID rejection, firmware update issues, and the like. Tier 2 handles cases that require deeper diagnostics, including remote sessions using the Polaris Remote Diagnostics module. Tier 3 is Engineering on-call, engaged only when Tier 2 confirms a genuine product defect rather than a configuration or environmental issue.</p><p>Response and resolution targets are governed by the customer's service plan — Essential, Professional, or Gold — each with its own remote-response and on-site targets, with a small number of documented country-specific exceptions in Germany, Spain, and the Netherlands that Tier 1 staff should always check before quoting a commitment to a customer.</p><p>Regional support hubs currently operate out of the France, Germany, Spain, and Netherlands offices, each covering a defined set of countries during local business hours, with Gold-tier 24/7 coverage handled by a follow-the-sun rotation across all four hubs.</p><p>Every resolved case that isn't already covered by an existing Support Article should be flagged to the Knowledge team so the article library keeps pace with real-world issues — this is the single biggest lever Tier 1 has for reducing repeat escalations to Tier 2 and Tier 3.</p>",
+        "publicationDate": "2024-11-05",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "organization, support, escalation, internal"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-007",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NMG France — Paris Office Profile",
+        "articleType": "officeInformation",
+        "department": "Corporate Facilities",
+        "summary": "<p>The Paris office anchors Northstar Mobility Group's presence in France, combining regional sales, a Tier 1/Tier 2 support hub, and a Cloud Platform Engineering pod focused on Polaris Charge Cloud.</p>",
+        "body": "<p>Paris was one of Northstar Mobility Group's first international offices, opened as the company's AC-first strategy began scaling workplace and corporate-parking deployments across France in 2023. The office today combines a regional Sales and Channel Partner team, a Tier 1/Tier 2 support hub covering France and the wider Francophone market, and a small engineering pod contributing to Polaris Charge Cloud.</p><p>The Paris office also hosts Northstar Mobility Group's solar-powered charging pilot program, launched in partnership with a local renewable-energy provider, and serves as the reference site for prospective customers evaluating solar-integrated deployments using Orion Energy Manager.</p><p>Standard service-plan terms apply in France, with no country-specific exceptions to the Essential, Professional, or Gold tiers documented at this time.</p>",
+        "publicationDate": "2024-05-20",
+        "countryScope": "france",
+        "audience": "partner",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "office, france, paris"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-008",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NMG Spain — Madrid Office Profile",
+        "articleType": "officeInformation",
+        "department": "Corporate Facilities",
+        "summary": "<p>The Madrid office covers Sales and Support for the Spanish market, with a field-technician network extending Gold-tier coverage well beyond the capital.</p>",
+        "body": "<p>The Madrid office is home to a regional Sales team and a Tier 1 support hub covering Spain. Field technician density around Madrid and Barcelona is strong enough that Gold-tier critical on-site response holds to the standard 4-hour target in those two metro areas; elsewhere in Spain, Gold on-site response is extended to 10 hours rather than the standard 8, reflecting lower technician density outside the two largest metro areas.</p><p>Support staff based in Madrid coordinate closely with the Paris hub during overnight hours as part of the follow-the-sun Gold-tier rotation, and escalate hardware-level issues directly to the Munich engineering team when a Tier 2 diagnosis points to a product defect rather than an installation or environmental cause.</p><p>The office does not currently host a dedicated engineering or certification function; all product engineering support for Spanish customers is routed through Munich.</p>",
+        "publicationDate": "2024-06-02",
+        "countryScope": "spain",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "office, spain, madrid"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-009",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NMG Italy — Milan Office Profile",
+        "articleType": "officeInformation",
+        "department": "Corporate Facilities",
+        "summary": "<p>The Milan office covers Sales and a growing installer-partner network for the Italian market, supported remotely by the Madrid and Munich hubs.</p>",
+        "body": "<p>Milan is Northstar Mobility Group's newest of the six country offices covered in this profile series, opened to support growing demand for corporate and hospitality AC charging in northern Italy. The office currently focuses on Sales and installer-partner enablement; Tier 1 support for Italian customers is handled remotely by the Madrid hub during business hours, with Tier 2/Tier 3 escalation following the same path as Spain, through Munich.</p><p>Standard Essential, Professional, and Gold service-plan terms apply in Italy, with no country-specific exceptions documented at this time. As the installed base in Italy grows, a locally staffed Tier 1 function is under consideration but not yet approved.</p><p>The Milan team also coordinates closely with Product Marketing on localized go-to-market materials for the Italian market, including translated technical datasheets for the Nova AC and Nova DC lines.</p>",
+        "publicationDate": "2024-06-09",
+        "countryScope": "italy",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "office, italy, milan"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-010",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NMG Belgium — Brussels Office Profile",
+        "articleType": "officeInformation",
+        "department": "Corporate Facilities",
+        "summary": "<p>The Brussels office is a compact hub covering Belgium and Luxembourg, with a strong focus on EU institutional and corporate-parking customers.</p>",
+        "body": "<p>The Brussels office is Northstar Mobility Group's smallest country office, staffed primarily by a regional Sales and Account Management team covering Belgium and Luxembourg. Its customer base skews toward EU institutional buildings, corporate headquarters, and hospitality sites in and around Brussels — a natural fit for the Nova AC 200 and Nova AC 400 product lines.</p><p>Support for Belgian customers is handled remotely by the Paris hub during business hours, given the office's proximity and the shared French-language support capability. There are no country-specific service-plan exceptions for Belgium; standard Essential, Professional, and Gold terms apply.</p><p>The Brussels team also represents Northstar Mobility Group in several EU-level charging infrastructure policy and standards working groups, feeding requirements back into the company's product and compliance roadmap.</p>",
+        "publicationDate": "2024-07-01",
+        "countryScope": "belgium",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "office, belgium, brussels"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-011",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NMG Netherlands — Amsterdam Office Profile",
+        "articleType": "officeInformation",
+        "department": "Corporate Facilities",
+        "summary": "<p>The Amsterdam office is a regional hub combining Sales, Support, and an Atlas Fleet-focused engineering pod, serving one of Northstar Mobility Group's most fleet-electrification-heavy markets.</p>",
+        "body": "<p>Amsterdam serves as Northstar Mobility Group's hub for the Netherlands, combining a regional Sales team, a Tier 1/Tier 2 support function, and an engineering pod contributing to Atlas Fleet — a natural fit given the strength of logistics and corporate fleet electrification in the Dutch market.</p><p>Customers on a Gold service plan in the Netherlands should note the local coverage exception: the standard 4-hour critical on-site response applies only within the Amsterdam, Rotterdam, Utrecht, and The Hague metro areas; elsewhere in the Netherlands, Gold critical on-site response extends to 8 hours.</p><p>The Amsterdam office frequently hosts customer and partner briefings on fleet electrification and depot capacity planning, drawing on the Atlas Fleet engineering team's direct involvement in the platform's route-aware scheduling and depot forecasting capabilities.</p>",
+        "publicationDate": "2024-07-08",
+        "countryScope": "netherlands",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "office, netherlands, amsterdam"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-012",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Northstar Mobility Group Launches Sustainability Initiative: Net Zero Operations by 2030",
+        "articleType": "announcement",
+        "department": "Sustainability",
+        "summary": "<p>Northstar Mobility Group today committed to net zero operational emissions across its own facilities and manufacturing footprint by 2030, alongside new product-level sustainability targets.</p>",
+        "body": "<p>Northstar Mobility Group has announced a company-wide sustainability initiative targeting net zero operational emissions across its own offices and manufacturing sites by 2030. The plan covers three areas: transitioning company facilities to renewable electricity, reducing manufacturing waste in the production of the Nova AC and Nova DC product lines, and expanding the use of recycled materials in charger enclosures.</p><p>\"As a company that exists to help our customers decarbonize transport, we owe it to them to hold our own operations to the same standard,\" said the company's Head of Sustainability. \"This is a concrete, dated commitment, not an aspiration.\"</p><p>The initiative also formalizes support for customer-facing sustainability use cases already enabled by Orion Energy Manager's solar-generation-aware priority rules and battery-storage integration, and builds on the solar-powered charging pilot already running out of the Paris office.</p><p>Progress against the 2030 target will be reported annually, with the first milestone review scheduled for early 2027.</p>",
+        "publicationDate": "2025-04-22",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "sustainability, net-zero, announcement"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-013",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "New Employee Wellness and Flexible Work Program Launched",
+        "articleType": "internalNews",
+        "department": "Human Resources",
+        "summary": "<p>Human Resources has launched a company-wide wellness and flexible working program available to all Northstar Mobility Group employees starting this month.</p>",
+        "body": "<p>Following feedback gathered in this year's employee engagement survey, Human Resources has introduced a new wellness and flexible working program available to all employees across every Northstar Mobility Group office. The program includes an annual wellness stipend, an expanded employee assistance program with confidential counseling access, and a formalized flexible working policy allowing employees to agree individual start and finish time arrangements with their manager.</p><p>\"We heard clearly that our people wanted more flexibility and better support for their wellbeing, not just more benefits on paper,\" said the Head of Human Resources. \"This program is designed to be used, not just offered.\"</p><p>Managers have received guidance materials to support consistent rollout across teams, and HR Business Partners in each country office are available to answer questions about local implementation details, since some elements of the program (particularly the wellness stipend) are administered slightly differently depending on local tax treatment.</p>",
+        "publicationDate": "2023-09-11",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "hr, wellness, flexible-work, internal"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-014",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Restructuring of the EMEA Sales Organization",
+        "articleType": "organization",
+        "department": "Sales",
+        "summary": "<p>Effective this quarter, the EMEA Sales organization is moving from a country-led structure to a segment-led structure, aligning account coverage around Corporate, Retail & Hospitality, and Fleet & Logistics rather than geography alone.</p>",
+        "body": "<p>This notice is confidential to management pending formal communication to affected teams and should not be shared outside the leadership group until the rollout communication is issued.</p><p>Effective this quarter, EMEA Sales is transitioning from a purely country-led account structure to a segment-led structure organized around three go-to-market segments: Corporate & Workplace, Retail & Hospitality, and Fleet & Logistics. Country Sales Leads in France, Germany, Spain, Italy, Belgium, and the Netherlands will retain local relationship ownership, but segment leadership will now set account strategy and product positioning centrally, reporting to a newly created VP of Segment Sales role.</p><p>This change is intended to align sales motion with the company's product strategy shift toward DC fast-charging and energy-management bundles, which increasingly sell into fleet and logistics accounts that span multiple countries and were previously split across separate country teams.</p><p>A small number of account reassignments will follow as segment coverage is finalized over the next several weeks. Managers should hold from communicating specific account changes to individual contributors until the coordinated rollout communication, expected next month.</p>",
+        "publicationDate": "2025-10-03",
+        "countryScope": "global",
+        "audience": "manager",
+        "lifecycleStatus": "current",
+        "confidentiality": "confidential",
+        "tags": "organization, sales, restructuring, confidential"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-015",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Engineering Blog: Introducing the Next-Generation Remote Diagnostics Platform",
+        "articleType": "internalNews",
+        "department": "Engineering",
+        "summary": "<p>The Cloud Platform Engineering team shares an inside look at the next iteration of Polaris Remote Diagnostics, in active development to catch error patterns like E217 before they reach customers.</p>",
+        "body": "<p>Since Remote Diagnostics shipped in Polaris Charge Cloud 2024.3, support engineers have been able to pull a live diagnostic snapshot from any connected unit without an on-site visit. It has meaningfully cut Tier 2 resolution times, but the current version is still fundamentally reactive: someone has to notice a problem and request a snapshot.</p><p>The team is now building the next generation of the platform around continuous, low-overhead telemetry streaming, with the explicit goal of catching failure patterns automatically before a customer files a ticket. The motivating case study internally is E217 — the intermittent OCPP backend disconnect that showed up on NX-400 firmware 4.8 after roughly 72 hours of continuous uptime under high session volume. In hindsight, the session-token cache leak behind E217 left a detectable memory-growth signature well before the disconnect actually occurred; a proactive diagnostics platform should be able to flag that kind of pattern automatically going forward.</p><p>Early prototypes are already running against a subset of opted-in fleet customers, correlating memory usage, session volume, and reconnect frequency across firmware versions. The team is targeting a beta rollout to select Gold-tier customers later this year, with general availability to follow as a future Polaris Charge Cloud release.</p><p>This is an internal engineering update and not yet a customer-facing commitment — no firm release version or date has been set.</p>",
+        "publicationDate": "2026-02-18",
+        "countryScope": "global",
+        "audience": "engineer",
+        "lifecycleStatus": "current",
+        "confidentiality": "internal",
+        "tags": "engineering, diagnostics, polaris, internal"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-016",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Northstar Mobility Group Marks 10 Years of Innovation in EV Charging",
+        "articleType": "announcement",
+        "department": "Corporate Communications",
+        "summary": "<p>Northstar Mobility Group celebrates ten years since its founding, marking a decade of growth from an early-stage charging hardware startup to a full-portfolio EV charging and energy management company.</p>",
+        "body": "<p>This month marks ten years since Northstar Mobility Group was founded to build reliable, installer-friendly AC charging hardware for the emerging EV market. What began as a small engineering team has grown into a company spanning hardware, firmware, and cloud software, with a footprint across six European countries.</p><p>\"A decade ago, most of the questions we got were 'will this even work reliably.' Today the questions are about dynamic load balancing, fleet-scale scheduling, and energy management integration,\" said the company's co-founder and CEO. \"That shift says everything about how far the market — and we — have come.\"</p><p>The anniversary comes as the company prepares to expand its AC portfolio and lay the groundwork for a growing DC fast-charging lineup in the years ahead, alongside its Polaris Charge Cloud, Atlas Fleet, and Orion Energy Manager software platforms.</p><p>Employees across all offices are invited to a series of local anniversary events being coordinated by Corporate Communications over the coming weeks.</p>",
+        "publicationDate": "2023-01-10",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "anniversary, history, announcement"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-017",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NMG Appoints New Chief Technology Officer",
+        "articleType": "organization",
+        "department": "Executive Office",
+        "summary": "<p>Northstar Mobility Group has appointed a new Chief Technology Officer to lead Engineering as the company scales its hardware, firmware, and cloud platform investments.</p>",
+        "body": "<p>Northstar Mobility Group has announced the appointment of a new Chief Technology Officer, effective this month, taking over leadership of the combined Hardware Engineering, Firmware & Embedded Systems, Cloud Platform Engineering, and Quality & Certification organization.</p><p>The incoming CTO joins from a background in embedded systems and industrial IoT platforms, and will oversee the continued build-out of the NX-400 and forthcoming NX-450 firmware lines, as well as the expansion of Polaris Charge Cloud, Atlas Fleet, and Orion Energy Manager.</p><p>\"Our engineering organization has grown quickly, and now needs the kind of structure and platform discipline that lets us keep shipping quality hardware and software at this pace,\" said the company's CEO. \"That's exactly the experience our new CTO brings.\"</p><p>The transition follows a structured handover period with the outgoing engineering leadership team and is not expected to change near-term product or firmware release commitments.</p>",
+        "publicationDate": "2024-03-01",
+        "countryScope": "global",
+        "audience": "partner",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "organization, leadership, cto, announcement"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-018",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Solar-Powered Charging Pilot Program Launches in France",
+        "articleType": "announcement",
+        "department": "Sustainability",
+        "summary": "<p>Northstar Mobility Group has launched a solar-powered charging pilot program at its Paris office, combining on-site solar generation with Orion Energy Manager's charging priority rules.</p>",
+        "body": "<p>Northstar Mobility Group has launched a pilot program at its Paris office pairing rooftop solar generation with a cluster of Nova AC charging stations managed by Orion Energy Manager. The pilot uses Orion's solar-generation-aware priority rules, introduced in version 3.1, to favor charging sessions when excess on-site solar output is available, reducing reliance on grid power during daylight hours.</p><p>\"This is exactly the use case Orion was built for,\" said the local Sustainability lead. \"Instead of solar generation and EV charging operating as two separate systems, they're now actively coordinated.\"</p><p>Early results show a meaningful share of charging sessions at the pilot site now drawing primarily from on-site solar during midday hours. The Paris office is serving as the reference site for customers evaluating similar solar-integrated deployments, and learnings from the pilot are feeding directly into the company's broader net zero operations initiative.</p><p>If results continue to hold through the coming months, Northstar Mobility Group plans to expand the pilot approach to additional company-owned sites in other markets.</p>",
+        "publicationDate": "2024-09-16",
+        "countryScope": "france",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "sustainability, solar, france, pilot"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-019",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Northstar Mobility Group Recognized for Early EV Charging Prototype",
+        "articleType": "announcement",
+        "department": "Corporate Communications",
+        "summary": "<p>An early Northstar Mobility Group charging prototype received a regional innovation recognition in the company's founding years. This item is retained for historical record only.</p>",
+        "body": "<p>This article is archived and retained for historical record only; it does not reflect current products, organization, or messaging.</p><p>In the company's earliest years, before the Nova product naming convention existed, an early single-socket AC charging prototype developed by Northstar Mobility Group's founding engineering team received a regional innovation recognition from a local business association. The prototype's core connectivity and load-management concepts later informed the design of what would become the Nova AC 100.</p><p>The recognition predates the company's current product portfolio, current leadership team, and current corporate structure, and has no bearing on any current product claims or specifications. It is preserved here purely as a matter of company history.</p>",
+        "publicationDate": "2023-01-05",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "archived",
+        "confidentiality": "public",
+        "tags": "press, archived, history"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-020",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Internal Rollout: New Expense Reporting Tool",
+        "articleType": "internalNews",
+        "department": "Finance",
+        "summary": "<p>Finance rolled out a new expense reporting tool for all employees starting this month. This tool has since been replaced and this notice is retained for historical reference only.</p>",
+        "body": "<p>This notice is deprecated. The expense reporting tool described below has since been replaced by a newer platform; employees should refer to current Finance guidance rather than this article for expense submission instructions.</p><p>Finance has rolled out a new expense reporting tool to all employees, replacing the previous paper-and-spreadsheet based process. The new tool supports mobile receipt capture, automatic currency conversion for cross-border business travel, and direct integration with the payroll system for faster reimbursement.</p><p>All employees are asked to submit any outstanding expenses from the prior quarter through the new tool by the end of this month. Training sessions were held in each country office during the rollout window, and recordings were made available on the internal HR portal at the time.</p>",
+        "publicationDate": "2023-06-20",
+        "countryScope": "global",
+        "audience": "employee",
+        "lifecycleStatus": "deprecated",
+        "confidentiality": "internal",
+        "tags": "finance, expense-tool, internal, deprecated"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-021",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Northstar Mobility Group Announces Strategic Partnership with European Charge Point Operators Alliance",
+        "articleType": "strategy",
+        "department": "Corporate Strategy",
+        "summary": "<p>Northstar Mobility Group has joined a strategic partnership with the European Charge Point Operators Alliance to promote interoperable OCPP-based charging infrastructure across the continent.</p>",
+        "body": "<p>Northstar Mobility Group has entered a strategic partnership with the European Charge Point Operators Alliance, a coalition of charging infrastructure operators and manufacturers focused on promoting open, interoperable charging standards across Europe.</p><p>As part of the partnership, Northstar Mobility Group commits to maintaining full OCPP 2.0.1 compliance across its connected product lines and to participating in the Alliance's joint interoperability testing program, alongside other member manufacturers and network operators.</p><p>\"Open standards are what let a driver charge confidently regardless of which network operator or hardware vendor is behind a given charging station,\" said the Chief Strategy Officer. \"This partnership formalizes a commitment we've held informally since our earliest OCPP implementations.\"</p><p>The partnership does not change any existing product roadmap commitments; it formalizes ongoing collaboration on standards and interoperability testing that Northstar Mobility Group has participated in on an ad hoc basis for several years.</p>",
+        "publicationDate": "2025-05-12",
+        "countryScope": "global",
+        "audience": "partner",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "strategy, partnership, announcement"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-022",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Executive Leadership Realignment: New Regional Reporting Structure",
+        "articleType": "organization",
+        "department": "Executive Office",
+        "summary": "<p>Ahead of next quarter's segment-led sales restructuring, the executive team is realigning regional reporting lines so that country leadership reports through segment VPs rather than a single EMEA General Manager role.</p>",
+        "body": "<p>This notice is confidential to management and should not be shared outside the leadership group until formal communication has been issued to affected teams.</p><p>In preparation for the segment-led sales restructuring already planned for the coming quarter, the executive team is realigning regional reporting lines. The current EMEA General Manager role will be retired, with the six country Sales Leads (France, Germany, Spain, Italy, Belgium, Netherlands) transitioning to report through the newly created segment VP roles instead, consistent with the Corporate & Workplace, Retail & Hospitality, and Fleet & Logistics segment structure described in the related sales restructuring notice.</p><p>The current EMEA General Manager will move into a newly created Strategic Accounts role focused on the company's largest fleet and logistics customers, reporting directly to the CEO.</p><p>This realignment is being communicated to Country Sales Leads and their direct reports on a rolling basis over the coming two weeks; managers should not discuss specific reporting-line changes with individual contributors before their own manager has been briefed.</p>",
+        "publicationDate": "2025-09-30",
+        "relatedContent": "CORP-014",
+        "countryScope": "global",
+        "audience": "manager",
+        "lifecycleStatus": "current",
+        "confidentiality": "confidential",
+        "tags": "organization, leadership, confidential"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-023",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Nova AC 100 \"Power Where You Park\" Marketing Campaign Materials",
+        "articleType": "announcement",
+        "department": "Product Marketing",
+        "summary": "<p>Marketing materials and messaging guidance for the original \"Power Where You Park\" campaign promoting the Nova AC 100 for small business and employee parking. This campaign has since been superseded by newer product messaging.</p>",
+        "body": "<p>This announcement is superseded. The messaging described here has been retired in favor of current product marketing guidance; see the NX-450 launch announcement (CORP-001) for the company's current premium AC charging messaging.</p><p>In 2023, Northstar Mobility Group launched the \"Power Where You Park\" marketing campaign to promote the Nova AC 100 to small businesses and corporate employers looking to add a small number of employee charging spaces. The campaign emphasized simplicity of installation and affordability over the multi-socket, network-managed positioning used for the larger NX-200 and NX-400 units.</p><p>Campaign materials at the time included print and digital ads, a dedicated landing page, and sales collateral tailored to small-business buyers. As the company's product portfolio has grown to include the premium NX-450 and the full DC fast-charging lineup, this campaign's messaging and materials are no longer current and should not be reused without checking with Product Marketing for up-to-date guidance.</p>",
+        "publicationDate": "2023-04-18",
+        "relatedContent": "CORP-001",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "superseded",
+        "confidentiality": "public",
+        "tags": "marketing, nova-ac-100, superseded"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-024",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Northstar Mobility Group to Expand Manufacturing Capacity in 2026",
+        "articleType": "announcement",
+        "department": "Operations",
+        "summary": "<p>Northstar Mobility Group is expanding manufacturing capacity in 2026 to meet growing demand across its Nova AC and Nova DC product lines, ahead of the NX-450 launch and continued DC portfolio growth.</p>",
+        "body": "<p>Northstar Mobility Group has announced plans to expand manufacturing capacity through 2026, citing sustained order growth across both the Nova AC and Nova DC product families. The expansion adds a second production line dedicated to dual-socket AC units (Nova AC 400 and Nova AC 450) and increases capacity for the modular DX-series DC power electronics used in the DX-120, DX-240, and DX-360 stations.</p><p>\"Demand for the NX-450 alone has exceeded our initial forecasts, and our DC lineup is growing even faster as logistics and highway customers scale up,\" said the company's Chief Operating Officer. \"This expansion is about making sure lead times stay competitive as that demand continues.\"</p><p>The expansion is expected to reduce average lead times for large corporate and logistics orders over the course of the year, without any change to product specifications, pricing, or the existing certification and quality processes overseen by the Quality & Certification team in Munich.</p><p>Customers with orders already in the pipeline should not expect any change to their current delivery estimates as a result of this announcement; the additional capacity is intended to support future order volume.</p>",
+        "publicationDate": "2026-01-15",
+        "countryScope": "global",
+        "audience": "customer",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "operations, manufacturing, expansion, announcement"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    },
+    {
+      "externalReferenceCode": "CORP-025",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Draft: Q4 2026 Fleet Electrification Partnership Program (Pending Announcement)",
+        "articleType": "announcement",
+        "department": "Corporate Strategy",
+        "summary": "<p>DRAFT — not for external distribution. Early messaging for a planned Q4 2026 partnership program bundling Atlas Fleet and Orion Energy Manager for large logistics and fleet customers, pending final sign-off.</p>",
+        "body": "<p>This article is a draft. It has not been approved for external distribution and should not be shared with customers, press, or partners until a final version is published.</p><p>Corporate Strategy is preparing a Q4 2026 announcement for a new Fleet Electrification Partnership Program, bundling Atlas Fleet's route-aware scheduling and depot capacity forecasting with Orion Energy Manager's battery-storage-aware load balancing, targeted at large logistics operators planning multi-year depot electrification.</p><p>Early positioning frames the program around a single point of accountability for depot-scale electrification planning — combining hardware sizing (DX-240 and DX-360 stations), software (Atlas Fleet plus Orion), and a dedicated Strategic Accounts contact drawn from the newly created Strategic Accounts function.</p><p>Final scope, pricing structure, and launch date are still under review with the executive team; this draft exists to gather early feedback from regional Sales leadership ahead of a planned public announcement later in the year.</p>",
+        "publicationDate": "2026-08-20",
+        "countryScope": "global",
+        "audience": "manager",
+        "lifecycleStatus": "draft",
+        "confidentiality": "internal",
+        "tags": "draft, fleet, partnership, not-yet-public"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-CORPORATE"
+    }
+  ]
+}

@@ -1,0 +1,756 @@
+{
+  "configuration": {
+    "className": "com.liferay.object.rest.dto.v1_0.ObjectEntry",
+    "parameters": {
+      "createStrategy": "UPSERT",
+      "scopeKey": "NMG-KNOWLEDGE"
+    },
+    "taskItemDelegateName": "C_NMGTechSpec"
+  },
+  "items": [
+    {
+      "externalReferenceCode": "SPEC-NX400-01",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NX-400 Technical Specification — Hardware Revision 1",
+        "productCode": "NX-400",
+        "hardwareVersion": "Rev 1",
+        "maximumPower": "2 x 22 kW",
+        "inputVoltage": "400V AC three-phase, 63A",
+        "outputVoltage": "400V AC three-phase, dual Type 2 connectors",
+        "connectivity": "Ethernet, integrated 4G modem",
+        "protocols": "OCPP 2.0.1",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "700 x 400 x 220 mm (floor-standing pedestal)",
+        "weight": "45 kg",
+        "installationRequirements": "<p>The NX-400 is a floor-standing pedestal unit requiring a dedicated three-phase 400V, 63A circuit sized for simultaneous dual-socket operation. Foundation and cable-routing requirements follow standard pedestal-charger practice; confirm available capacity for dynamic load balancing across multiple NX-400 units before finalizing circuit sizing if more than one unit shares a supply.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service must be performed by a qualified, certified electrician. Dynamic load balancing configuration should only be adjusted by personnel trained on the Polaris Charge Cloud platform, since an incorrect shared-circuit budget can lead to nuisance breaker trips under load.</p>",
+        "certificationInformation": "<p>CE marked; complies with applicable low-voltage, EMC, and OCPP 2.0.1 conformance requirements.</p>",
+        "techNotes": "<p>Firmware for this hardware revision has progressed through the 4.x line since 2023. Version 4.8 introduced an intermittent OCPP backend disconnect (E217) on dual-socket units under sustained high session volume after roughly 72 hours of continuous uptime; this was fixed in 4.8.1. See SPEC-NX400-02 for the current recommended firmware baseline and KI-NX400-004 for full detail on E217.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2023-06-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-400, hardware spec, dual-socket, OCPP 2.0.1"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-NX100-01",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NX-100 Technical Specification — Hardware Revision 1",
+        "productCode": "NX-100",
+        "hardwareVersion": "Rev 1",
+        "maximumPower": "7.4 kW",
+        "inputVoltage": "230V AC single-phase, 32A",
+        "outputVoltage": "230V AC, Type 2 connector",
+        "connectivity": "Wi-Fi 802.11n, 10/100 Ethernet",
+        "protocols": "OCPP 1.6J",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "400 x 250 x 150 mm (wall-mount)",
+        "weight": "8 kg",
+        "installationRequirements": "<p>The NX-100 mounts to an interior or exterior wall on a single-phase 230V, 32A dedicated circuit. No dedicated transformer or three-phase supply is required. Allow standard clearance around the unit for cable access and ventilation, and terminate the network connection (Ethernet, or configure Wi-Fi during commissioning) before energizing the circuit.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and any internal service must be performed by a qualified, certified electrician familiar with local wiring regulations. Do not open the enclosure while the unit is energized. The circuit supplying the NX-100 must include appropriate residual-current protection sized per local code before the unit is commissioned.</p>",
+        "certificationInformation": "<p>CE marked; complies with applicable low-voltage and EMC directives for the countries in which it is sold. IP54 enclosure rating verified for outdoor wall-mount use.</p>",
+        "techNotes": "<p>Rev 1 is the original NX-100 hardware build and remains the current shipping revision; no Rev 2 has been released to date.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2022-03-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-100, hardware spec, single-phase, wall-mount"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-NX100-02",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NX-100 Technical Specification — France Installation Variant",
+        "productCode": "NX-100",
+        "hardwareVersion": "Rev 1 (FR connector variant)",
+        "maximumPower": "7.4 kW",
+        "inputVoltage": "230V AC single-phase, 32A",
+        "outputVoltage": "230V AC, Type 2 connector (FR fitting)",
+        "connectivity": "Wi-Fi 802.11n, 10/100 Ethernet",
+        "protocols": "OCPP 1.6J",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "400 x 250 x 150 mm (wall-mount)",
+        "weight": "8.1 kg",
+        "installationRequirements": "<p>Installation requirements match the base NX-100: a dedicated single-phase 230V, 32A circuit, standard wall-mount clearance, and network configuration prior to energizing. This variant additionally follows the documentation pack aligned to French workplace charging point guidance.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>As with the base NX-100, installation and service must be performed by a qualified, certified electrician. The supply circuit must include residual-current protection sized per French wiring regulations before commissioning.</p>",
+        "certificationInformation": "<p>CE marked, with French grid-connection paperwork pre-completed as part of the France Employee Parking Edition package.</p><p>Replacement Type 2 connector assemblies and the France-fitting cable gland kit are stocked as standard spare parts and can typically be dispatched for next-business-day delivery under an active service plan.</p>",
+        "techNotes": "<p>Electrically identical to SPEC-NX100-01; the only differences are the connector fitting and the documentation pack bundled for French installers.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2023-01-01",
+        "businessDomain": "",
+        "countryScope": "france",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-100, France, hardware spec, market variant"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-NX200-01",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NX-200 Technical Specification — Hardware Revision 1 (Superseded)",
+        "productCode": "NX-200",
+        "hardwareVersion": "Rev 1",
+        "maximumPower": "22 kW",
+        "inputVoltage": "400V AC three-phase, 32A",
+        "outputVoltage": "400V AC three-phase, Type 2 connector",
+        "connectivity": "Ethernet, Wi-Fi; 4G module field-add-on",
+        "protocols": "OCPP 1.6J",
+        "operatingTemperature": "-20°C to +45°C",
+        "ipRating": "IP54",
+        "dimensions": "500 x 300 x 180 mm (wall or pedestal)",
+        "weight": "14.5 kg",
+        "installationRequirements": "<p>Rev 1 requires a dedicated three-phase 400V, 32A circuit and standard wall or pedestal mounting clearance. The RFID reader module was a factory-fit-only option on Rev 1 and could not be retrofitted in the field.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service require a qualified, certified electrician. The supply circuit must include appropriate three-phase protection devices sized per local code.</p>",
+        "certificationInformation": "<p>CE marked under the certification in effect at Rev 1's release; superseded by the Rev 2 certification package below, which extends the rated operating temperature range.</p>",
+        "techNotes": "<p>This is the original NX-200 hardware revision, shipped from launch in 2022 until Rev 2's release. It is superseded by SPEC-NX200-02, which widened the operating temperature range and made the RFID reader field-installable. Existing Rev 1 units in service remain supported; new orders ship as Rev 2.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2022-09-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "superseded",
+        "confidentiality": "public",
+        "tags": "NX-200, hardware spec, superseded, Rev 1"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-NX200-02",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NX-200 Technical Specification — Hardware Revision 2 (Current)",
+        "productCode": "NX-200",
+        "hardwareVersion": "Rev 2",
+        "maximumPower": "22 kW",
+        "inputVoltage": "400V AC three-phase, 32A",
+        "outputVoltage": "400V AC three-phase, Type 2 connector",
+        "connectivity": "Ethernet, Wi-Fi; 4G module field-add-on",
+        "protocols": "OCPP 1.6J",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "500 x 300 x 180 mm (wall or pedestal)",
+        "weight": "15 kg",
+        "installationRequirements": "<p>Rev 2 requires the same dedicated three-phase 400V, 32A circuit as Rev 1. Unlike Rev 1, the RFID reader and 4G modules are both field-installable add-ons and no longer require factory fitment, simplifying post-installation upgrades.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service require a qualified, certified electrician. The supply circuit must include appropriate three-phase protection devices sized per local code.</p>",
+        "certificationInformation": "<p>CE marked; extends the certified operating temperature range to -25°C to +50°C compared with Rev 1's -20°C to +45°C range.</p><p>Replacement RFID reader modules and 4G modem add-on kits for Rev 2 are stocked as standard spare parts, reflecting their field-installable design; Rev 1 units requiring these components must be scheduled for a factory-fit service visit instead.</p>",
+        "techNotes": "<p>Rev 2 is the current shipping hardware revision, superseding SPEC-NX200-01. Field-installable RFID and 4G modules were the main driver for the revision, along with the widened operating temperature certification.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2024-01-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-200, hardware spec, Rev 2, current"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-NX200-03",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NX-200 Technical Specification — Iberian Market Edition (Spain)",
+        "productCode": "NX-200",
+        "hardwareVersion": "Rev 2 (ES connector variant)",
+        "maximumPower": "22 kW",
+        "inputVoltage": "400V AC three-phase, 32A",
+        "outputVoltage": "400V AC three-phase, Type 2 connector (ES fitting)",
+        "connectivity": "Ethernet, Wi-Fi; 4G add-on",
+        "protocols": "OCPP 1.6J",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "500 x 300 x 180 mm (wall or pedestal)",
+        "weight": "15.2 kg",
+        "installationRequirements": "<p>Installation requirements match the global Rev 2 NX-200: a dedicated three-phase 400V, 32A circuit. This edition ships with Spanish grid-connection documentation pre-completed.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service require a qualified, certified electrician familiar with Spanish wiring regulations. Protection devices must be sized per local code before commissioning.</p>",
+        "certificationInformation": "<p>CE marked, with the grid-connection compliance package specific to Spanish distribution network operator requirements.</p><p>Replacement connector assemblies matching the Spanish fitting, along with the standard Rev 2 RFID and 4G add-on modules, are stocked as spare parts for field service in Spain, and Spanish field technicians are trained on the same Rev 2 procedures used elsewhere in the NX-200 fleet.</p>",
+        "techNotes": "<p>Electrically identical to SPEC-NX200-02; differs only in connector fitting and pre-completed Spanish certification paperwork.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target; outside the Madrid and Barcelona metropolitan areas, Gold on-site response is extended to ten hours rather than the standard eight, reflecting field-technician density in this region.</p>",
+        "effectiveDate": "2024-02-01",
+        "businessDomain": "",
+        "countryScope": "spain",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-200, Spain, hardware spec, market variant"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-NX400-02",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NX-400 Technical Specification — Hardware Revision 2",
+        "productCode": "NX-400",
+        "hardwareVersion": "Rev 2",
+        "maximumPower": "2 x 22 kW",
+        "inputVoltage": "400V AC three-phase, 63A",
+        "outputVoltage": "400V AC three-phase, dual Type 2 connectors",
+        "connectivity": "Ethernet, integrated 4G modem",
+        "protocols": "OCPP 2.0.1",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "700 x 400 x 220 mm (floor-standing pedestal)",
+        "weight": "45.5 kg",
+        "installationRequirements": "<p>Installation requirements are unchanged from Rev 1: a dedicated three-phase 400V, 63A circuit, standard pedestal foundation and cable routing, and load-budget planning if multiple units share a supply under dynamic load balancing.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service must be performed by a qualified, certified electrician. As with Rev 1, dynamic load balancing configuration should only be changed by personnel trained on Polaris Charge Cloud.</p>",
+        "certificationInformation": "<p>CE marked; Rev 2 uses a revised OCPP client implementation to eliminate the session-token cache leak that caused the E217 backend-disconnect issue on Rev 1 units running firmware 4.8.</p>",
+        "techNotes": "<p>Rev 2 hardware ships with firmware 4.8.1 or later as standard, which includes the fix for the E217 OCPP backend-disconnect issue described under SPEC-NX400-01 and KI-NX400-004. Existing Rev 1 units are not affected once upgraded to firmware 4.8.1.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2025-03-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-400, hardware spec, Rev 2, E217 fix"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-NX400-03",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NX-400 Technical Specification — Pre-Launch Prototype Build (Archived)",
+        "productCode": "NX-400",
+        "hardwareVersion": "Prototype (pre-Rev 1)",
+        "maximumPower": "2 x 22 kW (prototype, derated to 2x18 kW in early test units)",
+        "inputVoltage": "400V AC three-phase, 63A",
+        "outputVoltage": "400V AC three-phase, dual Type 2 connectors",
+        "connectivity": "Ethernet only; 4G modem not yet integrated in prototype build",
+        "protocols": "OCPP 1.6J (pre-2.0.1 prototype firmware)",
+        "operatingTemperature": "0°C to +40°C (prototype rating)",
+        "ipRating": "IP44 (prototype enclosure)",
+        "dimensions": "720 x 420 x 230 mm (prototype enclosure)",
+        "weight": "48 kg",
+        "installationRequirements": "<p>This specification documents the internal pre-launch prototype build used during NX-400 development and field trials in 2022 and early 2023. It does not reflect the shipping product and is retained for historical reference only; no new installations should be planned against it.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>As an archived, non-shipping specification, this document should not be used to guide any live installation. Any prototype-era unit still in a test environment must only be serviced by qualified, certified personnel aware of its non-production status.</p>",
+        "certificationInformation": "<p>The prototype build was not CE certified for commercial sale; certification was completed only for the shipping Rev 1 hardware described in SPEC-NX400-01.</p>",
+        "techNotes": "<p>Retained for historical/engineering reference only. Key differences from the shipping product: no integrated 4G modem, OCPP 1.6J rather than 2.0.1, a lower IP44 enclosure rating, and a narrower 0°C to +40°C operating range. All of these were addressed before the Rev 1 commercial launch.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2022-11-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "archived",
+        "confidentiality": "public",
+        "tags": "NX-400, archived, prototype, historical"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-NX450-01",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NX-450 Technical Specification — Hardware Revision 1",
+        "productCode": "NX-450",
+        "hardwareVersion": "Rev 1",
+        "maximumPower": "2 x 22 kW",
+        "inputVoltage": "400V AC three-phase, 63A",
+        "outputVoltage": "400V AC three-phase, dual Type 2 connectors",
+        "connectivity": "Ethernet, integrated 4G modem",
+        "protocols": "OCPP 2.0.1, ISO 15118 (Plug & Charge)",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "700 x 400 x 220 mm (floor-standing pedestal)",
+        "weight": "46 kg",
+        "installationRequirements": "<p>Installation requirements match the NX-400: a dedicated three-phase 400V, 63A circuit, standard pedestal foundation and cable routing, and load-budget planning under dynamic load balancing. No additional electrical infrastructure is needed to support Plug & Charge — it operates entirely at the protocol layer.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service must be performed by a qualified, certified electrician. As with the NX-400, dynamic load balancing configuration should only be adjusted by personnel trained on Polaris Charge Cloud.</p>",
+        "certificationInformation": "<p>CE marked; ISO 15118 Plug & Charge certificate handling was updated in firmware 1.1 after an early certificate-renewal issue was identified post-launch (see techNotes).</p>",
+        "techNotes": "<p>Launched March 2026 on firmware 1.0. Firmware 1.1 (May 2026) fixed a Plug & Charge certificate-renewal issue affecting vehicles enrolled near a certificate's expiry boundary; firmware 1.2 (July 2026) improved energy-metering accuracy. Sites billing per kWh should confirm units are running 1.2 or later.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2026-03-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-450, hardware spec, Plug and Charge, ISO 15118"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-NX450-02",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "NX-450 Technical Specification — Firmware 1.2 Metering Update",
+        "productCode": "NX-450",
+        "hardwareVersion": "Rev 1 (firmware 1.2 baseline)",
+        "maximumPower": "2 x 22 kW",
+        "inputVoltage": "400V AC three-phase, 63A",
+        "outputVoltage": "400V AC three-phase, dual Type 2 connectors",
+        "connectivity": "Ethernet, integrated 4G modem",
+        "protocols": "OCPP 2.0.1, ISO 15118 (Plug & Charge)",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "700 x 400 x 220 mm (floor-standing pedestal)",
+        "weight": "46 kg",
+        "installationRequirements": "<p>No installation changes from SPEC-NX450-01 — this document specifically covers the unit's configuration once updated to firmware 1.2, relevant for sites planning per-kWh billing through the Polaris Billing module.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service must be performed by a qualified, certified electrician, consistent with SPEC-NX450-01. No new safety considerations are introduced by the firmware 1.2 metering update.</p>",
+        "certificationInformation": "<p>CE marked, unchanged from Rev 1's original certification; the firmware 1.2 metering improvement did not require re-certification.</p><p>Sites upgrading from firmware 1.0 or 1.1 should schedule the update during a low-traffic window, since a firmware update briefly takes both sockets offline; Polaris Charge Cloud can push the update remotely without a technician visit under the Remote Diagnostics module.</p>",
+        "techNotes": "<p>This specification exists specifically to document the metering-accuracy improvement introduced in firmware 1.2 (July 2026), which is the recommended baseline for any NX-450 site billing per kWh consumed rather than per session.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2026-07-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "NX-450, firmware 1.2, metering, billing"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-DX60-01",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "DX-60 Technical Specification — Hardware Revision 1",
+        "productCode": "DX-60",
+        "hardwareVersion": "Rev 1",
+        "maximumPower": "60 kW",
+        "inputVoltage": "400V AC three-phase, ~100A",
+        "outputVoltage": "150-500V DC, CCS2 connector",
+        "connectivity": "Ethernet, standard 4G modem",
+        "protocols": "OCPP 2.0.1",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "900 x 600 x 300 mm (floor cabinet)",
+        "weight": "180 kg",
+        "installationRequirements": "<p>The DX-60 requires a dedicated three-phase 400V supply at approximately 100A. Unlike the higher-power DX units, most sites can accommodate a DX-60 on existing distribution-board capacity without a dedicated transformer, though a site survey should still confirm available headroom before installation.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service must be performed by a qualified, certified electrician experienced with DC fast-charging equipment. The unit's DC output stage must never be serviced while energized; follow lockout-tagout procedure before opening the cabinet.</p>",
+        "certificationInformation": "<p>CE marked; complies with applicable low-voltage, EMC, and OCPP 2.0.1 conformance requirements for DC fast-charging equipment.</p><p>Replacement CCS2 gun and cable assemblies are stocked as standard spare parts; a gun replacement can generally be completed within a single service visit without removing the main cabinet from service for more than the duration of the swap.</p>",
+        "techNotes": "<p>Rev 1 is the original and current shipping hardware for the DX-60; no subsequent hardware revision has been released.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2023-02-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "DX-60, hardware spec, DC charging, CCS2"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-DX60-02",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "DX-60 Technical Specification — Germany Retail Edition (Eichrecht Metering)",
+        "productCode": "DX-60",
+        "hardwareVersion": "Rev 1 (DE metering configuration)",
+        "maximumPower": "60 kW",
+        "inputVoltage": "400V AC three-phase, ~100A",
+        "outputVoltage": "150-500V DC, CCS2 connector",
+        "connectivity": "Ethernet, standard 4G modem",
+        "protocols": "OCPP 2.0.1",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "900 x 600 x 300 mm (floor cabinet)",
+        "weight": "181 kg",
+        "installationRequirements": "<p>Installation requirements match the base DX-60: a dedicated three-phase 400V supply at approximately 100A. This edition ships with Eichrecht-compliant metering firmware pre-applied at the factory, avoiding a separate post-installation calibration step.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service must be performed by a qualified, certified electrician experienced with DC fast-charging equipment, following lockout-tagout procedure before opening the cabinet.</p>",
+        "certificationInformation": "<p>CE marked, with German calibration-law (Eichrecht) metering and receipt-printing configuration pre-applied for per-kWh customer billing.</p><p>As with the base DX-60, replacement CCS2 gun and cable assemblies are stocked as standard spare parts; the Eichrecht metering module itself is a sealed, calibration-locked component that must only be replaced or recalibrated by a certified metering technician.</p>",
+        "techNotes": "<p>Electrically identical to SPEC-DX60-01; the metering firmware configuration is the only functional difference, required for sites billing guests directly per kWh in Germany.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas elsewhere; note separately that Professional-plan on-site response is next business day except in Bavaria and Baden-Württemberg, where a request logged before 12:00 receives same-day on-site response.</p>",
+        "effectiveDate": "2023-09-01",
+        "businessDomain": "",
+        "countryScope": "germany",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "DX-60, Germany, Eichrecht, metering, market variant"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-DX120-01",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "DX-120 Technical Specification — Hardware Revision 1",
+        "productCode": "DX-120",
+        "hardwareVersion": "Rev 1",
+        "maximumPower": "120 kW (shared across 1-2 guns)",
+        "inputVoltage": "400V AC three-phase, ~175A",
+        "outputVoltage": "150-920V DC, up to 2x CCS2 connectors",
+        "connectivity": "Ethernet, standard 4G modem",
+        "protocols": "OCPP 2.0.1",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "1200 x 700 x 350 mm (floor cabinet)",
+        "weight": "320 kg",
+        "installationRequirements": "<p>The DX-120 requires a dedicated three-phase 400V supply at approximately 175A. A site survey should confirm available capacity at the main distribution board before committing to an installation date; where capacity is insufficient, coordination with the local grid operator for a capacity upgrade is typically required and should be initiated well ahead of the planned installation.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service must be performed by a qualified, certified electrician experienced with high-current DC fast-charging equipment. Follow lockout-tagout procedure before any internal service; the DC output stage must never be opened while energized.</p>",
+        "certificationInformation": "<p>CE marked; complies with applicable low-voltage, EMC, and OCPP 2.0.1 conformance requirements for high-power DC fast-charging equipment.</p>",
+        "techNotes": "<p>Rev 1 is the current shipping hardware for the DX-120, introduced in 2023 to replace the earlier DX-120 Gen1 platform, which used a fixed single-gun design and a larger transformer footprint.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2023-05-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "DX-120, hardware spec, DC charging, three-phase"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-DX120-02",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "DX-120 Technical Specification — Benelux Grid Edition",
+        "productCode": "DX-120",
+        "hardwareVersion": "Rev 1 (Benelux grid configuration)",
+        "maximumPower": "120 kW (shared across 1-2 guns)",
+        "inputVoltage": "400V AC three-phase, ~175A",
+        "outputVoltage": "150-920V DC, up to 2x CCS2 connectors",
+        "connectivity": "Ethernet, standard 4G modem",
+        "protocols": "OCPP 2.0.1",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "1200 x 700 x 350 mm (floor cabinet)",
+        "weight": "322 kg",
+        "installationRequirements": "<p>Installation requirements match the base DX-120: a dedicated three-phase 400V supply at approximately 175A. This edition ships with metering interfaces and protection-relay settings pre-configured to match common Belgian and Dutch distribution network operator requirements, which shortens the grid-connection approval step.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service must be performed by a qualified, certified electrician experienced with high-current DC fast-charging equipment, following lockout-tagout procedure before any internal service.</p>",
+        "certificationInformation": "<p>CE marked; grid-interconnection package aligned with Belgian and Dutch distribution network operator conventions.</p><p>Spare parts stocking matches the base DX-120 specification; the grid-interconnection metering interface used in this edition is a separate replaceable module from the charger's own session-billing meter, so a grid-interface fault does not affect billing accuracy.</p>",
+        "techNotes": "<p>Electrically identical to SPEC-DX120-01; the grid-interconnection configuration is the only functional difference from the base specification.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2024-03-01",
+        "businessDomain": "",
+        "countryScope": "belgium",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "DX-120, Benelux, grid connection, market variant"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-DX240-01",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "DX-240 Technical Specification — Modular Hardware Revision 1",
+        "productCode": "DX-240",
+        "hardwareVersion": "Rev 1 (modular, 2x120kW)",
+        "maximumPower": "240 kW (2 x 120 kW modules, 2-4 guns)",
+        "inputVoltage": "400V AC three-phase, ~350A",
+        "outputVoltage": "150-920V DC, 2-4x CCS2 connectors",
+        "connectivity": "Ethernet, standard 4G modem",
+        "protocols": "OCPP 2.0.1",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "1600 x 800 x 400 mm (power cabinet + dispensers)",
+        "weight": "650 kg (full system)",
+        "installationRequirements": "<p>The DX-240 requires a dedicated three-phase 400V supply at approximately 350A — roughly double the DX-120's requirement, reflecting its two-module design. Installation prerequisites (dedicated transformer room, cable routing, clearances) closely resemble the DX-120's, sized for the higher current rating. A detailed site survey confirming grid capacity should be completed before scheduling installation.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service must be performed by a qualified, certified electrician experienced with high-current, multi-module DC fast-charging systems. Each power module must be individually isolated via lockout-tagout before internal service; do not assume isolating one module de-energizes the other.</p>",
+        "certificationInformation": "<p>CE marked; complies with applicable low-voltage, EMC, and OCPP 2.0.1 conformance requirements for modular high-power DC fast-charging systems.</p>",
+        "techNotes": "<p>The modular architecture means a fault in one 120 kW module degrades total capacity rather than taking the system fully offline — the surviving module continues serving connected guns at reduced throughput until the faulty module is serviced.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2024-01-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "DX-240, hardware spec, modular, DC charging"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-DX240-02",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "DX-240 Technical Specification — Original Single-Cabinet Configuration (Deprecated)",
+        "productCode": "DX-240",
+        "hardwareVersion": "Rev 1 (single-cabinet, pre-modular layout)",
+        "maximumPower": "240 kW (non-modular, fixed 4-gun layout)",
+        "inputVoltage": "400V AC three-phase, ~350A",
+        "outputVoltage": "150-920V DC, 4x CCS2 connectors (fixed)",
+        "connectivity": "Ethernet, standard 4G modem",
+        "protocols": "OCPP 2.0.1",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "1800 x 900 x 450 mm (single cabinet)",
+        "weight": "700 kg",
+        "installationRequirements": "<p>This configuration used a single non-modular cabinet with a fixed four-gun layout, requiring the same ~350A three-phase supply as the current modular design but with a larger single-cabinet footprint and no ability to scale gun count independently of power module count.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service must be performed by a qualified, certified electrician experienced with high-current DC fast-charging equipment, following lockout-tagout procedure before internal service.</p>",
+        "certificationInformation": "<p>CE marked under the certification in effect at initial DX-240 release; superseded by the modular configuration's certification package.</p>",
+        "techNotes": "<p>This was the original DX-240 configuration before the platform moved to the current modular 2x120kW power-cabinet-plus-dispensers layout described in SPEC-DX240-01. It is deprecated: sites with this configuration remain supported, but the fixed-layout design is no longer offered for new orders because it cannot be resized without replacing the whole cabinet.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2024-01-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "deprecated",
+        "confidentiality": "public",
+        "tags": "DX-240, deprecated, single-cabinet, legacy configuration"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-DX360-01",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "DX-360 Technical Specification — Modular Hardware Revision 1",
+        "productCode": "DX-360",
+        "hardwareVersion": "Rev 1 (modular, 3x120kW)",
+        "maximumPower": "360 kW (3 x 120 kW modules, 2-6 guns)",
+        "inputVoltage": "Dedicated MV/LV substation, >400A three-phase equivalent",
+        "outputVoltage": "150-920V DC, 2-6x CCS2 connectors",
+        "connectivity": "Ethernet, standard 4G modem",
+        "protocols": "OCPP 2.0.1",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "2000 x 900 x 450 mm (power cabinet array + dispensers)",
+        "weight": "950 kg (full system)",
+        "installationRequirements": "<p>The DX-360 requires a dedicated medium-voltage to low-voltage substation supporting above approximately 400A, which typically means the installation is planned as new-build infrastructure rather than a retrofit onto an existing distribution board. Engage the site's electrical design and the local grid operator early in the project, since substation lead times are typically measured in months rather than weeks.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service must be performed by a qualified, certified electrician experienced with medium-voltage-fed, multi-module DC fast-charging systems. Substation and module isolation procedures must both be followed via lockout-tagout before any internal service — do not treat module-level isolation as sufficient on its own given the upstream MV/LV infrastructure.</p>",
+        "certificationInformation": "<p>CE marked; complies with applicable low-voltage, EMC, and OCPP 2.0.1 conformance requirements, plus substation interconnection requirements specific to the country of installation.</p>",
+        "techNotes": "<p>As with the DX-240, module-level redundancy means a single 120 kW module fault reduces total available power rather than taking the site fully offline, which matters for high-traffic logistics and highway locations that cannot tolerate a complete outage.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2024-06-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "DX-360, hardware spec, modular, substation"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-DX360-02",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "DX-360 Technical Specification — Six-Gun Maximum Configuration",
+        "productCode": "DX-360",
+        "hardwareVersion": "Rev 1 (6-gun configuration)",
+        "maximumPower": "360 kW (3 x 120 kW modules, 6 guns)",
+        "inputVoltage": "Dedicated MV/LV substation, >400A three-phase equivalent",
+        "outputVoltage": "150-920V DC, 6x CCS2 connectors",
+        "connectivity": "Ethernet, standard 4G modem",
+        "protocols": "OCPP 2.0.1",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "2400 x 900 x 450 mm (power cabinet array + 6 dispensers)",
+        "weight": "1050 kg (full system)",
+        "installationRequirements": "<p>The maximum six-gun configuration requires the same dedicated MV/LV substation as the base DX-360 specification, with additional site footprint for the extra dispenser positions. This configuration is the recommended reference for highway rest-area installations expecting sustained high vehicle turnover across the full day.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service must be performed by a qualified, certified electrician experienced with medium-voltage-fed, multi-module, multi-gun DC fast-charging systems, following the same substation and module lockout-tagout discipline as the base configuration.</p>",
+        "certificationInformation": "<p>CE marked, under the same certification package as SPEC-DX360-01; the six-gun layout does not change the underlying power-module certification.</p>",
+        "techNotes": "<p>This specification documents the maximum-gun-count deployment of the DX-360 platform, most relevant for site planners sizing a highway or logistics-hub installation for peak concurrent vehicle demand.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2024-08-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "DX-360, six-gun, highway, hardware spec"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-DX360-03",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "DX-360 Technical Specification — Netherlands Port Logistics Site Configuration",
+        "productCode": "DX-360",
+        "hardwareVersion": "Rev 1 (NL substation configuration)",
+        "maximumPower": "360 kW (3 x 120 kW modules, 4 guns)",
+        "inputVoltage": "Dedicated MV/LV substation, >400A three-phase equivalent",
+        "outputVoltage": "150-920V DC, 4x CCS2 connectors",
+        "connectivity": "Ethernet, standard 4G modem",
+        "protocols": "OCPP 2.0.1",
+        "operatingTemperature": "-25°C to +50°C",
+        "ipRating": "IP54",
+        "dimensions": "2000 x 900 x 450 mm (power cabinet array + dispensers)",
+        "weight": "960 kg (full system)",
+        "installationRequirements": "<p>This configuration documents the substation interconnection package used for Dutch port-logistics sites, where the DX-360's MV/LV substation requirement is coordinated directly with the regional grid operator as part of the broader port electrification planning process, rather than as a standalone site request.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>Installation and service must be performed by a qualified, certified electrician experienced with medium-voltage-fed DC fast-charging systems, following the same substation and module lockout-tagout discipline documented for the base DX-360 specification.</p>",
+        "certificationInformation": "<p>CE marked; substation interconnection package aligned with Dutch grid-operator requirements for port-logistics site connections.</p>",
+        "techNotes": "<p>Functionally identical to the base DX-360 specification; documents the Netherlands-specific substation coordination process used for port-logistics installations.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with the four-hour on-site response window limited to the Amsterdam, Rotterdam, Utrecht, and The Hague metropolitan areas; sites elsewhere in the Netherlands should plan for an eight-hour on-site response instead.</p>",
+        "effectiveDate": "2024-09-01",
+        "businessDomain": "",
+        "countryScope": "netherlands",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "DX-360, Netherlands, port logistics, substation"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-POLARIS-01",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Polaris Charge Cloud Technical Specification — System Requirements & Integration",
+        "productCode": "POLARIS",
+        "hardwareVersion": "N/A (cloud-hosted software)",
+        "maximumPower": "Not applicable — cloud-hosted software platform",
+        "inputVoltage": "Not applicable — cloud-hosted software platform",
+        "outputVoltage": "Not applicable — cloud-hosted software platform",
+        "connectivity": "HTTPS/TLS 1.2+, OCPP 1.6J/2.0.1 charger connections, REST API",
+        "protocols": "OCPP 1.6J, OCPP 2.0.1, OAuth2 client credentials (API Management module)",
+        "operatingTemperature": "Not applicable — cloud-hosted software platform",
+        "ipRating": "Not applicable — cloud-hosted software platform",
+        "dimensions": "Not applicable — cloud-hosted software platform",
+        "weight": "Not applicable — cloud-hosted software platform",
+        "installationRequirements": "<p>Polaris Charge Cloud is delivered as a SaaS platform with no on-premises server component to install. Chargers connect outbound over OCPP to the Polaris backend, so on-site requirements are limited to confirming that the site's network allows outbound OCPP/HTTPS traffic and, for the API Management module, provisioning OAuth2 client credentials for any integrating system.</p><p>Because this is a SaaS platform rather than physical equipment, there is no on-site maintenance schedule; instead, customers integrating against its API should review release notes at each version boundary and re-test integration credentials whenever OAuth2 client-credentials rotation is due, typically on the same cadence as the customer's own internal security policy requires.</p>",
+        "safetyInformation": "<p>No electrical safety considerations apply to the software platform itself. However, any configuration change to dynamic load balancing or charging priority rules made through Polaris directly affects connected hardware behavior, and such changes should only be made by personnel trained on the platform to avoid unintended load-management outcomes.</p>",
+        "certificationInformation": "<p>Polaris supports OCPP 1.6J and OCPP 2.0.1 conformant charge point connections; API access via the API Management module uses standard OAuth2 client-credentials flow, added in the 2025.1 release.</p>",
+        "techNotes": "<p>Released on a calendar versioning scheme since 2024. Module availability (Billing, Monitoring, Remote Diagnostics, Reporting, API Management) is a per-contract commercial configuration rather than a version-gated hardware capability.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2024-02-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "Polaris, software spec, system requirements, API"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-ATLAS-01",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Atlas Fleet Technical Specification — System Requirements & Integration",
+        "productCode": "ATLAS",
+        "hardwareVersion": "N/A (cloud-hosted software)",
+        "maximumPower": "Not applicable — cloud-hosted software platform",
+        "inputVoltage": "Not applicable — cloud-hosted software platform",
+        "outputVoltage": "Not applicable — cloud-hosted software platform",
+        "connectivity": "HTTPS/TLS 1.2+; integrates with Polaris Charge Cloud for charger telemetry",
+        "protocols": "REST API integration with Polaris Charge Cloud",
+        "operatingTemperature": "Not applicable — cloud-hosted software platform",
+        "ipRating": "Not applicable — cloud-hosted software platform",
+        "dimensions": "Not applicable — cloud-hosted software platform",
+        "weight": "Not applicable — cloud-hosted software platform",
+        "installationRequirements": "<p>Atlas Fleet is delivered as a SaaS platform with no on-premises component. It requires an active Polaris Charge Cloud deployment to source charger telemetry and session data; no direct charger connection is made by Atlas itself.</p><p>Because this is a SaaS platform rather than physical equipment, there is no on-site maintenance schedule; instead, customers integrating against its API should review release notes at each version boundary and re-test integration credentials whenever OAuth2 client-credentials rotation is due, typically on the same cadence as the customer's own internal security policy requires.</p>",
+        "safetyInformation": "<p>No electrical safety considerations apply to the software platform. Fleet managers configuring route or scheduling rules should be aware that Atlas's charge-scheduling recommendations are advisory unless explicitly enforced through Polaris; the platform does not directly override charger-level controls.</p>",
+        "certificationInformation": "<p>Not applicable — Atlas Fleet is a fleet-management application rather than charging hardware or protocol-conformant equipment.</p>",
+        "techNotes": "<p>Atlas depends on Polaris for underlying charger status and session data, which keeps its release cadence independent of charger firmware versions. Route Optimization requires Atlas 2.2 or later; the driver mobile app v2 shipped in the 2.3 release.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2023-05-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "Atlas Fleet, software spec, system requirements, fleet"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-ATLAS-02",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Atlas Fleet Technical Specification — Driver Mobile App v2",
+        "productCode": "ATLAS-MOBILE",
+        "hardwareVersion": "N/A (mobile application)",
+        "maximumPower": "Not applicable — mobile application",
+        "inputVoltage": "Not applicable — mobile application",
+        "outputVoltage": "Not applicable — mobile application",
+        "connectivity": "HTTPS/TLS 1.2+ over the driver's mobile data or Wi-Fi connection",
+        "protocols": "REST API integration with Atlas Fleet backend",
+        "operatingTemperature": "Not applicable — mobile application",
+        "ipRating": "Not applicable — mobile application",
+        "dimensions": "Not applicable — mobile application",
+        "weight": "Not applicable — mobile application",
+        "installationRequirements": "<p>The Atlas Fleet driver mobile app is distributed through standard mobile app stores and requires an active Atlas Fleet subscription with the driver assigned to a specific vehicle before it will display any charge status or route information.</p><p>Because this is a SaaS platform rather than physical equipment, there is no on-site maintenance schedule; instead, customers integrating against its API should review release notes at each version boundary and re-test integration credentials whenever OAuth2 client-credentials rotation is due, typically on the same cadence as the customer's own internal security policy requires.</p>",
+        "safetyInformation": "<p>No electrical safety considerations apply. As with any mobile application, drivers should not interact with the app while operating a vehicle; charge-status and route notifications are designed to be reviewed before or after driving, not during.</p>",
+        "certificationInformation": "<p>Not applicable — a mobile application rather than charging hardware or protocol-conformant equipment.</p>",
+        "techNotes": "<p>Version 2, shipped in the Atlas 2.3 release, simplified the interface after feedback that the original version surfaced too much fleet-manager-oriented detail for day-to-day driver use.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2025-08-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "Atlas Fleet, mobile app, driver experience, software spec"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-ORION-01",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "Orion Energy Manager Technical Specification — System Requirements & Integration",
+        "productCode": "ORION",
+        "hardwareVersion": "N/A (cloud-hosted software)",
+        "maximumPower": "Not applicable — cloud-hosted software platform",
+        "inputVoltage": "Not applicable — cloud-hosted software platform",
+        "outputVoltage": "Not applicable — cloud-hosted software platform",
+        "connectivity": "HTTPS/TLS 1.2+; integrates with Polaris Charge Cloud, site energy meters, and, where present, solar inverters and battery storage systems",
+        "protocols": "REST API integration with Polaris Charge Cloud and site energy hardware",
+        "operatingTemperature": "Not applicable — cloud-hosted software platform",
+        "ipRating": "Not applicable — cloud-hosted software platform",
+        "dimensions": "Not applicable — cloud-hosted software platform",
+        "weight": "Not applicable — cloud-hosted software platform",
+        "installationRequirements": "<p>Orion Energy Manager is delivered as a SaaS platform with no on-premises component beyond the data feeds it consumes. A baseline deployment requires a Polaris Charge Cloud integration for charger telemetry; the Solar Integration and battery storage capabilities additionally require the site to expose a compatible solar generation forecast or live output feed, and a compatible battery storage system interface, respectively.</p><p>Because this is a SaaS platform rather than physical equipment, there is no on-site maintenance schedule; instead, customers integrating against its API should review release notes at each version boundary and re-test integration credentials whenever OAuth2 client-credentials rotation is due, typically on the same cadence as the customer's own internal security policy requires.</p>",
+        "safetyInformation": "<p>No electrical safety considerations apply to the software platform itself. Charging priority rules and load-balancing configuration changes made through Orion directly affect connected charger behavior site-wide and should only be made by personnel trained on the platform.</p>",
+        "certificationInformation": "<p>Not applicable — Orion Energy Manager is an energy-management application rather than charging hardware or protocol-conformant equipment.</p>",
+        "techNotes": "<p>Solar-generation-aware charging was added in the 3.1 release; battery storage integration in 3.2. Charging priority rules — including the ability to prioritize fleet vehicles over visitor vehicles — are available from the initial 3.0 general-availability release.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2023-10-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "current",
+        "confidentiality": "public",
+        "tags": "Orion Energy Manager, software spec, energy management, priority rules"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    },
+    {
+      "externalReferenceCode": "SPEC-DX500-01",
+      "status": {
+        "code": 0
+      },
+      "properties": {
+        "title": "DX-500 High-Power Charger — Preview Technical Specification (Draft, Unreleased)",
+        "productCode": "DX-500",
+        "hardwareVersion": "Pre-release engineering sample",
+        "maximumPower": "Up to 500 kW (modular, target 4 x 125 kW — subject to change)",
+        "inputVoltage": "Dedicated MV/LV substation, preliminary estimate >500A three-phase equivalent (subject to change)",
+        "outputVoltage": "150-1000V DC (preliminary), CCS2 connectors, gun count not yet finalized",
+        "connectivity": "Ethernet, integrated 4G/5G modem (preliminary)",
+        "protocols": "OCPP 2.0.1 (planned); megawatt charging system compatibility under evaluation",
+        "operatingTemperature": "Target -25°C to +50°C (not yet validated)",
+        "ipRating": "Target IP54 (not yet validated)",
+        "dimensions": "Preliminary estimate, final dimensions not confirmed",
+        "weight": "Preliminary estimate, final weight not confirmed",
+        "installationRequirements": "<p>This is a preview specification for an unreleased, in-development product and must not be used to plan any live installation. All figures are preliminary engineering targets and are expected to change before general availability. The intended positioning is a step above the DX-360 for the highest-throughput logistics and highway sites, requiring an even larger dedicated MV/LV substation than the DX-360.</p><p>Routine preventive maintenance is recommended every twelve months for standard-duty sites, or every six months for sites averaging more than one hundred charging sessions per month, covering connector wear inspection, residual-current-device and breaker function testing, enclosure seal condition, and confirmation that the unit is running current firmware.</p>",
+        "safetyInformation": "<p>As an unreleased engineering sample, this specification is not validated for production installation and no safety certification has been completed. Any engineering-sample unit in a test environment must only be handled by qualified, certified personnel trained on high-voltage DC fast-charging prototypes, under controlled test-site conditions.</p>",
+        "certificationInformation": "<p>Not yet certified. Certification activity has not started; this document should not be interpreted as indicating any compliance status.</p>",
+        "techNotes": "<p>Internal draft documenting early DX-500 planning — a potential future addition above the DX-360 in the Nova DC line, aimed at the very highest-throughput logistics and highway sites. No launch date has been set and all specifications are subject to change or cancellation.</p><p>Service response for units under this specification follows Northstar's standard Essential, Professional, and Gold plan tiers. Gold-tier customers receive a 30-minute critical remote response target, with four-hour on-site response in supported metropolitan areas and eight-hour response elsewhere.</p>",
+        "effectiveDate": "2026-11-01",
+        "businessDomain": "",
+        "countryScope": "global",
+        "lifecycleStatus": "draft",
+        "confidentiality": "internal",
+        "tags": "DX-500, draft, unreleased, preview, internal"
+      },
+      "objectEntryFolderExternalReferenceCode": "NMG-FOLDER-PRODUCTS"
+    }
+  ]
+}

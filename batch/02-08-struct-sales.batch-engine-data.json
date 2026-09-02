@@ -1,0 +1,287 @@
+{
+  "configuration": {
+    "className": "com.liferay.object.admin.rest.dto.v1_0.ObjectDefinition",
+    "parameters": {
+      "createStrategy": "UPSERT",
+      "updateStrategy": "UPDATE"
+    }
+  },
+  "items": [
+    {
+      "enableComments": false,
+      "enableFriendlyURLCustomization": true,
+      "enableIndexSearch": true,
+      "enableLocalization": false,
+      "enableObjectEntryDraft": true,
+      "enableObjectEntryHistory": true,
+      "enableObjectEntrySchedule": false,
+      "enableObjectEntryVersioning": true,
+      "externalReferenceCode": "NMG-STRUCT-SALES",
+      "label": {
+        "en_US": "Sales Playbook"
+      },
+      "name": "NMGSalesPlaybook",
+      "pluralLabel": {
+        "en_US": "NMG Sales Playbooks"
+      },
+      "scope": "depot",
+      "status": {
+        "code": 0
+      },
+      "titleObjectFieldName": "title",
+      "objectFolderExternalReferenceCode": "L_CMS_CONTENT_STRUCTURES",
+      "objectDefinitionSettings": [
+        {
+          "name": "acceptedGroupExternalReferenceCodes",
+          "value": "NMG-KNOWLEDGE"
+        }
+      ],
+      "objectFields": [
+        {
+          "name": "title",
+          "label": {
+            "en_US": "Title"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "segment",
+          "label": {
+            "en_US": "Segment"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "customerProfile",
+          "label": {
+            "en_US": "Customer Profile"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "customerNeeds",
+          "label": {
+            "en_US": "Customer Needs"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "recommendedProducts",
+          "label": {
+            "en_US": "Recommended Products"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "discoveryQuestions",
+          "label": {
+            "en_US": "Discovery Questions"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "valueProposition",
+          "label": {
+            "en_US": "Value Proposition"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "objections",
+          "label": {
+            "en_US": "Objections"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "objectionResponses",
+          "label": {
+            "en_US": "Objection Responses"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "competitivePositioning",
+          "label": {
+            "en_US": "Competitive Positioning"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "qualificationCriteria",
+          "label": {
+            "en_US": "Qualification Criteria"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "exampleConfiguration",
+          "label": {
+            "en_US": "Example Configuration"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "relatedCaseStudies",
+          "label": {
+            "en_US": "Related Case Studies"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "businessDomain",
+          "label": {
+            "en_US": "Business Domain"
+          },
+          "businessType": "Picklist",
+          "DBType": "String",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-BUSINESSDOMAIN",
+          "objectFieldSettings": []
+        },
+        {
+          "name": "countryScope",
+          "label": {
+            "en_US": "Country"
+          },
+          "businessType": "Picklist",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-COUNTRY",
+          "objectFieldSettings": []
+        },
+        {
+          "name": "lifecycleStatus",
+          "label": {
+            "en_US": "Lifecycle Status"
+          },
+          "businessType": "Picklist",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-LIFECYCLESTATUS",
+          "objectFieldSettings": []
+        },
+        {
+          "name": "confidentiality",
+          "label": {
+            "en_US": "Confidentiality"
+          },
+          "businessType": "Picklist",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-CONFIDENTIALITY",
+          "objectFieldSettings": []
+        },
+        {
+          "name": "tags",
+          "label": {
+            "en_US": "Tags"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        }
+      ],
+      "objectRelationships": []
+    }
+  ]
+}

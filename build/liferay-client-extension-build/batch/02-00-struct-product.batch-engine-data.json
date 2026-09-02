@@ -1,0 +1,268 @@
+{
+  "configuration": {
+    "className": "com.liferay.object.admin.rest.dto.v1_0.ObjectDefinition",
+    "parameters": {
+      "createStrategy": "UPSERT",
+      "updateStrategy": "UPDATE"
+    }
+  },
+  "items": [
+    {
+      "enableComments": false,
+      "enableFriendlyURLCustomization": true,
+      "enableIndexSearch": true,
+      "enableLocalization": false,
+      "enableObjectEntryDraft": true,
+      "enableObjectEntryHistory": true,
+      "enableObjectEntrySchedule": false,
+      "enableObjectEntryVersioning": true,
+      "externalReferenceCode": "NMG-STRUCT-PRODUCT",
+      "label": {
+        "en_US": "Product"
+      },
+      "name": "NMGProduct",
+      "pluralLabel": {
+        "en_US": "NMG Products"
+      },
+      "scope": "depot",
+      "status": {
+        "code": 0
+      },
+      "titleObjectFieldName": "title",
+      "objectFolderExternalReferenceCode": "L_CMS_CONTENT_STRUCTURES",
+      "objectDefinitionSettings": [
+        {
+          "name": "acceptedGroupExternalReferenceCodes",
+          "value": "NMG-KNOWLEDGE"
+        }
+      ],
+      "objectFields": [
+        {
+          "name": "title",
+          "label": {
+            "en_US": "Title"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "productCode",
+          "label": {
+            "en_US": "Product Code"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "productFamily",
+          "label": {
+            "en_US": "Product Family"
+          },
+          "businessType": "Picklist",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-PRODUCTFAMILY",
+          "objectFieldSettings": []
+        },
+        {
+          "name": "shortDescription",
+          "label": {
+            "en_US": "Short Description"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "fullDescription",
+          "label": {
+            "en_US": "Full Description"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "targetMarket",
+          "label": {
+            "en_US": "Target Market"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "keyFeatures",
+          "label": {
+            "en_US": "Key Features"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "technicalSummary",
+          "label": {
+            "en_US": "Technical Summary"
+          },
+          "businessType": "RichText",
+          "DBType": "Clob",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "indexedLanguageId": "en_US",
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "launchDate",
+          "label": {
+            "en_US": "Launch Date"
+          },
+          "businessType": "Date",
+          "DBType": "Date",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "endOfSaleDate",
+          "label": {
+            "en_US": "End of Sale Date"
+          },
+          "businessType": "Date",
+          "DBType": "Date",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "relatedProducts",
+          "label": {
+            "en_US": "Related Products"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "countryAvailability",
+          "label": {
+            "en_US": "Country Availability"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        },
+        {
+          "name": "businessDomain",
+          "label": {
+            "en_US": "Business Domain"
+          },
+          "businessType": "Picklist",
+          "DBType": "String",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-BUSINESSDOMAIN",
+          "objectFieldSettings": []
+        },
+        {
+          "name": "audience",
+          "label": {
+            "en_US": "Audience"
+          },
+          "businessType": "Picklist",
+          "DBType": "String",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-AUDIENCE",
+          "objectFieldSettings": []
+        },
+        {
+          "name": "lifecycleStatus",
+          "label": {
+            "en_US": "Lifecycle Status"
+          },
+          "businessType": "Picklist",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-LIFECYCLESTATUS",
+          "objectFieldSettings": []
+        },
+        {
+          "name": "confidentiality",
+          "label": {
+            "en_US": "Confidentiality"
+          },
+          "businessType": "Picklist",
+          "DBType": "String",
+          "required": true,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "listTypeDefinitionExternalReferenceCode": "NMG-PICKLIST-CONFIDENTIALITY",
+          "objectFieldSettings": []
+        },
+        {
+          "name": "tags",
+          "label": {
+            "en_US": "Tags"
+          },
+          "businessType": "Text",
+          "DBType": "String",
+          "required": false,
+          "indexed": true,
+          "indexedAsKeyword": true,
+          "localized": false,
+          "objectFieldSettings": []
+        }
+      ],
+      "objectRelationships": []
+    }
+  ]
+}
