@@ -16,6 +16,7 @@
       "enableObjectEntryHistory": true,
       "enableObjectEntrySchedule": false,
       "enableObjectEntryVersioning": true,
+      "className": "com.liferay.object.model.ObjectDefinition#NMGFAQ",
       "externalReferenceCode": "NMG-STRUCT-FAQ",
       "label": {
         "en_US": "FAQ"

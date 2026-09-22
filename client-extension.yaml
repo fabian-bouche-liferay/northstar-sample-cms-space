@@ -16,4 +16,5 @@ nmg-corpus-batch-oauth:
         - Liferay.Object.Admin.REST.everything
         - Liferay.Headless.Object.everything
         - Liferay.Headless.Admin.List.Type.everything
+        - Liferay.Search.Experiences.REST.everything
     type: oAuthApplicationHeadlessServer

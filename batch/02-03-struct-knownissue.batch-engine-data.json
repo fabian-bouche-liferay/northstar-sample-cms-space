@@ -16,6 +16,7 @@
       "enableObjectEntryHistory": true,
       "enableObjectEntrySchedule": false,
       "enableObjectEntryVersioning": true,
+      "className": "com.liferay.object.model.ObjectDefinition#NMGKNOWNISSUE",
       "externalReferenceCode": "NMG-STRUCT-KNOWNISSUE",
       "label": {
         "en_US": "Known Issue"

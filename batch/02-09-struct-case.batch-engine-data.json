@@ -16,6 +16,7 @@
       "enableObjectEntryHistory": true,
       "enableObjectEntrySchedule": false,
       "enableObjectEntryVersioning": true,
+      "className": "com.liferay.object.model.ObjectDefinition#NMGCASE",
       "externalReferenceCode": "NMG-STRUCT-CASE",
       "label": {
         "en_US": "Customer Case Study"

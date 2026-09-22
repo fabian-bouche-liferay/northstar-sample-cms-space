@@ -1,0 +1,42 @@
+{
+  "configuration": {
+    "className": "com.liferay.search.experiences.rest.dto.v1_0.SXPBlueprint",
+    "parameters": {
+      "createStrategy": "UPSERT",
+      "updateStrategy": "UPDATE"
+    }
+  },
+  "items": [
+    {
+      "schemaVersion": "1.2",
+      "title_i18n": {
+        "en_US": "Northstar Corporate & Policy"
+      },
+      "description_i18n": {},
+      "externalReferenceCode": "NMG-BLUEPRINT-CORPORATE-POLICY",
+      "configuration": {
+        "highlightConfiguration": {},
+        "parameterConfiguration": {},
+        "aggregationConfiguration": {},
+        "generalConfiguration": {
+          "collectionProviderType": "com.liferay.asset.kernel.model.AssetEntry",
+          "scope": ["NMG-KNOWLEDGE"],
+          "searchableAssetTypes": [
+            "com.liferay.object.model.ObjectDefinition#NMGCORPORATE",
+            "com.liferay.object.model.ObjectDefinition#NMGPOLICY",
+            "com.liferay.object.model.ObjectDefinition#NMGPROCEDURE"
+          ],
+          "clauseContributorsExcludes": [],
+          "clauseContributorsIncludes": ["*"],
+          "collectionProvider": false
+        },
+        "advancedConfiguration": {},
+        "sortConfiguration": {},
+        "queryConfiguration": {
+          "applyIndexerClauses": true
+        }
+      },
+      "elementInstances": []
+    }
+  ]
+}

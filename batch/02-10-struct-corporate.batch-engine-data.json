@@ -16,6 +16,7 @@
       "enableObjectEntryHistory": true,
       "enableObjectEntrySchedule": false,
       "enableObjectEntryVersioning": true,
+      "className": "com.liferay.object.model.ObjectDefinition#NMGCORPORATE",
       "externalReferenceCode": "NMG-STRUCT-CORPORATE",
       "label": {
         "en_US": "Corporate Article"

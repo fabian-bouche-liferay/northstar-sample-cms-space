@@ -16,6 +16,7 @@
       "enableObjectEntryHistory": true,
       "enableObjectEntrySchedule": false,
       "enableObjectEntryVersioning": true,
+      "className": "com.liferay.object.model.ObjectDefinition#NMGRELEASE",
       "externalReferenceCode": "NMG-STRUCT-RELEASE",
       "label": {
         "en_US": "Release Note"

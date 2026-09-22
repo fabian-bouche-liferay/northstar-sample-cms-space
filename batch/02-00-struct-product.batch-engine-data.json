@@ -16,6 +16,7 @@
       "enableObjectEntryHistory": true,
       "enableObjectEntrySchedule": false,
       "enableObjectEntryVersioning": true,
+      "className": "com.liferay.object.model.ObjectDefinition#NMGPRODUCT",
       "externalReferenceCode": "NMG-STRUCT-PRODUCT",
       "label": {
         "en_US": "Product"

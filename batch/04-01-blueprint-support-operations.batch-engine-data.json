@@ -1,0 +1,41 @@
+{
+  "configuration": {
+    "className": "com.liferay.search.experiences.rest.dto.v1_0.SXPBlueprint",
+    "parameters": {
+      "createStrategy": "UPSERT",
+      "updateStrategy": "UPDATE"
+    }
+  },
+  "items": [
+    {
+      "schemaVersion": "1.2",
+      "title_i18n": {
+        "en_US": "Northstar Support & operations"
+      },
+      "description_i18n": {},
+      "externalReferenceCode": "NMG-BLUEPRINT-SUPPORT-OPERATIONS",
+      "configuration": {
+        "highlightConfiguration": {},
+        "parameterConfiguration": {},
+        "aggregationConfiguration": {},
+        "generalConfiguration": {
+          "collectionProviderType": "com.liferay.asset.kernel.model.AssetEntry",
+          "scope": ["NMG-KNOWLEDGE"],
+          "searchableAssetTypes": [
+            "com.liferay.object.model.ObjectDefinition#NMGSUPPORT",
+            "com.liferay.object.model.ObjectDefinition#NMGFAQ"
+          ],
+          "clauseContributorsExcludes": [],
+          "clauseContributorsIncludes": ["*"],
+          "collectionProvider": false
+        },
+        "advancedConfiguration": {},
+        "sortConfiguration": {},
+        "queryConfiguration": {
+          "applyIndexerClauses": true
+        }
+      },
+      "elementInstances": []
+    }
+  ]
+}

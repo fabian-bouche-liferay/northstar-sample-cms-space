@@ -1,0 +1,43 @@
+{
+  "configuration": {
+    "className": "com.liferay.search.experiences.rest.dto.v1_0.SXPBlueprint",
+    "parameters": {
+      "createStrategy": "UPSERT",
+      "updateStrategy": "UPDATE"
+    }
+  },
+  "items": [
+    {
+      "schemaVersion": "1.2",
+      "title_i18n": {
+        "en_US": "Northstar product & engineering"
+      },
+      "description_i18n": {},
+      "externalReferenceCode": "NMG-BLUEPRINT-PRODUCT-ENGINEERING",
+      "configuration": {
+        "highlightConfiguration": {},
+        "parameterConfiguration": {},
+        "aggregationConfiguration": {},
+        "generalConfiguration": {
+          "collectionProviderType": "com.liferay.asset.kernel.model.AssetEntry",
+          "scope": ["NMG-KNOWLEDGE"],
+          "searchableAssetTypes": [
+            "com.liferay.object.model.ObjectDefinition#NMGPRODUCT",
+            "com.liferay.object.model.ObjectDefinition#NMGKNOWNISSUE",
+            "com.liferay.object.model.ObjectDefinition#NMGTECHSPEC",
+            "com.liferay.object.model.ObjectDefinition#NMGRELEASE"
+          ],
+          "clauseContributorsExcludes": [],
+          "clauseContributorsIncludes": ["*"],
+          "collectionProvider": false
+        },
+        "advancedConfiguration": {},
+        "sortConfiguration": {},
+        "queryConfiguration": {
+          "applyIndexerClauses": true
+        }
+      },
+      "elementInstances": []
+    }
+  ]
+}

@@ -16,6 +16,7 @@
       "enableObjectEntryHistory": true,
       "enableObjectEntrySchedule": false,
       "enableObjectEntryVersioning": true,
+      "className": "com.liferay.object.model.ObjectDefinition#NMGSALES",
       "externalReferenceCode": "NMG-STRUCT-SALES",
       "label": {
         "en_US": "Sales Playbook"

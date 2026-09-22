@@ -16,6 +16,7 @@
       "enableObjectEntryHistory": true,
       "enableObjectEntrySchedule": false,
       "enableObjectEntryVersioning": true,
+      "className": "com.liferay.object.model.ObjectDefinition#NMGPOLICY",
       "externalReferenceCode": "NMG-STRUCT-POLICY",
       "label": {
         "en_US": "Policy"

@@ -16,6 +16,7 @@
       "enableObjectEntryHistory": true,
       "enableObjectEntrySchedule": false,
       "enableObjectEntryVersioning": true,
+      "className": "com.liferay.object.model.ObjectDefinition#NMGTECHSPEC",
       "externalReferenceCode": "NMG-STRUCT-TECHSPEC",
       "label": {
         "en_US": "Technical Specification"
