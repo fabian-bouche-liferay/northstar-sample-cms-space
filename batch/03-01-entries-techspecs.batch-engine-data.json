@@ -3,7 +3,8 @@
     "className": "com.liferay.object.rest.dto.v1_0.ObjectEntry",
     "parameters": {
       "createStrategy": "UPSERT",
-      "scopeKey": "NMG-KNOWLEDGE"
+      "scopeKey": "NMG-KNOWLEDGE",
+      "taskItemDelegateName": "C_NMGTechSpec"
     },
     "taskItemDelegateName": "C_NMGTechSpec"
   },
